@@ -1,0 +1,46 @@
+/* Margin */
+
+.mb-80 {
+  margin-bottom: 20rem;
+}
+.text-center {
+  text-align: center;
+}
+.mb-160 {
+  margin-bottom: 40rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+/* Text */
+.text-second {
+    color: #0a3d3f;
+  }
+  .text-2xl {
+    font-size: 2rem;
+  }
+  .font-rosellinda {
+    font-family: 'SVN-Rosellinda Alyamore', serif;
+  }
+  .font-zona {
+    font-family: 'SVN-Zona Pro', ui-sans-serif, system-ui, Inter, sans-serif;
+  }
+  .sub-text {
+    font-size: 1.8rem;
+  }
+  .main-text {
+    font-weight: 400;
+  }
+  .text-normal {
+    font-weight: 500;
+  }
+  .text-bold {
+    font-weight: 700;
+  }
+  .text-extra-bold {
+    font-weight: 800;
+  }
+    .text-semi-bold {
+    font-weight: 600;
+  }
