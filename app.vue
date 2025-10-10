@@ -6,6 +6,9 @@
       <Header />
       <main class="pt-32">
         <IntroSection />
+        <MapSection />
+        <BenefitSection />
+        <PrivilegeSection />
       </main>
       <!-- <Footer /> -->
     </div>
@@ -15,7 +18,9 @@
 <script setup lang="ts">
 import bg from '~/assets/images/bg.jpg'
 import IntroSection from '~/components/sections/IntroSection.vue'
-import '~/assets/css/base.css'
+import MapSection from '~/components/sections/MapSection.vue'
+import BenefitSection from '~/components/sections/BenefitSection.vue'
+import PrivilegeSection from '~/components/sections/PrivilegeSection.vue'
 const appStyle = {
   backgroundImage: `url(${bg})`
 }
