@@ -26,21 +26,18 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nuxtjs
+# Create app directory and set proper permissions
+RUN mkdir -p /app && chown -R node:node /app
 
-# Copy built application
-COPY --from=builder --chown=nuxtjs:nodejs /app/.output ./.output
+# Copy built application with proper ownership
+COPY --from=builder --chown=node:node /app/.output ./.output
 
-USER nuxtjs
+USER node
 
 EXPOSE 3000
 
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
-
-RUN chown -R node:node /app 
-USER node
 
 # Start the application
 CMD ["node", ".output/server/index.mjs"]
