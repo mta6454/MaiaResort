@@ -39,5 +39,8 @@ EXPOSE 3000
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
+RUN chown -R node:node /app 
+USER node
+
 # Start the application
 CMD ["node", ".output/server/index.mjs"]
