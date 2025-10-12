@@ -16,7 +16,15 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .mb-16 {
+  margin-bottom: 4rem;
+}
+.my-16 {
+  margin-top: 4rem;
   margin-bottom: 4rem;
 }
 .mt-4 {
@@ -53,6 +61,9 @@
 /* Text */
 .text-second {
     color: #0a3d3f;
+  }
+  .text-size-normal {
+    font-size: 14px;
   }
   .text-xl {
     font-size: 1.5rem;

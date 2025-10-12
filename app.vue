@@ -9,6 +9,7 @@
         <MapSection />
         <BenefitSection />
         <PrivilegeSection />
+        <ProductSection />
       </main>
       <!-- <Footer /> -->
     </div>
@@ -21,6 +22,8 @@ import IntroSection from '~/components/sections/IntroSection.vue'
 import MapSection from '~/components/sections/MapSection.vue'
 import BenefitSection from '~/components/sections/BenefitSection.vue'
 import PrivilegeSection from '~/components/sections/PrivilegeSection.vue'
+import ProductSection from '~/components/sections/ProductSection.vue'
+
 const appStyle = {
   backgroundImage: `url(${bg})`
 }
