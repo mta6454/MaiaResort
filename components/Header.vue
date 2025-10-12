@@ -8,7 +8,7 @@
           </a>
         </div>
         <div class="btn_header">
-          <a href="/">
+          <a href="https://vr360.maiaresorthotram.com/">
             <img :src="View360" alt="View360" class="view360" />
           </a>
         </div>
@@ -21,8 +21,11 @@
 
       <div class="header_right">
         <!-- icon menu -->
-        <div class="icon_menu">
+        <div class="icon_menu" @click="showMenu = true">
           <img :src="menuIcon" alt="Menu" class="menu" />
+          <MenuOverlay
+              v-model:open="showMenu"
+          />
         </div>
       </div>
     </div>
@@ -34,6 +37,9 @@ import logo from '~/assets/images/Logo.svg'
 import View360 from '~/assets/images/View360.gif'
 import phoneIcon from '~/assets/images/phone.svg'
 import menuIcon from '~/assets/images/menu.svg'
+import MenuOverlay from "~/components/sections/MenuOverlay.vue";
+
+const showMenu = ref(false)
 </script>
 <style>
 .app_header {
