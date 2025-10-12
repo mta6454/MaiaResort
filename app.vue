@@ -11,8 +11,9 @@
         <PrivilegeSection />
         <ProductSection />
       </main>
-      <!-- <Footer /> -->
+      <BottomMenu />
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -23,7 +24,7 @@ import MapSection from '~/components/sections/MapSection.vue'
 import BenefitSection from '~/components/sections/BenefitSection.vue'
 import PrivilegeSection from '~/components/sections/PrivilegeSection.vue'
 import ProductSection from '~/components/sections/ProductSection.vue'
-
+import BottomMenu from '~/components/commons/BottomMenu.vue'
 const appStyle = {
   backgroundImage: `url(${bg})`
 }

@@ -1,14 +1,76 @@
 <template>
-  <footer class="bg-secondary text-white py-8 mt-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-sm opacity-80">© 2025 Maia Resort Ho Tram. All rights reserved.</p>
-      <nav class="flex items-center gap-4 text-sm opacity-90">
-        <a href="#" class="hover:text-sand">Chính sách bảo mật</a>
-        <a href="#" class="hover:text-sand">Điều khoản</a>
-      </nav>
+  <footer class="footer-wrapper">
+    <div class="container footer">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="footer-item">
+            <div class="footer-item-title text-size-normal text-semibold mb-1">
+              Maia Sales Gallery
+            </div>
+            <div class="footer-item-content">
+              <div class="text-light">
+                23 Trần Bạch Đằng, P.An Khánh, TP.HCM
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="footer-item">
+            <div class="footer-item-title text-size-normal text-semibold mb-1">
+              Địa chỉ dự án
+            </div>
+            <div class="footer-item-content">
+              <div class="text-light">
+                Xã Hồ Tràm, TP.HCM
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="footer-item">
+            <div class="footer-item-title text-size-normal text-semibold mb-1">
+              Hotline
+            </div>
+            <div class="footer-item-content">
+              <div class="text-light">
+                091 180 49 88
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="footer-item">
+            <div class="footer-item-title text-size-normal text-semibold mb-1">
+              Email
+            </div>
+            <div class="footer-item-content">
+              <div class="text-light">
+                hotrammaia@gmail.com
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="footer-item">
+            <!-- icon facebook -->
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
 </script>
+
+<style scoped>
+.footer-wrapper {
+  background-color: rgba(0, 85, 102);
+
+}
+.footer {
+padding: 1rem 0;
+color: #fff;
+}
+
+</style>
