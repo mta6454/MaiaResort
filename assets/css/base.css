@@ -74,6 +74,12 @@
   .text-3xl {
     font-size: 3rem;
   }
+  .text-4xl {
+    font-size: 4rem;
+  }
+  .text-5xl {
+    font-size: 5rem;
+  }
   .font-rosellinda {
     font-family: 'NVN Motherland Signature', serif;
   }
