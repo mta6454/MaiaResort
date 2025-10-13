@@ -6,13 +6,11 @@
             </div>
         </div>
        <div class="col-md-10">
-            <ClientOnly>
-                <FlickingVue :options="flickingOptions" ref="flickingPrivilegeCompRef" @ready="onReady">
+                <Flicking :hideBeforeInit="true" :firstPanelSize="'200px'" :options="flickingOptions" ref="flickingPrivilegeCompRef" @ready="onReady">
                     <div v-for="(item, idx) in list" class="flicking-panel" :key="idx">
                         <img :src="item?.img" alt="privilege" class="flicking-panel-img"/>
                     </div>
-                </FlickingVue>
-            </ClientOnly>
+                </Flicking>
        </div>
        <div class="col-md-1">
             <div class="privilege-carousel-prev" @click="handleNext">
@@ -22,7 +20,7 @@
     </div>
 </template>
 <script setup lang="ts">
-import FlickingVue, { useFlickingReactiveAPI } from "@egjs/vue3-flicking";
+import Flicking, { useFlickingReactiveAPI } from "@egjs/vue3-flicking";
 import type { Ref } from 'vue'
 import sectionImg from '~/assets/images/privilegeSlide/section-6.jpg'
 import arrowLeft from '~/assets/images/arrow-left.svg'
@@ -36,7 +34,7 @@ const list = ref([{
 }, {
     img: sectionImg
 }]);
-const flickingPrivilegeCompRef = ref<InstanceType<typeof FlickingVue> | null>(null)
+const flickingPrivilegeCompRef = ref<InstanceType<typeof Flicking> | null>(null)
 // Flicking options
 const flickingOptions = reactive({
   circular: false,

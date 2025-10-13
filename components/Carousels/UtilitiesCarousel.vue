@@ -9,18 +9,16 @@
             </div>
         </div>
        <div class="col-md-10">
-            <ClientOnly>
-                <FlickingVue :options="flickingOptions" ref="flickingCompRef" @ready="onReady">
+                <Flicking :hideBeforeInit="true" :firstPanelSize="'200px'" :options="flickingOptions" ref="flickingCompRef" @ready="onReady">
                     <div v-for="(item, idx) in list" class="flicking-panel" :key="idx">
                         <img :src="item?.img" alt="Utilities" class="flicking-panel-img"/>
                     </div>
-                </FlickingVue>
-            </ClientOnly>
+                </Flicking>
        </div>
     </div>
 </template>
 <script setup lang="ts">
-import FlickingVue, { useFlickingReactiveAPI } from "@egjs/vue3-flicking";
+import Flicking, { useFlickingReactiveAPI } from "@egjs/vue3-flicking";
 
 import type { Ref } from 'vue'
 import sectionImg from '~/assets/images/utilitiesSlide/section-4.jpg'
@@ -35,7 +33,7 @@ const list = ref([{
 }, {
     img: sectionImg
 }]);
-const flickingCompRef = ref<InstanceType<typeof FlickingVue> | null>(null)
+const flickingCompRef = ref<InstanceType<typeof Flicking> | null>(null)
 // Flicking options
 const flickingOptions = reactive({
   circular: false,
