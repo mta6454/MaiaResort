@@ -12,7 +12,7 @@
         biển <br> ion hóa tái tạo sức khỏe, cải thiện tinh thần.
       </div>
       <div class="second-slide-wrapper">
-        <!--  cái slide thứ 2 ở đây -->
+        <CarouselsPrivilegeCarousel  class="py-8"/>
       </div>
       <SectionDevide/>
       <p class="second-slide-subtitle text-xl font-sans font-semibold">
