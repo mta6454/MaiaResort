@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="slide-wrapper">
-        <!-- slide ở đây -->
+        <UtilitiesCarousel />
       </div>
       <div class="mt-16 font-rosellinda text-3xl text-light text-navy">
         Và không chỉ dừng lại ở sự tĩnh tại.
@@ -46,4 +46,5 @@
 
 <script setup lang="ts">
 import SectionDevide from '~/components/commons/SectionDevide.vue'
+import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
 </script>
