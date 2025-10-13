@@ -38,7 +38,7 @@
           </div>
         </div>
         <div class="map col-md-8">
-          <img src="/assets/images/map.svg" alt="Map" />
+          <img style="color: white" src="/assets/images/map.svg" alt="Map" />
         </div>
         <div class="pin_effect">
           <div class="box_img">
@@ -77,7 +77,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 }
 
 .container {
-  margin-top: 120vh;
+  margin-top: 50vh;
 }
 
 .schedule-wrapper {}

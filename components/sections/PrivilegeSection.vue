@@ -12,7 +12,7 @@
         biển <br> ion hóa tái tạo sức khỏe, cải thiện tinh thần.
       </div>
       <div class="second-slide-wrapper">
-        <CarouselsPrivilegeCarousel  class="py-8"/>
+        <CarouselsPrivilegeCarousel class="py-8"/>
       </div>
       <SectionDevide/>
       <p class="second-slide-subtitle text-xl font-sans font-semibold">
@@ -65,10 +65,13 @@
       <div style="padding-top: 50px" class="mini-vegas w-screen relative left-1/2 -translate-x-1/2 mt-8 text-white">
         <div class="mini-vegas-row px-4 sm:px-0">
           <!-- Card 1 -->
-          <div class="perk-card relative overflow-hidden rounded-xl">
-            <img src="/images/Section-8.2.1.png" alt="Casino" class="perk-img">
+          <div class="relative rounded-xl" style="position: relative">
+            <div style="height: 80%;">
+              <img src="/images/Section-8.2.1.png" alt="Casino" class="perk-img">
+            </div>
+            <div style="height: 20%;"></div>
             <div class="perk-gradient"></div>
-            <div class="perk-content">
+            <div class="perk-content" style="z-index: 9999;">
               <div class="font-rosellinda text-xl sm:text-2xl leading-snug">
                 Dòng tiền thu nhập<br>tốt nhất
               </div>
@@ -215,7 +218,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 }
 
 .perk-card {
-  height: 520px;
+  height: 620px;
 }
 
 @media (max-width: 767.98px) {

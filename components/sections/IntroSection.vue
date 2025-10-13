@@ -25,14 +25,14 @@
           </span>
         </div>
       </div>
-      <div class="intro_description intro_description_first text-center mt-8">
+      <div class="intro_description intro_description_first text-center mt-10">
         Đây không chỉ là nơi để bạn tìm lại an vui, mà còn là giá trị bền vững được kiến tạo cho
       </div>
-      <div class="text-second text-2xl text-center mt-8  font-semibold text-intro">
+      <div class="text-second text-2xl text-center font-semibold text-intro mt-8">
         Happy Tower & Villa tại Maia Resort Ho Tram, <br>
         chốn an trú độc tôn cho những chủ nhân tinh hoa.
       </div>
-      <div class="cta-schedule mt-8 text-center">
+      <div class="cta-schedule mt-16 text-center">
         <div class="cta-title">ĐẶT LỊCH ĐỂ TRẢI NGHIỆM</div>
 
         <!-- Icon power–down custom (theo thiết kế) -->
@@ -58,7 +58,7 @@
       <div class="text-second text-2xl text-center mt-8  font-semibold text-intro">
         Có những nơi thiên nhiên chỉ dừng lại ở phong cảnh,
       </div>
-      <div class="intro_description text-center">
+      <div class="intro_description text-center" style="margin-top: 20px">
         Nhưng ở Maia Resort Ho Tram,
       </div>
       <div class="text-second text-center font-semibold">
@@ -102,7 +102,7 @@ import arrowRight from '~/assets/images/arrow-right.svg'
 }
 
 .intro_description_first {
-  padding-top: 35vh;
+  padding-top: 40vh;
 }
 
 .cta-schedule {
