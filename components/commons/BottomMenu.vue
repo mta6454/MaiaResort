@@ -7,18 +7,18 @@
         </div>
       </div>
       <div class="col-md-3 right-divide">
-        <div class="bottom-menu-item flex items-center justify-center ">
+        <div class="bottom-menu-item flex items-center justify-center" @click="go('#map')">
           XEM BẢN ĐỒ
         </div>
       </div>
       <div class="col-md-3 right-divide">
-        <div class="bottom-menu-item flex items-center justify-center ">
+        <div class="bottom-menu-item flex items-center justify-center" @click="go('#register')">
           TƯ VẤN NGAY
         </div>
       </div>
       <div class="col-md-3">
         <div class="bottom-menu-item flex items-center justify-center">
-          360° DỰ ÁN
+          <a target="_blank" href="https://vr360.maiaresorthotram.com/">360° DỰ ÁN</a>
         </div>
       </div>
     </div>
@@ -49,4 +49,18 @@
 .bottom-menu-item {
   cursor: pointer;
 }
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
 </style>
+<script setup lang="ts">
+function go(hash) {
+  close()
+  if (hash && hash.startsWith('#')) {
+    const el = document.querySelector(hash)
+    if (el) el.scrollIntoView({behavior: 'smooth'})
+  }
+}
+</script>

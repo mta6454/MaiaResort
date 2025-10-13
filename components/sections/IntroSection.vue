@@ -35,8 +35,7 @@
       <div class="cta-schedule mt-16 text-center">
         <div class="cta-title">ĐẶT LỊCH ĐỂ TRẢI NGHIỆM</div>
 
-        <!-- Icon power–down custom (theo thiết kế) -->
-        <span class="cta-icon" aria-hidden="true">
+        <span @click="go('#register')" class="cta-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" class="icon" xmlns="http://www.w3.org/2000/svg">
 
             <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -88,6 +87,13 @@
 import utilities from '~/assets/images/utilitiesImage.jpg'
 import utilitiesSecond from '~/assets/images/section-2_2.jpg'
 import arrowRight from '~/assets/images/arrow-right.svg'
+
+function go(hash) {
+  if (hash && hash.startsWith('#')) {
+    const el = document.querySelector(hash)
+    if (el) el.scrollIntoView({behavior: 'smooth'})
+  }
+}
 </script>
 <style scoped>
 .intro_content {

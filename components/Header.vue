@@ -8,7 +8,7 @@
           </a>
         </div>
         <div class="btn_header">
-          <a href="https://vr360.maiaresorthotram.com/">
+          <a target="_blank" href="https://vr360.maiaresorthotram.com/">
             <img :src="View360" alt="View360" class="view360" />
           </a>
         </div>

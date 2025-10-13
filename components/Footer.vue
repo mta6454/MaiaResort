@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer-wrapper">
+  <div class="footer-wrapper">
     <div class="container footer">
       <div class="row">
         <div class="col-md-4">
@@ -26,7 +26,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2" style="margin-left: 30px">
           <div class="footer-item">
             <div class="footer-item-title text-size-normal text-semibold mb-1">
               Hotline
@@ -50,27 +50,52 @@
             </div>
           </div>
         </div>
-        <div class="col-md-2">
-          <div class="footer-item">
-            <!-- icon facebook -->
+        <div class="col-md-1" style="margin-left: 70px">
+          <div class="footer-item socials">
+            <a target="_blank" href="https://www.facebook.com/MaiaResortHoTram.vn" aria-label="Facebook">
+              <img :src="facebookIcon" alt="Facebook" class="facebook"/>
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
 </template>
 
 <script setup lang="ts">
+import facebookIcon from "assets/images/facebook.svg";
 </script>
 
 <style scoped>
 .footer-wrapper {
   background-color: rgba(0, 85, 102);
-
+  z-index: 9999;
+  position: relative;
 }
+
 .footer {
-padding: 2rem 0;
-color: #fff;
+  padding: 2rem 0;
+  color: #fff;
 }
 
+.socials a {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1.5px solid rgba(255, 255, 255, .6);
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.socials a img {
+  cursor: pointer;
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  margin: auto;
+}
 </style>
