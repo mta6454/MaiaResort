@@ -10,10 +10,12 @@
       </div>
       <div class="map-wrapper flex flex-row">
 
+        <div class="schedule">
+<!--            <img src="/assets/images/schedule.png" alt="Schedule"></img>-->
+        </div>
         <div class="map">
           <img src="/assets/images/map.svg" alt="Map" />
         </div>
-        <!-- Sửa lại pin ở đây -->
         <div class="pin_effect">
           <div class="box_img">
             <img src="https://maiaresorthotram.com/wp-content/themes/thuythu-child/assets/images/home/pin_logo.svg"
@@ -30,12 +32,12 @@
 <script setup lang="ts">
 import SectionDevide from '~/components/commons/SectionDevide.vue'
 </script>
-<style>
+<style scoped>
 .map-wrapper {
   position: relative;
 }
 .map {
-  width: 100%;
+  width: 50%;
   height: 100%;
 }
 .pin_effect {
@@ -46,5 +48,14 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   align-items: center;
   justify-content: center;
   z-index: 9;
+}
+
+.container {
+  margin-top: 120vh;
+}
+
+.schedule img {
+  width: 50%;
+  height: 100%;
 }
 </style>
