@@ -83,10 +83,33 @@
                     </div>
                 </div>
             </div>
-            <div class="py-8">
-                <div class="row">
-                    <!-- 2 ảnh ở đây -->
-                </div>
+            <div class="project-wrapper">
+							<div class="d-flex justify-content-between gap-4">
+								<div class="project-item">
+									<img alt="test-image" src="/assets/images/project/project-1.jpg" width="100%" height="100%"/>
+									<div class="project-item-content p-4 d-flex justify-content-between">
+										<div class="text-uppercase d-flex align-items-end text-2xl md:text-3xl">Happy Tower</div>
+										<div class="project-item-content-button">
+											<div class="d-flex justify-content-end mb-2">
+												<img alt="icon" src="/assets/images/arrow-right.svg" width="45" height="45" class="me-2"/>
+											</div>
+											<div class="md:text-xl">Xem thêm ảnh</div>
+										</div>
+									</div>
+								</div>
+								<div class="project-item">
+									<img alt="test-image" src="/assets/images/project/project-2.jpg" width="100%" height="100%"/>
+									<div class="project-item-content p-4 d-flex justify-content-between">
+										<div class="text-uppercase d-flex align-items-end text-2xl md:text-3xl">Villa</div>
+										<div class="project-item-content-button">
+											<div class="d-flex justify-content-end mb-2">
+												<img alt="icon" src="/assets/images/arrow-right.svg" width="45" height="45" class="me-2"/>
+											</div>
+											<div class="md:text-xl">Xem thêm ảnh</div>
+										</div>
+									</div>
+								</div>
+							</div>
             </div>
             <div class="text-center">
                 <div class="font-rosellinda text-3xl main-text">
@@ -133,5 +156,27 @@ import ProductForm from '~/components/commons/ProductForm.vue'
   width: 200px;
   height: 80px;
   object-fit: contain;
+}
+
+.project-wrapper{
+	margin: 3.5rem 0;
+}
+
+.project-item{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	
+}
+
+.project-item-content{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: linear-gradient(to bottom, rgba(0, 85, 102, 0.6), rgba(0, 150, 136, 0.6));
+}
+
+.project-item-content-button:hover{
+	cursor: pointer; /* TODO: Add animation */
 }
 </style>
