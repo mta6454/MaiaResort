@@ -1,7 +1,7 @@
 <template>
     <div class="product-form">
         <div class="product-form-title text-center">Happy Tower & Villa tại Maia Resort Ho Tram</div>
-        <div class="product-form-subtitle text-center">
+        <div class="product-form-subtitle text-center mt-4">
             <span class="font-rosellinda main-text-cl text-2xl">
                 Giữa
             </span>
@@ -14,7 +14,7 @@
                 chọn
             </span>
             <span class="sub-cl font-semibold text-xl">
-                an vui,
+                an vui,&nbsp;
             </span>
             <span class="font-rosellinda main-text-cl text-2xl">
                 chọn

@@ -5,6 +5,8 @@ export default defineNuxtConfig({
   css: [
     "~/assets/css/tailwind.css",
     "~/assets/css/base.css",
-    "bootstrap/dist/css/bootstrap.min.css"
+    "bootstrap/dist/css/bootstrap.min.css",
+    '@egjs/vue3-flicking/dist/flicking.css',
+    '@egjs/vue3-flicking/dist/flicking-inline.css'
   ],
 });
