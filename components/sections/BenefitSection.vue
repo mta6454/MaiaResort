@@ -12,7 +12,7 @@
 
         </div>
       </div>
-      <div class="slide-wrapper">
+      <div class="slide-wrapper w-100">
         <UtilitiesCarousel />
       </div>
       <div class="mt-16 font-rosellinda text-3xl text-light text-navy">
