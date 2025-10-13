@@ -15,13 +15,13 @@
             chọn
           </span>
           <span class="font-sans sub-cl font-semibold">
-            an vui,
+            An vui,
           </span>
           <span class="font-rosellinda main-text-cl main-text text-2xl">
             chọn
           </span>
           <span class="font-sans sub-cl font-extrabold">
-            giá trị bền vững.
+            Giá trị bền vững.
           </span>
         </div>
       </div>

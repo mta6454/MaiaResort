@@ -1,5 +1,5 @@
-# Use Node.js 22.20 on Alpine 3.20 for up-to-date security fixes
-FROM node:22.20-alpine3.20 AS base
+# Use Node.js 22.14 on Alpine 3.20 for up-to-date security fixes
+FROM node:22140-alpine3.20 AS base
 
 # Apply security updates to base image packages
 RUN apk update && apk upgrade --no-cache
