@@ -1,5 +1,5 @@
 <template>
-  <section id="benefits" class="">
+  <section id="utilities" class="">
     <div class="container text-white text-center">
       <div class="slide-title">
         <div class="slide-title-text">

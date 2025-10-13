@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="map">
     <div class="container">
       <div class="text-center font-rosellinda text-3xl third-cl">
         Và hơn thế.
@@ -8,12 +8,36 @@
         Maia Resort Ho Tram còn tọa lạc ngay trung tâm thủ phủ nghỉ dưỡng Hồ Tràm,<br>kết nối trực tiếp đến TP. Hồ Chí
         Minh và sân bay quốc tế Long Thành.
       </div>
-      <div class="map-wrapper flex flex-row">
+      <div class="map-wrapper flex flex-row align-items-center">
 
-        <div class="schedule">
-<!--            <img src="/assets/images/schedule.png" alt="Schedule"></img>-->
+        <div class="schedule-wrapper col-md-2">
+          <div class="schedule-item">
+            <div class="schedule-item_dot"></div>
+            <div class="schedule-item-content">
+              <img src="https://maiaresorthotram.com/wp-content/themes/thuythu-child/assets/images/home/pin_logo.svg"
+                alt="pin_logo">
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-item_dot"></div>
+            <div class="schedule-item-content">
+              <div><span class="text-bold text-2xl sub-cl">30 </span> <span class="font-rosellinda text-white text-xl">Phút</span></div>
+              <div class="text-white text-size-normal">
+                Là thời gian di chuyển từ đây tới sân bay quốc tế Long Thành
+              </div>
+            </div>
+          </div>
+          <div class="schedule-item">
+            <div class="schedule-item_dot"></div>
+            <div class="schedule-item-content">
+              <div><span class="text-bold text-2xl sub-cl">90 </span> <span class="font-rosellinda text-white text-xl">Phút</span></div>
+              <div class="text-white text-size-normal">
+                Là thời gian di chuyển giữa Maia Resort Ho Tram và Siêu Đô thị Hồ Chí Minh
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="map">
+        <div class="map col-md-8">
           <img src="/assets/images/map.svg" alt="Map" />
         </div>
         <div class="pin_effect">
@@ -25,7 +49,7 @@
       </div>
     </div>
     <SectionDevide />
-    
+
   </section>
 </template>
 
@@ -36,10 +60,12 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 .map-wrapper {
   position: relative;
 }
+
 .map {
   width: 50%;
   height: 100%;
 }
+
 .pin_effect {
   position: absolute;
   top: 42.4%;
@@ -54,8 +80,56 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   margin-top: 120vh;
 }
 
-.schedule img {
-  width: 50%;
+.schedule-wrapper {}
+
+.schedule-item {
+  align-items: center;
+  display: flex;
+  position: relative;
+
+}
+
+.schedule-item-content img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.schedule-item-content {
+
+}
+.schedule-item_dot {
+  min-width: 1rem;
+  height: 1rem;
+  background-color: #ECBD6A;
+  border-radius: 99px;
+  z-index: 1;
+}
+.schedule-item:not(:first-child):not(:last-child) {
+  padding: 2rem 0;
+}
+.schedule-item-content {
+  margin-left: 1rem;
+}
+.schedule-item:first-child::before {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  left: calc(0.5rem - 1px);
+  height: 50%;
+  border-left: 2px dashed #fff;
+}
+.schedule-item:last-child::before {
+  content: '';
+  position: absolute;
+  bottom: calc(50% - 2px);
+  left: calc(0.5rem - 1px);
+  height: 50%;
+  border-left: 2px dashed #fff;
+}
+.schedule-item::before {
+  content: '';
+  position: absolute;
+  left: calc(0.5rem - 1px);
   height: 100%;
+  border-left: 2px dashed #fff;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <section id="second-slide" class="mt-4">
+  <section id="privilege" class="mt-4">
     <div class="container text-center text-white">
       <div class="second-slide-title font-rosellinda text-2xl">
         Wellness từ thiên nhiên

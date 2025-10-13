@@ -1,5 +1,5 @@
 <template>
-    <div class="product-form">
+    <div id="register" class="product-form">
         <div class="product-form-title text-center">Happy Tower & Villa tại Maia Resort Ho Tram</div>
         <div class="product-form-subtitle text-center mt-4">
             <span class="font-rosellinda main-text-cl text-2xl">

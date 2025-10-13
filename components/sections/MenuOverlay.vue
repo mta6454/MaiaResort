@@ -39,42 +39,42 @@
         <nav class="menu-right">
           <ol>
             <li>
-              <button class="menu-item" @click="go('#gioi-thieu')">
+              <button class="menu-item" @click="go('#intro')">
                 <span class="idx">01</span>
                 <span class="label">Giới thiệu</span>
                 <span class="rule"></span>
               </button>
             </li>
             <li>
-              <button class="menu-item" @click="go('#vi-tri')">
+              <button class="menu-item" @click="go('#map')">
                 <span class="idx">02</span>
                 <span class="label">Vị trí</span>
                 <span class="rule"></span>
               </button>
             </li>
             <li>
-              <button class="menu-item" @click="go('#tien-ich')">
+              <button class="menu-item" @click="go('#utilities')">
                 <span class="idx">03</span>
                 <span class="label">Tiện ích</span>
                 <span class="rule"></span>
               </button>
             </li>
             <li>
-              <button class="menu-item" @click="go('#dac-quyen')">
+              <button class="menu-item" @click="go('#privilege')">
                 <span class="idx">04</span>
                 <span class="label">Đặc Quyền Maia Resort Ho Tram</span>
                 <span class="rule"></span>
               </button>
             </li>
             <li>
-              <button class="menu-item" @click="go('#san-pham')">
+              <button class="menu-item" @click="go('#product')">
                 <span class="idx">05</span>
                 <span class="label">Sản phẩm</span>
                 <span class="rule"></span>
               </button>
             </li>
             <li>
-              <button class="menu-item" @click="go('#dang-ky')">
+              <button class="menu-item" @click="go('#register')">
                 <span class="idx">06</span>
                 <span class="label">Đăng ký tư vấn</span>
                 <span class="rule"></span>

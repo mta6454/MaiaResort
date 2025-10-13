@@ -6,7 +6,7 @@
             </div>
         </div>
        <div class="col-md-10">
-            <FlickingVue :options="flickingOptions" ref="flickingCompRef" @ready="onReady">
+            <FlickingVue :options="flickingOptions" ref="flickingPrivilegeCompRef" @ready="onReady">
                 <div v-for="(item, idx) in list" class="flicking-panel" :key="idx">
                     <img :src="item?.img" alt="privilege" class="flicking-panel-img"/>
                 </div>
@@ -34,7 +34,7 @@ const list = ref([{
 }, {
     img: sectionImg
 }]);
-const flickingCompRef = ref<InstanceType<typeof FlickingVue> | null>(null)
+const flickingPrivilegeCompRef = ref<InstanceType<typeof FlickingVue> | null>(null)
 // Flicking options
 const flickingOptions = reactive({
   circular: false,
@@ -52,7 +52,7 @@ const {
   isReachEnd,
   progress,
   moveTo
-} = useFlickingReactiveAPI(flickingCompRef as unknown as Ref<any>)
+} = useFlickingReactiveAPI(flickingPrivilegeCompRef as unknown as Ref<any>)
 
 // Methods
 const onReady = (_e: any) => {}
@@ -68,7 +68,7 @@ const handleNext = () => {
   }
 }
 onMounted(() => {
-  if (flickingCompRef.value) {
+  if (flickingPrivilegeCompRef.value) {
     console.log('Flicking instance mounted')
   }
 })
