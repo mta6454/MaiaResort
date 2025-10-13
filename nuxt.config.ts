@@ -9,4 +9,5 @@ export default defineNuxtConfig({
     '@egjs/vue3-flicking/dist/flicking.css',
     '@egjs/vue3-flicking/dist/flicking-inline.css'
   ],
+  build: { transpile: ['@egjs/vue3-flicking'] }
 });

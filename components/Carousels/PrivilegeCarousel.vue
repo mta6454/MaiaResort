@@ -6,11 +6,13 @@
             </div>
         </div>
        <div class="col-md-10">
-            <FlickingVue :options="flickingOptions" ref="flickingPrivilegeCompRef" @ready="onReady">
-                <div v-for="(item, idx) in list" class="flicking-panel" :key="idx">
-                    <img :src="item?.img" alt="privilege" class="flicking-panel-img"/>
-                </div>
-            </FlickingVue>
+            <ClientOnly>
+                <FlickingVue :options="flickingOptions" ref="flickingPrivilegeCompRef" @ready="onReady">
+                    <div v-for="(item, idx) in list" class="flicking-panel" :key="idx">
+                        <img :src="item?.img" alt="privilege" class="flicking-panel-img"/>
+                    </div>
+                </FlickingVue>
+            </ClientOnly>
        </div>
        <div class="col-md-1">
             <div class="privilege-carousel-prev" @click="handleNext">
