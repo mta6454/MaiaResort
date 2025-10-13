@@ -89,6 +89,7 @@ const showMenu = ref(false)
   filter: brightness(0) invert(1);
 }
 .icon_menu {
+  cursor: pointer;
   width: 2.34375rem;
   height: 2.34375rem;
 }
