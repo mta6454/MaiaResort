@@ -9,12 +9,11 @@
         Minh và sân bay quốc tế Long Thành.
       </div>
       <div class="map-wrapper flex flex-row align-items-center">
-
         <div class="schedule-wrapper col-md-2">
           <div class="schedule-item">
             <div class="schedule-item_dot"></div>
             <div class="schedule-item-content">
-              <img src="https://maiaresorthotram.com/wp-content/themes/thuythu-child/assets/images/home/pin_logo.svg"
+              <img src="/assets/images/logo-gold.png"
                 alt="pin_logo">
             </div>
           </div>
@@ -38,18 +37,11 @@
           </div>
         </div>
         <div class="map col-md-8">
-          <img style="color: white" src="/assets/images/map.svg" alt="Map" />
-        </div>
-        <div class="pin_effect">
-          <div class="box_img">
-            <img src="https://maiaresorthotram.com/wp-content/themes/thuythu-child/assets/images/home/pin_logo.svg"
-              alt="pin_logo">
-          </div>
+          <img src="/assets/images/new-map.png" alt="Map" />
         </div>
       </div>
     </div>
     <SectionDevide />
-
   </section>
 </template>
 
@@ -66,21 +58,14 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   height: 100%;
 }
 
-.pin_effect {
-  position: absolute;
-  top: 42.4%;
-  right: 28.8%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9;
-}
-
 .container {
-  margin-top: 50vh;
+  /* TODO: Update */
+  margin-top: 3vh;
+  max-width: 1600px;
+  @media (max-width: 1440px) {
+    margin-top: 10vh;
+  }
 }
-
-.schedule-wrapper {}
 
 .schedule-item {
   align-items: center;
@@ -93,9 +78,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   width: 3.5rem;
   height: 3.5rem;
 }
-.schedule-item-content {
 
-}
 .schedule-item_dot {
   min-width: 1rem;
   height: 1rem;
