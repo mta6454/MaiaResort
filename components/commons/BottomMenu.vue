@@ -1,5 +1,5 @@
 <template>
-  <div class="bottom-menu w-40">
+  <div class="bottom-menu w-40 text-size-normal">
     <div class="row">
       <div class="col-md-3 right-divide">
         <div class="bottom-menu-item flex items-center justify-center">

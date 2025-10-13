@@ -21,14 +21,14 @@
 
       <div class="header_right">
         <!-- icon menu -->
-        <div class="icon_menu" @click="showMenu = true">
+        <div class="icon_menu" @click.prevent="showMenu = true">
           <img :src="menuIcon" alt="Menu" class="menu" />
-          <MenuOverlay
-              v-model:open="showMenu"
-          />
         </div>
       </div>
     </div>
+    <MenuOverlay
+        v-model:open="showMenu"
+    />
   </header>
 </template>
 

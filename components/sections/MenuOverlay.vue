@@ -15,7 +15,7 @@
       <div class="menu-wrap" @click.stop>
         <!-- Cột trái -->
         <section class="menu-left text-center">
-          <img style="margin-left: 5vw;" class="brand" :src="logo" alt="MAIA" v-if="logo"/>
+          <img class="brand" :src="logo" alt="MAIA" v-if="logo"/>
           <div class="brand-text text-center">
             <h3>Maia Sales Gallery</h3>
             <p>23 Trần Bạch Đằng, P. An Khánh, TP.HCM</p>
@@ -24,8 +24,12 @@
             <p class="address">Xã Hồ Tràm, Thành phố Hồ Chí Minh</p>
 
             <div class="socials">
-              <a href="#" aria-label="Call"><i>📞</i></a>
-              <a href="#" aria-label="Facebook"><i></i></a>
+              <a href="#" aria-label="Call">
+                <img :src="phoneIcon" alt="Phone" class="phone" />
+              </a>
+              <a href="#" aria-label="Facebook">
+                <img :src="facebookIcon" alt="Facebook" class="facebook" />
+              </a>
               <a href="https://vr360.maiaresorthotram.com/" aria-label="360"><img :src="View360" alt="View360" class="view360" width="24px" height="24px"/></a>
             </div>
           </div>
@@ -87,7 +91,8 @@
 import {watch, onBeforeUnmount} from 'vue'
 import View360 from "assets/images/View360.gif";
 import logo from '~/assets/images/logo-white.png'
-
+import phoneIcon from '~/assets/images/phone.svg'
+import facebookIcon from '~/assets/images/facebook.svg'
 const props = defineProps({
   open: {type: Boolean, default: false},   // v-model:open
   logo: {type: String, default: ''}
@@ -182,8 +187,9 @@ onBeforeUnmount(() => {
 }
 
 .menu-left {
-  display: grid;
-  justify-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 16px;
 }
 
@@ -227,6 +233,7 @@ onBeforeUnmount(() => {
   display: flex;
   gap: 10px;
   margin-top: 18px;
+  justify-content: center;
 }
 
 .socials a {
@@ -239,8 +246,15 @@ onBeforeUnmount(() => {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
+  
 }
+.socials a img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  margin: auto;
 
+}
 .menu-right ol {
   list-style: none;
   padding: 0;
