@@ -102,7 +102,11 @@ import arrowRight from '~/assets/images/arrow-right.svg'
 }
 
 .intro_description_first {
-  padding-top: 35vh;
+  /* TODO: Update */
+  padding-top: 15vh;
+  @media (max-width: 1440px) {
+    padding-top: 35vh;
+  }
 }
 
 .cta-schedule {
