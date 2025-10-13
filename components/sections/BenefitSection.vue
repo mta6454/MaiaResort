@@ -1,5 +1,5 @@
 <template>
-  <section id="utilities" class="">
+  <section id="utilities" class="mt-16">
     <div class="container text-white text-center">
       <div class="slide-title">
         <div class="slide-title-text">
@@ -12,13 +12,13 @@
 
         </div>
       </div>
-      <div class="slide-wrapper w-100 py-8">
+      <div class="slide-wrapper w-100 py-8 mt-16">
         <UtilitiesCarousel />
       </div>
-      <div class="my-8 font-rosellinda text-3xl text-light text-navy">
+      <div class="my-8 font-rosellinda text-3xl text-navy mt-16" style="color: #365967;">
         Và không chỉ dừng lại ở sự tĩnh tại.
       </div>
-      <div class="text-black">
+      <div class="text-black mt-16">
         Maia Resort Ho Tram còn nằm trong lòng tổ hợp tỷ đô The Grand Ho Tram - trung tâm nghỉ dưỡng & giải trí hàng đầu
         Việt Nam.<br>
         Tại đây, quý khách được tận hưởng những đặc quyền hiếm có
@@ -37,7 +37,7 @@
         kiến tạo trải nghiệm trọn vẹn chưa từng có.
       </p>
     </div>
-    <div class="mt-16 hightlight-wrapper">
+    <div class="mt-16 hightlight-wrapper mb-16">
       <!-- 3 cái highlight ở đây -->
         <div class="benefit-wrapper container d-flex justify-content-between">
           <div class="benefit-item benefit-item-1 d-flex flex-column justify-center align-items-center">
@@ -87,4 +87,6 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
  width: auto;
  object-fit: contain;
 }
+
+
 </style>

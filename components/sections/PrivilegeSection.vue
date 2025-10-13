@@ -1,5 +1,5 @@
 <template>
-  <section id="privilege" class="mt-4">
+  <section id="privilege" class="mt-16">
     <div class="container text-center text-white">
       <div class="second-slide-title font-rosellinda text-2xl">
         Wellness từ thiên nhiên
@@ -7,18 +7,18 @@
       <div class="second-slide-subtitle text-xl font-sans font-light">
         Không khí rừng giàu anion & gió biển ion hóa <br> tái tạo sức khỏe, cải thiện tinh thần.
       </div>
-      <div class="mt-4 text-light font-sans font-normal">
+      <div class="mt-8 text-light font-sans font-normal">
         Ở đây, việc dung dưỡng thân - tâm - trí không còn là xa xỉ. Đó là hơi thở của rừng vàng giàu anion, là làn gió
         biển <br> ion hóa tái tạo sức khỏe, cải thiện tinh thần.
       </div>
-      <div class="second-slide-wrapper">
+      <div class="second-slide-wrapper mt-16 mb-16">
         <CarouselsPrivilegeCarousel class="py-8"/>
       </div>
       <SectionDevide/>
-      <p class="second-slide-subtitle text-xl font-sans font-semibold">
+      <p class="second-slide-subtitle text-xl font-sans font-semibold mt-16">
         Maia Resort Ho Tram hội tụ uy tín quốc tế, sự am hiểu bản địa và chuẩn mực vận hành tinh hoa.
       </p>
-      <div class="privilege-wrapper px-16 py-8">
+      <div class="privilege-wrapper px-16 py-8 mt-16 mb-16">
         <div class="font-rosellinda text-3xl text-white font-light">Thuộc hệ sinh thái tài sản đầu tư</div>
         <div class="text-xl font-sans font-normal">Quỹ đầu tư uy tín nước Mỹ</div>
         <div class="py-8 privilege-name text-3xl font-sans font-bold">
@@ -76,7 +76,7 @@
         </div>
       </div>
       <SectionDevide/>
-      <p class="text-2xl font-sans font-semibold">
+      <p class="text-2xl font-sans font-semibold mt-16">
                 <span class="font-rosellinda text-3xl font-light">
                     Được ví như
                 </span> "Las Vegas thu nhỏ"
@@ -150,7 +150,26 @@
       </div>
 
     </div>
+    <div class="cta-schedule mt-16 text-center">
+      <div class="cta-title">ĐẶT LỊCH ĐỂ TRẢI NGHIỆM</div>
 
+      <!-- Icon power–down custom (theo thiết kế) -->
+      <span class="cta-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="icon" xmlns="http://www.w3.org/2000/svg">
+
+            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-dasharray="50 8" stroke-dashoffset="12"/>
+
+            <!-- Thân mũi tên -->
+            <path d="M12 2v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+
+            <!-- Đầu mũi tên -->
+            <path d="M9.75 11.5L12 14l2.25-2.5" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+        </span>
+    </div>
   </section>
 </template>
 
@@ -164,7 +183,6 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 
 .privilege-wrapper {
   background: linear-gradient(to bottom, rgba(0, 85, 102, 0.6), rgba(0, 150, 136, 0.6));
-
 }
 
 .privilege-name {
@@ -249,26 +267,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 }
 
 .perk-card {
-  height: 700px;
-}
-
-@media (max-width: 767.98px) {
-  .perk-card {
-    height: 420px;
-  }
-}
-
-.perk-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.perk-card {
-  position: relative;
-  height: 520px;
-  overflow: hidden;
+  height: 800px;
 }
 
 @media (max-width: 767.98px) {
@@ -283,6 +282,18 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   object-fit: cover;
   display: block;
   z-index: 0;
+}
+
+.perk-card {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+}
+
+@media (max-width: 767.98px) {
+  .perk-card {
+    height: 420px;
+  }
 }
 
 .perk-gradient {
@@ -331,30 +342,59 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 }
 
 .text-item-color {
-  background:
-      radial-gradient(130% 70% at 50% 0%,
-      rgba(255,255,255,.95) 0%,
-      rgba(255,255,255,0) 50%),
-      linear-gradient(180deg,
-      #FFF9DC 0%,   /* sáng hơn */
-      #FFEFAF 24%,  /* vàng nhạt */
-      #FFD84A 50%,  /* vàng tươi rực */
-      #FFE7A8 72%,  /* ánh sáng lại */
-      #D9A231 100%  /* chút chiều sâu, ít nâu */
-      );
+  background: radial-gradient(130% 70% at 50% 0%,
+  rgba(255, 255, 255, .95) 0%,
+  rgba(255, 255, 255, 0) 50%),
+  linear-gradient(180deg,
+      #FFF9DC 0%, /* sáng hơn */ #FFEFAF 24%, /* vàng nhạt */ #FFD84A 50%, /* vàng tươi rực */ #FFE7A8 72%, /* ánh sáng lại */ #D9A231 100% /* chút chiều sâu, ít nâu */
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 
   /* nổi rõ trên nền tối nhưng không bẩn màu */
-  text-shadow:
-      0 1px 1px rgba(0,0,0,.18),
-      0 6px 16px rgba(0,0,0,.22);
-  -webkit-text-stroke: .25px rgba(0,0,0,.12);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .18),
+  0 6px 16px rgba(0, 0, 0, .22);
+  -webkit-text-stroke: .25px rgba(0, 0, 0, .12);
 }
 
 .text-percent {
   padding-top: 30px;
   font-size: 24px;
+}
+
+.cta-schedule {
+  text-align: center;
+  padding: 16px 0 10px;
+}
+
+.cta-title {
+  font-family: "SVN-Zona Pro", system-ui, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .16em;
+  font-size: 14px;
+  color: #fff;
+}
+
+.cta-icon {
+  display: inline-flex;
+  margin-top: 8px;
+  /* khoảng hở giữa chữ và icon */
+  color: #fff;
+  /* màu icon */
+  cursor: pointer;
+}
+
+.cta-icon .icon {
+  width: 38px;
+  /* đường kính icon ~38–40px */
+  height: 38px;
+}
+
+/* nhẹ nhàng: rung xuống một chút khi hover */
+.cta-icon:hover .icon {
+  transform: translateY(1px);
+  transition: transform .18s ease;
 }
 </style>

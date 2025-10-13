@@ -1,14 +1,14 @@
 <template>
   <section id="map">
     <div class="container">
-      <div class="text-center font-rosellinda text-3xl third-cl">
-        Và hơn thế.
+      <div class="text-center font-rosellinda text-3xl third-cl mt-8">
+        Và hơn thế
       </div>
-      <div class="text-center text-white main-text">
+      <div class="text-center text-white main-text mt-16">
         Maia Resort Ho Tram còn tọa lạc ngay trung tâm thủ phủ nghỉ dưỡng Hồ Tràm,<br>kết nối trực tiếp đến TP. Hồ Chí
         Minh và sân bay quốc tế Long Thành.
       </div>
-      <div class="map-wrapper flex flex-row align-items-center">
+      <div class="map-wrapper flex flex-row align-items-center mt-16">
         <div class="schedule-wrapper col-md-2">
           <div class="schedule-item">
             <div class="schedule-item_dot"></div>

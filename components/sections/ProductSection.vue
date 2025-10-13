@@ -27,7 +27,7 @@
                         Thương hiệu vận hành
                     </div>
                     <div class="text-size-normal">
-                        fusion
+                      <img alt="" class="img-partner" src="/assets/images/Fusion-logo.png"/>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -46,6 +46,9 @@
                     <div class="font-rosellinda text-2xl main-text">
                         Đơn vị thiết kế
                     </div>
+                  <div class="text-size-normal">
+                    <img alt="" class="img-partner" src="/assets/images/dewan-logo.png"/>
+                  </div>
                 </div>
             </div>
             <div class="devide-line my-16"></div>
@@ -89,7 +92,7 @@
                 <div class="font-rosellinda text-3xl main-text">
                     Maia Ho Tram trở lại cùng tuyệt tác
                 </div>
-                <div>
+                <div class="mt-16">
                     Happy Tower và bộ sưu tập 36 căn Villa.
                 </div>
                 <SectionDevide />
@@ -100,7 +103,7 @@
                     97% căn hộ được mua chốt chỉ sau 1 tháng ra mắt
                 </div>
             </div>
-            <div class="py-8 row">
+            <div class="py-8 row mt-16">
                 <div class="col-md-6"></div>
                 <div class="col-md-6"><ProductForm /></div>
             </div>
@@ -121,5 +124,14 @@ import ProductForm from '~/components/commons/ProductForm.vue'
 .product-number {
     line-height: 1.1;
     margin-right: 0.5rem;
+}
+#product {
+  margin-top: 70vh;
+}
+
+.img-partner {
+  width: 200px;
+  height: 80px;
+  object-fit: contain;
 }
 </style>

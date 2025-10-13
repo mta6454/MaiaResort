@@ -103,7 +103,7 @@ import arrowRight from '~/assets/images/arrow-right.svg'
 
 .intro_description_first {
   /* TODO: Update */
-  padding-top: 15vh;
+  padding-top: 40vh;
   @media (max-width: 1440px) {
     padding-top: 35vh;
   }
