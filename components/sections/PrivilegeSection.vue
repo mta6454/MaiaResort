@@ -47,7 +47,32 @@
           <div class="devide-line"></div>
         </div>
         <div class="flex flex-row">
-          <!-- Còn phần dưới của cái này -->
+          <div class="w-70" style="border-right: 1px solid yellow; width: 65%">
+              <div>
+                  <h5 class="font-rosellinda">Chủ đàu tư và đơn vị phát triển</h5>
+              </div>
+              <div class="flex-row flex">
+<div>
+<img class="img-partner" src="/assets/images/dewan-logo.png"></img>
+</div>
+<div>
+<img class="img-partner" src="/assets/images/Lodgis-logo.png"></img>
+</div>
+<div>
+<img class="img-partner" src="/assets/images/VinaLiving-Logo-White.png"></img>
+</div>
+              </div>
+          </div>
+          <div class="w-30 flex flex-column align-items-center" style="width: 35%;">
+  <div>
+                  <h5 class="font-rosellinda">Vận hành dưới thương hiệu</h5>
+              </div>
+          <div class="flex-row flex">
+<div>
+<img class="img-partner" src="/assets/images/Fusion-logo.png"></img>
+</div>
+              </div>
+          </div>
         </div>
       </div>
       <SectionDevide/>
@@ -66,18 +91,17 @@
         <div class="mini-vegas-row px-4 sm:px-0">
           <!-- Card 1 -->
           <div class="relative rounded-xl" style="position: relative">
-            <div style="height: 80%;">
+            <div style="height: 70%;">
               <img src="/images/Section-8.2.1.png" alt="Casino" class="perk-img">
             </div>
-            <div style="height: 20%;"></div>
+            <div style="height: 30%;"></div>
             <div class="perk-gradient"></div>
             <div class="perk-content" style="z-index: 9999;">
               <div class="font-rosellinda text-xl sm:text-2xl leading-snug">
                 Dòng tiền thu nhập<br>tốt nhất
               </div>
-              <div class="mt-3 flex items-baseline justify-center gap-1">
-                <span class="text-5xl sm:text-6xl font-extrabold leading-none">40</span>
-                <span class="text-3xl sm:text-4xl font-extrabold leading-none">%</span>
+              <div class="mt-2 flex items-baseline justify-center gap-1">
+                <span class="text-2xl sm:text-3xl font-extrabold leading-none">40%</span>
               </div>
               <div class="text-sm sm:text-base font-sans opacity-90 mt-1">doanh thu &amp; ổn định</div>
             </div>
@@ -85,7 +109,10 @@
 
           <!-- Card 2 -->
           <div class="perk-card relative overflow-hidden rounded-xl">
-            <img src="/images/Section-8.2.2.png" alt="Cheers" class="perk-img">
+            <div style="height: 70%;">
+              <img src="/images/Section-8.2.2.png" alt="Cheers" class="perk-img">
+            </div>
+            <div style="height: 30%;"></div>
             <div class="perk-gradient"></div>
             <div class="perk-content">
               <div class="font-rosellinda text-xl sm:text-2xl leading-snug">
@@ -102,15 +129,17 @@
 
           <!-- Card 3 -->
           <div class="perk-card relative overflow-hidden rounded-xl">
-            <img src="/images/Section-8.2.3.png" alt="Waiter" class="perk-img">
+            <div style="height: 70%;">
+              <img src="/images/Section-8.2.3.png" alt="Waiter" class="perk-img">
+            </div>
+            <div style="height: 30%;"></div>
             <div class="perk-gradient"></div>
             <div class="perk-content">
               <div class="font-rosellinda text-xl sm:text-2xl leading-snug">
                 Lịch thanh toán giản nhất<br>trên thị trường
               </div>
               <div class="mt-3 flex items-baseline justify-center gap-1">
-                <span class="text-5xl sm:text-6xl font-extrabold leading-none">50</span>
-                <span class="text-3xl sm:text-4xl font-extrabold leading-none">%</span>
+                <span class="text-2xl sm:text-3xl font-extrabold leading-none">50%</span>
               </div>
               <div class="text-sm sm:text-base font-sans opacity-90 mt-1">là nhận nhà</div>
             </div>
@@ -218,7 +247,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 }
 
 .perk-card {
-  height: 620px;
+  height: 700px;
 }
 
 @media (max-width: 767.98px) {
@@ -260,8 +289,8 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   right: 0;
   bottom: 0;
   height: 55%;
-  background: linear-gradient(0deg, rgba(0, 20, 10, .9), rgba(0, 20, 10, .45), rgba(0, 0, 0, 0));
-  z-index: 1; /* dưới nội dung, trên ảnh */
+  background: linear-gradient(0deg, rgba(0, 20, 10, .0), rgba(0, 20, 10, .45), rgba(0, 0, 0, 0));
+  z-index: 1;
 }
 
 .perk-content {
@@ -273,5 +302,11 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   text-align: center;
   color: #fff; /* đảm bảo chữ trắng */
   z-index: 2; /* trên cùng */
+}
+
+.img-partner {
+  width: 200px;
+  height: 80px;
+  object-fit: contain;
 }
 </style>
