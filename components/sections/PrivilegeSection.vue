@@ -47,31 +47,31 @@
           <div class="devide-line"></div>
         </div>
         <div class="flex flex-row">
-          <div class="w-70" style="border-right: 1px solid yellow; width: 65%">
+          <div class="banner-left">
+            <div>
+              <h5 class="font-rosellinda">Chủ đầu tư và đơn vị phát triển</h5>
+            </div>
+            <div class="flex-row flex">
               <div>
-                  <h5 class="font-rosellinda">Chủ đàu tư và đơn vị phát triển</h5>
+                <img class="img-partner" src="/assets/images/dewan-logo.png"></img>
               </div>
-              <div class="flex-row flex">
-<div>
-<img class="img-partner" src="/assets/images/dewan-logo.png"></img>
-</div>
-<div>
-<img class="img-partner" src="/assets/images/Lodgis-logo.png"></img>
-</div>
-<div>
-<img class="img-partner" src="/assets/images/VinaLiving-Logo-White.png"></img>
-</div>
+              <div>
+                <img class="img-partner" src="/assets/images/Lodgis-logo.png"></img>
               </div>
+              <div>
+                <img class="img-partner" src="/assets/images/VinaLiving-Logo-White.png"></img>
+              </div>
+            </div>
           </div>
-          <div class="w-30 flex flex-column align-items-center" style="width: 35%;">
-  <div>
-                  <h5 class="font-rosellinda">Vận hành dưới thương hiệu</h5>
+          <div class="flex flex-column align-items-center banner-right">
+            <div>
+              <h5 class="font-rosellinda">Vận hành dưới thương hiệu</h5>
+            </div>
+            <div class="flex-row flex">
+              <div>
+                <img class="img-partner" src="/assets/images/Fusion-logo.png"></img>
               </div>
-          <div class="flex-row flex">
-<div>
-<img class="img-partner" src="/assets/images/Fusion-logo.png"></img>
-</div>
-              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -101,7 +101,8 @@
                 Dòng tiền thu nhập<br>tốt nhất
               </div>
               <div class="mt-2 flex items-baseline justify-center gap-1">
-                <span class="text-2xl sm:text-3xl font-extrabold leading-none">40%</span>
+                <span class="font-extrabold leading-none text-label text-item-color">40</span><span
+                  class="text-item-color text-percent">%</span>
               </div>
               <div class="text-sm sm:text-base font-sans opacity-90 mt-1">doanh thu &amp; ổn định</div>
             </div>
@@ -121,7 +122,7 @@
               <div class="text-sm sm:text-base font-sans opacity-90 mt-2">
                 vận hành dưới thương hiệu<br>quản lý nổi tiếng
               </div>
-              <div class="text-2xl sm:text-3xl font-extrabold mt-3 tracking-wide">
+              <div class="font-extrabold mt-3 tracking-wide text-item-center text-item-color">
                 FUSION HOTEL GROUP
               </div>
             </div>
@@ -139,7 +140,8 @@
                 Lịch thanh toán giản nhất<br>trên thị trường
               </div>
               <div class="mt-3 flex items-baseline justify-center gap-1">
-                <span class="text-2xl sm:text-3xl font-extrabold leading-none">50%</span>
+                <span class="font-extrabold leading-none text-label text-item-color">50</span><span
+                  class="text-item-color text-percent">%</span>
               </div>
               <div class="text-sm sm:text-base font-sans opacity-90 mt-1">là nhận nhà</div>
             </div>
@@ -280,7 +282,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   height: 100%;
   object-fit: cover;
   display: block;
-  z-index: 0; /* ảnh thấp nhất */
+  z-index: 0;
 }
 
 .perk-gradient {
@@ -300,13 +302,59 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   bottom: 0;
   padding: 22px 20px 26px;
   text-align: center;
-  color: #fff; /* đảm bảo chữ trắng */
-  z-index: 2; /* trên cùng */
+  color: #fff;
+  z-index: 2;
 }
 
 .img-partner {
   width: 200px;
   height: 80px;
   object-fit: contain;
+}
+
+.banner-left {
+  border-right: 1px solid yellow;
+  width: 65%
+}
+
+.banner-right {
+  width: 35%;
+}
+
+.text-item-center {
+  font-size: 28px;
+
+}
+
+.text-label {
+  font-size: 50px;
+}
+
+.text-item-color {
+  background:
+      radial-gradient(130% 70% at 50% 0%,
+      rgba(255,255,255,.95) 0%,
+      rgba(255,255,255,0) 50%),
+      linear-gradient(180deg,
+      #FFF9DC 0%,   /* sáng hơn */
+      #FFEFAF 24%,  /* vàng nhạt */
+      #FFD84A 50%,  /* vàng tươi rực */
+      #FFE7A8 72%,  /* ánh sáng lại */
+      #D9A231 100%  /* chút chiều sâu, ít nâu */
+      );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  /* nổi rõ trên nền tối nhưng không bẩn màu */
+  text-shadow:
+      0 1px 1px rgba(0,0,0,.18),
+      0 6px 16px rgba(0,0,0,.22);
+  -webkit-text-stroke: .25px rgba(0,0,0,.12);
+}
+
+.text-percent {
+  padding-top: 30px;
+  font-size: 24px;
 }
 </style>

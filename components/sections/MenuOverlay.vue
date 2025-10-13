@@ -177,13 +177,13 @@ onBeforeUnmount(() => {
 
 .menu-wrap {
   position: relative;
-  z-index: 1; /* tránh che nút X */
+  z-index: 1;
   display: grid;
   grid-template-columns:1.1fr 1.4fr;
   gap: 4rem;
   width: min(1200px, 92vw);
   margin: clamp(24px, 5vh, 56px) auto;
-  align-items: start;
+  align-items: center;
 }
 
 .menu-left {
