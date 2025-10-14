@@ -15,19 +15,19 @@
         <CarouselsPrivilegeCarousel class="py-8"/>
       </div>
       <SectionDevide/>
-      <p class="second-slide-subtitle text-xl font-sans font-semibold mt-16">
-        Maia Resort Ho Tram hội tụ uy tín quốc tế, sự am hiểu bản địa và chuẩn mực vận hành tinh hoa.
-      </p>
+      <div class="second-slide-subtitle text-xl font-sans font-semibold mt-16">
+        Maia Resort Ho Tram hội tụ uy tín quốc tế, <br/> sự am hiểu bản địa và chuẩn mực vận hành tinh hoa.
+      </div>
       <div class="privilege-wrapper px-16 py-8 mt-16 mb-16">
         <div class="font-rosellinda text-3xl text-white font-light">Thuộc hệ sinh thái tài sản đầu tư</div>
-        <div class="text-xl font-sans font-normal">Quỹ đầu tư uy tín nước Mỹ</div>
-        <div class="py-8 privilege-name text-3xl font-sans font-bold">
+        <div class="text-xl font-sans font-normal text-2xl">Quỹ đầu tư uy tín nước Mỹ</div>
+        <div class="py-8 privilege-name text-4xl font-sans font-bold text-uppercase">
           Warburg Pincus
         </div>
-        <div class="flex flex-row flex-wrap ">
+        <div class="flex flex-row flex-wrap">
           <div class="privilege-item">
             <div class="privilege-item-title font-sans font-extrabold">55+</div>
-            <div class="font-sans font-normal">Kinh nghiệm quốc tế</div>
+            <div class="font-sans font-normal">Năm kinh nghiệm <br/> đầu tư quốc tế</div>
           </div>
           <div class="privilege-item">
             <div class="privilege-item-title font-sans font-extrabold">$120+</div>
@@ -49,11 +49,11 @@
         <div class="flex flex-row">
           <div class="banner-left">
             <div>
-              <h5 class="font-rosellinda">Chủ đầu tư và đơn vị phát triển</h5>
+              <h5 class="font-rosellinda text-xl">Chủ đầu tư và đơn vị phát triển</h5>
             </div>
-            <div class="flex-row flex">
+            <div class="flex-row flex justify-content-center">
               <div>
-                <img class="img-partner" src="/assets/images/dewan-logo.png"></img>
+                <img class="img-partner" src="/assets/images/Logo_The Grand_White.png"></img>
               </div>
               <div>
                 <img class="img-partner" src="/assets/images/Lodgis-logo.png"></img>
@@ -65,7 +65,7 @@
           </div>
           <div class="flex flex-column align-items-center banner-right">
             <div>
-              <h5 class="font-rosellinda">Vận hành dưới thương hiệu</h5>
+              <h5 class="font-rosellinda font-normal text-xl">Vận hành dưới thương hiệu</h5>
             </div>
             <div class="flex-row flex">
               <div>
@@ -79,9 +79,9 @@
       <p class="text-2xl font-sans font-semibold mt-16">
                 <span class="font-rosellinda text-3xl font-light">
                     Được ví như
-                </span> "Las Vegas thu nhỏ"
+                </span> <b>"Las Vegas thu nhỏ"</b>
       </p>
-      <p class="font-sans font-normal">
+      <p class="font-sans text-xl">
         ngay tại trung tâm thủ phủ du lịch lớn nhất Việt Nam,<br>
         Maia Resort Ho Tram chính là sự đầu tư thích đáng và mang về giá trị bền vững cho tương lai
       </p>
@@ -187,7 +187,8 @@ function go(hash) {
 }
 
 .privilege-wrapper {
-  background: linear-gradient(to bottom, rgba(0, 85, 102, 0.6), rgba(0, 150, 136, 0.6));
+  background: linear-gradient(to bottom, rgba(1, 66, 97, 1), rgba(16, 153, 135, 1));
+  opacity: 93%;
 }
 
 .privilege-name {
@@ -329,17 +330,16 @@ function go(hash) {
 }
 
 .banner-left {
-  border-right: 1px solid yellow;
-  width: 65%
+  border-right: 2px solid #21a39a;
+  width: 60%
 }
 
 .banner-right {
-  width: 35%;
+  width: 40%;
 }
 
 .text-item-center {
   font-size: 28px;
-
 }
 
 .text-label {
