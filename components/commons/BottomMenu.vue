@@ -67,6 +67,50 @@ a {
   text-decoration: none;
   color: #000000;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 992px) {
+  .w-40 {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .bottom-menu {
+    bottom: 1rem;
+    padding: 0.75rem 0.5rem;
+    opacity: 0.9;
+  }
+
+  .w-40 {
+    width: 90%;
+  }
+
+  .bottom-menu-item {
+    font-size: 0.75rem;
+    padding: 0.25rem;
+  }
+
+  .right-divide {
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 480px) {
+  .bottom-menu {
+    bottom: 0.5rem;
+    padding: 0.5rem 0.25rem;
+  }
+
+  .w-40 {
+    width: 95%;
+  }
+
+  .bottom-menu-item {
+    font-size: 0.65rem;
+    padding: 0.2rem;
+  }
+}
 </style>
 <script setup lang="ts">
 function go( hash : string ) {

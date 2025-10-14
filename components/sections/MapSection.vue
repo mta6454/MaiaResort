@@ -68,6 +68,31 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   }
 }
 
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .map-wrapper {
+    flex-direction: column !important;
+  }
+
+  .schedule-wrapper {
+    width: 100% !important;
+    margin-bottom: 2rem;
+  }
+
+  .map {
+    width: 100% !important;
+  }
+
+  .schedule-item-content img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .schedule-item:not(:first-child):not(:last-child) {
+    padding: 1.5rem 0;
+  }
+}
+
 .schedule-item {
   align-items: center;
   display: flex;

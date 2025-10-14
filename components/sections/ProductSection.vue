@@ -216,4 +216,35 @@ const handleShowProductPopup = (data: ProductPopupProps) => {
     cursor: pointer;
     /* TODO: Add animation */
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .project-wrapper .d-flex {
+    flex-direction: column !important;
+  }
+
+  .project-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .img-partner {
+    width: 150px;
+    height: 60px;
+  }
+
+  .product-number {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .img-partner {
+    width: 120px;
+    height: 50px;
+  }
+
+  .product-number {
+    font-size: 1.5rem !important;
+  }
+}
 </style>

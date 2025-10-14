@@ -109,4 +109,32 @@ onMounted(() => {
     object-fit: cover;
     margin: 0 1rem;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .flicking-panel {
+    width: 100% !important;
+  }
+
+  .utilities-carousel-prev,
+  .utilities-carousel-next {
+    width: 2.5rem;
+  }
+
+  .flicking-panel-img {
+    width: calc(100% - 1rem);
+    margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .utilities-carousel-prev,
+  .utilities-carousel-next {
+    width: 2rem;
+  }
+
+  .flicking-panel-img {
+    margin: 0 0.25rem;
+  }
+}
 </style>

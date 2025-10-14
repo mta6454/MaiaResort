@@ -136,4 +136,38 @@ select option {
 width: fit-content;
 background-color: #ECBD6A;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .product-form {
+    padding: 1.5rem;
+  }
+
+  .product-form-title {
+    font-size: 1rem !important;
+  }
+
+  .product-form-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .form-submit {
+    width: 100%;
+    padding: 0.75rem 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-form {
+    padding: 1rem;
+  }
+
+  .product-form-title {
+    font-size: 0.875rem !important;
+  }
+
+  .product-form-subtitle {
+    font-size: 0.75rem;
+  }
+}
 </style>

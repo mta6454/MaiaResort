@@ -139,4 +139,53 @@ onUnmounted(() => {
   height: 100%;
   object-fit: contain;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .app_header {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .app_header_inner_left {
+    width: 30%;
+    gap: 0.5rem;
+  }
+
+  .header_right {
+    width: 30%;
+  }
+
+  .btn_header {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 0.5rem !important;
+  }
+
+  .header_logo {
+    width: 3.5rem !important;
+  }
+
+  .icon_menu {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn_header {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.3rem !important;
+  }
+
+  .header_logo {
+    width: 3rem !important;
+  }
+
+  .icon_menu {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
 </style>

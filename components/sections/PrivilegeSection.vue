@@ -344,4 +344,71 @@ function go( hash : string ) {
   transform: translateY(1px);
   transition: transform .18s ease;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .privilege-wrapper {
+    padding: 2rem 1rem !important;
+  }
+
+  .privilege-item {
+    width: 50% !important;
+    margin-bottom: 1rem;
+  }
+
+  .privilege-item-title {
+    font-size: 2rem !important;
+  }
+
+  .privilege-name {
+    font-size: 2rem !important;
+  }
+
+  .banner-left,
+  .banner-right {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 2px solid #21a39a;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .banner-right {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .flex-row.flex {
+    flex-direction: column !important;
+  }
+
+  .img-partner {
+    width: 150px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .privilege-wrapper {
+    padding: 1.5rem 0.75rem !important;
+  }
+
+  .privilege-item {
+    width: 100% !important;
+  }
+
+  .privilege-item-title {
+    font-size: 1.5rem !important;
+  }
+
+  .privilege-name {
+    font-size: 1.5rem !important;
+  }
+
+  .img-partner {
+    width: 120px;
+    height: 50px;
+  }
+}
 </style>

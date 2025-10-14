@@ -104,4 +104,23 @@ onMounted(() => {
 .privilege-carousel-prev.disabled img, .privilege-carousel-next.disabled img {
     filter: grayscale(100%);
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .flicking-panel {
+    width: 100% !important;
+  }
+
+  .privilege-carousel-prev,
+  .privilege-carousel-next {
+    width: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .privilege-carousel-prev,
+  .privilege-carousel-next {
+    width: 2rem;
+  }
+}
 </style>

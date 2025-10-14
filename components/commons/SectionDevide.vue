@@ -18,4 +18,27 @@
   background-color: #fff;
   border-radius: 50%;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .section-devide-line {
+    height: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .section-devide-line {
+    height: 1.5rem;
+  }
+}
 </style>

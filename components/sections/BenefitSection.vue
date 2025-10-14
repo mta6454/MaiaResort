@@ -91,4 +91,57 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
 .slide-wrapper {
   width: 100vw;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .benefit-wrapper {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem;
+  }
+
+  .benefit-item {
+    width: 200px;
+    height: 200px;
+  }
+
+  .benefit-item img {
+    height: 60px;
+  }
+
+  .benefit-item p {
+    font-size: 2rem !important;
+  }
+
+  .benefit-item p span {
+    font-size: 1.5rem !important;
+  }
+
+  .benefit-item p.text-sm {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefit-item {
+    width: 160px;
+    height: 160px;
+  }
+
+  .benefit-item img {
+    height: 50px;
+  }
+
+  .benefit-item p {
+    font-size: 1.5rem !important;
+  }
+
+  .benefit-item p span {
+    font-size: 1rem !important;
+  }
+
+  .benefit-item p.text-sm {
+    font-size: 0.65rem !important;
+  }
+}
 </style>

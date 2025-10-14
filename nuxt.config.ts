@@ -9,5 +9,13 @@ export default defineNuxtConfig({
     '@egjs/vue3-flicking/dist/flicking.css',
     '@egjs/vue3-flicking/dist/flicking-inline.css'
   ],
-  build: { transpile: ['@egjs/vue3-flicking'] }
+  build: { transpile: ['@egjs/vue3-flicking'] },
+  app: {
+    head: {
+      meta: [
+        { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=5' },
+        { charset: 'utf-8' }
+      ]
+    }
+  }
 });

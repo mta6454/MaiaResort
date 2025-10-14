@@ -75,4 +75,33 @@ body {
 .overlay:has(.menu-overlay.active) .bottom-menu {
   display: none;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .pt-32 {
+    padding-top: 4rem;
+  }
+
+  .pt-16 {
+    padding-top: 2rem;
+  }
+
+  .mt-16 {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pt-32 {
+    padding-top: 3rem;
+  }
+
+  .pt-16 {
+    padding-top: 1.5rem;
+  }
+
+  .mt-16 {
+    margin-top: 1.5rem;
+  }
+}
 </style>

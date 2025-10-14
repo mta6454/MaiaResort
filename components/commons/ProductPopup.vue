@@ -235,4 +235,71 @@ const handleNext = () => {
     font-size: 1.2rem;
     width: fit-content;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .menu-wrap {
+    padding: 1rem !important;
+  }
+
+  .product-popup-left {
+    margin-bottom: 2rem;
+  }
+
+  .product-popup-left-title {
+    font-size: 1.5rem !important;
+  }
+
+  .product-popup-left-subtitle {
+    font-size: 1.25rem !important;
+  }
+
+  .product-popup-left-description {
+    font-size: 1rem !important;
+    margin-top: 1rem !important;
+  }
+
+  .more-button {
+    font-size: 1rem;
+    margin-top: 1rem !important;
+    width: 100%;
+  }
+
+  .privilege-carousel-prev,
+  .privilege-carousel-next {
+    width: 2rem;
+  }
+
+  .slider-container {
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-wrap {
+    padding: 0.5rem !important;
+  }
+
+  .product-popup-left-title {
+    font-size: 1.25rem !important;
+  }
+
+  .product-popup-left-subtitle {
+    font-size: 1rem !important;
+  }
+
+  .product-popup-left-description {
+    font-size: 0.875rem !important;
+  }
+
+  .more-button {
+    font-size: 0.875rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .privilege-carousel-prev,
+  .privilege-carousel-next {
+    width: 1.5rem;
+  }
+}
 </style>
