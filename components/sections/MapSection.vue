@@ -20,7 +20,7 @@
           <div class="schedule-item">
             <div class="schedule-item_dot"></div>
             <div class="schedule-item-content">
-              <div><span class="text-bold text-2xl sub-cl">30 </span> <span class="font-rosellinda text-white text-xl">Phút</span></div>
+              <div><span class="text-semibold text-3xl sub-cl">30 </span> <span class="font-rosellinda text-white text-xl">Phút</span></div>
               <div class="text-white text-size-normal">
                 Là thời gian di chuyển từ đây tới sân bay quốc tế Long Thành
               </div>
@@ -29,7 +29,7 @@
           <div class="schedule-item">
             <div class="schedule-item_dot"></div>
             <div class="schedule-item-content">
-              <div><span class="text-bold text-2xl sub-cl">90 </span> <span class="font-rosellinda text-white text-xl">Phút</span></div>
+              <div><span class="text-semibold text-3xl sub-cl">90 </span> <span class="font-rosellinda text-white text-xl">Phút</span></div>
               <div class="text-white text-size-normal">
                 Là thời gian di chuyển giữa Maia Resort Ho Tram và Siêu Đô thị Hồ Chí Minh
               </div>
@@ -56,16 +56,18 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 .map {
   width: 50%;
   height: 100%;
+  object-fit: contain;
 }
 
 .container {
   /* TODO: Update */
-  margin-top: 0vh;
+  margin-top: 0px;
   max-width: 1600px;
   padding: 0;
   @media (max-width: 1440px) {
-    margin-top: 10vh;
+    margin-top: 100px;
   }
+  margin-bottom: 20px;
 }
 
 .main-text{
@@ -76,7 +78,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   align-items: center;
   display: flex;
   position: relative;
-
+  max-width: 190px;
 }
 
 .schedule-item-content img {
@@ -92,7 +94,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   z-index: 1;
 }
 .schedule-item:not(:first-child):not(:last-child) {
-  padding: 2rem 0;
+  padding: 6.5rem 0;
 }
 .schedule-item-content {
   margin-left: 1rem;

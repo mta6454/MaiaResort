@@ -93,7 +93,7 @@ onUnmounted(() => {
 
 .app_header_inner {
   display: flex;
-  align-items: center;
+  align-items: top;
   justify-content: space-between;
   flex-direction: row;
   width: 100%;
@@ -127,7 +127,7 @@ onUnmounted(() => {
 }
 
 .header_logo {
-  width: 5rem !important;
+  width: 7rem;
   filter: brightness(0) invert(1);
 }
 .icon_menu {

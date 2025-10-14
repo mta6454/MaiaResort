@@ -69,9 +69,6 @@ body {
 .pt-32  {
   padding-top: 8rem;
 }
-.mt-16 {
-  margin-top: 4rem;
-}
 .overlay:has(.menu-overlay.active) .bottom-menu {
   display: none;
 }
