@@ -60,11 +60,11 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 
 .container {
   /* TODO: Update */
-  margin-top: 0vh;
+  margin-top: 0px;
   max-width: 1600px;
   padding: 0;
   @media (max-width: 1440px) {
-    margin-top: 10vh;
+    margin-top: 100px;
   }
 }
 

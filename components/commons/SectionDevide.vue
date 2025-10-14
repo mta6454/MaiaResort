@@ -1,5 +1,5 @@
 <template>
-  <div class="container flex flex-col items-center justify-center py-16">
+  <div class="container flex flex-col items-center justify-center">
     <div class="section-devide-line">
     </div>
     <div class="section-devide-dot"></div>

@@ -1,85 +1,84 @@
 <template>
-    <section id="product" style="margin-top: 10vh;">
+    <section id="product" class="section-product">
         <div class="container text-white text-normal">
-            <div class="d-flex justify-content-between">
-                <div class="">
+            <div class="row">
+                <div class="col-5">
                     <div class="font-rosellinda text-2xl main-text">
                         Chủ đầu tư
                     </div>
-                    <div class="text-xl">
+                    <div class="text-2xl">
                         CÔNG TY TNHH DỰ ÁN <br>HỒ TRÀM
                     </div>
                 </div>
-                <div class="">
-                    <div class="font-rosellinda text-2xl main-text">
-                        Vị trí
+                <div class="col-7 d-flex justify-content-between">
+                    <div class="">
+                        <div class="font-rosellinda text-2xl main-text">
+                            Vị trí
+                        </div>
+                        <div class="mb-4 text-lg">
+                            Xã Hồ Tràm, Thành phố Hồ Chí Minh
+                        </div>
+                        <div class="font-rosellinda text-2xl main-text">
+                            Khởi công
+                        </div>
+                        <div class="mb-4 text-lg">
+                            Dự kiến quý 4/2025
+                        </div>
+                        <div class="font-rosellinda text-2xl main-text">
+                            Thương hiệu vận hành
+                        </div>
+                        <div class="text-size-normal">
+                            <img alt="fusion logo" class="img-partner" src="/assets/images/Fusion-logo.png" />
+                        </div>
                     </div>
-                    <div class="mb-4 text-lg">
-                        Xã Hồ Tràm, Thành phố Hồ Chí Minh
-                    </div>
-                    <div class="font-rosellinda text-2xl main-text">
-                        Khởi công
-                    </div>
-                    <div class="mb-4 text-lg">
-                        Dự kiến quý 4/2025
-                    </div>
-                    <div class="font-rosellinda text-2xl main-text">
-                        Thương hiệu vận hành
-                    </div>
-                    <div class="text-size-normal">
-                        <img alt="" class="img-partner" src="/assets/images/Fusion-logo.png" />
-                    </div>
-                </div>
-                <div class="">
-                    <div class="font-rosellinda text-2xl main-text">
-                        Diện tích
-                    </div>
-                    <div class="mb-4 text-lg">
-                        7ha
-                    </div>
-                    <div class="font-rosellinda text-2xl main-text">
-                        Bàn Giao
-                    </div>
-                    <div class="mb-4 text-lg">
-                        Dự kiến quý 3/2027
-                    </div>
-                    <div class="font-rosellinda text-2xl main-text">
-                        Đơn vị thiết kế
-                    </div>
-                    <div class="text-size-normal">
-                        <img alt="" class="img-partner" src="/assets/images/dewan-logo.png" />
+                    <div class="">
+                        <div class="font-rosellinda text-2xl main-text">
+                            Diện tích
+                        </div>
+                        <div class="mb-4 text-lg">
+                            7ha
+                        </div>
+                        <div class="font-rosellinda text-2xl main-text">
+                            Bàn Giao
+                        </div>
+                        <div class="mb-4 text-lg">
+                            Dự kiến quý 3/2027
+                        </div>
+                        <div class="font-rosellinda text-2xl main-text">
+                            Đơn vị thiết kế
+                        </div>
+                        <div class="text-size-normal">
+                            <img alt="dewan logo" class="img-partner" src="/assets/images/dewan-logo.png" />
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="devide-line my-16"></div>
             <div class="row">
-                <div class="col-md-4 font-rosellinda text-2xl main-text">
+                <div class="col-5 font-rosellinda text-2xl main-text">
                     Quy mô
                 </div>
-                <div class="col-md-8">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="font-rosellinda text-2xl main-text text-center">Peace Tower</div>
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div class="text-4xl product-number">634</div>
-                                <div>CĂN<br>HỘ</div>
-                            </div>
+                <div class="col-7 d-flex justify-content-between">
+                    <div class="">
+                        <div class="font-rosellinda text-2xl main-text text-center">Peace Tower</div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="text-4xl product-number">634</div>
+                            <div>CĂN<br>HỘ</div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="font-rosellinda text-2xl main-text text-center">Happy Tower</div>
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div class="text-4xl product-number">610</div>
-                                <div>CĂN<br>HỘ</div>
-                            </div>
+                    </div>
+                    <div class="">
+                        <div class="font-rosellinda text-2xl main-text text-center">Happy Tower</div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="text-4xl product-number">610</div>
+                            <div>CĂN<br>HỘ</div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="font-rosellinda text-2xl main-text text-center">Biệt Thự</div>
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div class="text-4xl product-number">63</div>
-                                <div><br>CĂN</div>
-                            </div>
+                    </div>
+                    <div class="">
+                        <div class="font-rosellinda text-2xl main-text text-center">Biệt Thự</div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="text-4xl product-number">63</div>
+                            <div><br>CĂN</div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -119,11 +118,11 @@
                 <div class="font-rosellinda main-text" style="font-size: 2.3rem;">
                     Maia Ho Tram trở lại cùng tuyệt tác
                 </div>
-                <div class="mt-2 text-2xl">
+                <div class="mt-2 text-2xl" style="margin-bottom: 4.75rem;">
                     Happy Tower và bộ sưu tập 36 căn Villa.
                 </div>
                 <SectionDevide />
-                <div class="text-light text-2xl">
+                <div class="text-light text-2xl" style="margin-top: 4.75rem;">
                     Tiếp nối sức hút thành công từ Peace Tower
                 </div>
                 <div class="text-2xl">
@@ -173,6 +172,11 @@ const handleShowProductPopup = (data: ProductPopupProps) => {
 }
 </script>
 <style>
+.section-product{
+    margin-top: 630px;
+    /* responsive here */
+}
+
 .devide-line {
     width: 100%;
     height: 2px;
@@ -183,10 +187,6 @@ const handleShowProductPopup = (data: ProductPopupProps) => {
 .product-number {
     line-height: 1.1;
     margin-right: 0.5rem;
-}
-
-#product {
-  /* margin-top: 70vh; */
 }
 
 .img-partner {
@@ -215,6 +215,5 @@ const handleShowProductPopup = (data: ProductPopupProps) => {
 
 .project-item-content-button:hover {
     cursor: pointer;
-    /* TODO: Add animation */
 }
 </style>

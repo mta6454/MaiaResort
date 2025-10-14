@@ -183,7 +183,7 @@ onBeforeUnmount(() => {
   grid-template-columns:1.1fr 1.4fr;
   gap: 4rem;
   width: min(1200px, 92vw);
-  margin: clamp(24px, 5vh, 56px) auto;
+  margin: clamp(24px, 5vw, 56px) auto;
   align-items: center;
 }
 

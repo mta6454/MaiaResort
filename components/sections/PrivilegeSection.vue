@@ -4,21 +4,21 @@
       <div class="second-slide-title font-rosellinda text-2xl">
         Wellness từ thiên nhiên
       </div>
-      <div class="mt-4 second-slide-subtitle font-sans font-light" style="font-size: 1.75rem;">
+      <div class="second-slide-subtitle font-sans font-light" style="font-size: 1.75rem; margin-top: 10px;">
         Không khí rừng giàu anion & gió biển ion hóa <br> tái tạo sức khỏe, cải thiện tinh thần.
       </div>
-      <div class="mt-4 text-light font-sans font-normal text-xl">
+      <div class="text-light font-sans font-normal text-xl" style="margin-top: 25px;">
         Ở đây, việc dung dưỡng thân - tâm - trí không còn là xa xỉ. Đó là hơi thở của rừng vàng giàu anion, là làn gió
         biển <br>mang ion tinh khiết, là những trải nghiệm đã được khoa học chứng minh giúp tái tạo thể chất lẫn tinh thần.
       </div>
-      <div class="second-slide-wrapper mt-16 mb-16">
-        <CarouselsPrivilegeCarousel class="py-8"/>
+      <div class="second-slide-wrapper mt-4 mb-4">
+        <CarouselsPrivilegeCarousel class="py-4"/>
       </div>
       <SectionDevide/>
-      <div class="second-slide-subtitle font-sans text-semibold mt-16" style="font-size: 1.75rem;">
+      <div class="second-slide-subtitle font-sans text-semibold" style="font-size: 1.75rem; margin-top: 3rem;">
         Maia Resort Ho Tram hội tụ uy tín quốc tế, <br/> sự am hiểu bản địa và chuẩn mực vận hành tinh hoa.
       </div>
-      <div class="privilege-wrapper px-16 py-8 mt-16 mb-16">
+      <div class="privilege-wrapper px-16 py-8" style="margin-top: 4rem; margin-bottom: 4rem;">
         <div class="font-rosellinda text-white font-light" style="font-size: 2.5rem;">Thuộc hệ sinh thái tài sản đầu tư</div>
         <div class="text-xl font-sans font-normal text-2xl">Quỹ đầu tư uy tín nước Mỹ</div>
         <div class="py-8 privilege-name text-4xl font-sans text-bold text-uppercase">
@@ -90,24 +90,11 @@
       </div>
 
     </div>
-    <div class="cta-schedule mt-16 text-center">
+    <div class="cta-schedule text-center" style="margin-top: 3rem;">
       <div class="cta-title">ĐẶT LỊCH ĐỂ TRẢI NGHIỆM</div>
 
-      <span @click="go('#register')" class="cta-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" class="icon" xmlns="http://www.w3.org/2000/svg">
-
-            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-dasharray="50 8" stroke-dashoffset="12"/>
-
-            <!-- Thân mũi tên -->
-            <path d="M12 2v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-
-            <!-- Đầu mũi tên -->
-            <path d="M9.75 11.5L12 14l2.25-2.5" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-
-        </span>
+      <!-- Lỗi không căn giữa nên đặt 13px margin -->
+       <img src="/assets/images/arrow-left.svg" alt="arrow-down" style="width: 38px; height: 38px; rotate: -90deg; cursor: pointer;" @click="go('#register')"/>
     </div>
   </section>
 </template>
@@ -122,9 +109,9 @@ function go( hash : string ) {
 }
 </script>
 <style>
-#second-slide {
+/* #second-slide {
   margin-bottom: 30vh;
-}
+} */
 
 .privilege-wrapper {
   background: linear-gradient(to bottom, rgba(1, 66, 97, 1), rgba(16, 153, 135, 1));

@@ -1,6 +1,6 @@
 <template>
-  <section id="intro" class="py-16">
-    <div class="container mt-16 px-0">
+  <section id="intro" class="section-intro">
+    <div class="container mt-8 px-0">
       <div class="intro_content">
         <div>
           <span class="font-rosellinda main-text-cl text-2xl">
@@ -35,7 +35,8 @@
       <div class="cta-schedule mt-8 text-center">
         <div class="cta-title">ĐẶT LỊCH ĐỂ TRẢI NGHIỆM</div>
 
-        <span @click="go('#register')" class="cta-icon" aria-hidden="true">
+        <!-- Lỗi không căn giữa nên đặt 13px margin -->
+        <span @click="go('#register')" class="cta-icon" aria-hidden="true" style="margin-right: 13px">
           <svg viewBox="0 0 24 24" class="icon" xmlns="http://www.w3.org/2000/svg">
 
             <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -51,7 +52,6 @@
 
         </span>
       </div>
-
 
       <div class="text-second text-2xl text-center mt-8  text-semibold text-intro" id="textIntro">
         Có những nơi thiên nhiên chỉ dừng lại ở phong cảnh,
@@ -104,6 +104,11 @@ const setReverse = () => {
 }
 </script>
 <style scoped>
+.section-intro{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 .intro_content {
   text-align: center;
   color: #fff;
@@ -122,10 +127,9 @@ const setReverse = () => {
 
 .intro_description_first {
   font-size: 18px;
-  /* TODO: Update */
-  padding-top: 40vh;
+  padding-top: 400px;
   @media (max-width: 1440px) {
-    padding-top: 35vh;
+    padding-top: 300px;
   }
 }
 
