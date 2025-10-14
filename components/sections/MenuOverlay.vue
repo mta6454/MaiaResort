@@ -6,6 +6,7 @@
         tabindex="0"
         @keydown.esc="close()"
         @click.self="close()"
+        :class="{'active': open}"
     >
       <!-- Nút đóng -->
       <button class="btn-close" type="button" @click="close" aria-label="Đóng menu">

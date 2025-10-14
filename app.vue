@@ -75,7 +75,7 @@ body {
 .mt-16 {
   margin-top: 4rem;
 }
-.overlay:has(.menu-overlay) .bottom-menu {
+.overlay:has(.menu-overlay.active) .bottom-menu {
   display: none;
 }
 </style>

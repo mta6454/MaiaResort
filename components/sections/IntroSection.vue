@@ -62,21 +62,21 @@
       <div class="text-second text-center text-semibold">
         Rừng vàng và biển bạc trở thành đặc quyền hiếm có, ôm trọn từng khoảnh khắc sống.
       </div>
-      <div class="section-utilities w-100 py-16 row">
-        <div class="w-70 utilities-image">
+      <div class="section-utilities w-100 py-16 row" :class="{'is-reverse': isReverse}">
+        <div class="utilities-image utilities-left">
           <img :src="utilities" alt="Utilities" />
-          <div class="utilities-image-content text-light">
-            <div class="text-semibold text-4xl text-end lh-1">100<span class="text-normal text-3xl">%</span></div>
-            <div class="text-xl">View biển trực diện</div>
+          <div class="utilities-left-content_overlay">
+            <div class="utilities-des-content_overlay_title text-3xl">100 %</div>
+            <div class="utilities-des-content_overlay_des text-xl">View biển trực diện</div>
           </div>
         </div>
-        <div class="w-30 utilities-des">
+        <div class="utilities-des utilities-right">
           <img :src="utilitiesSecond" alt="Utilities" />
           <div class="utilities-des-content_overlay">
             <div class="utilities-des-content_overlay_title text-4xl text-semibold">TOP 65</div>
             <div class="utilities-des-content_overlay_des text-xl">Hệ sinh thái rừng<br> bền vững thế giới</div>
           </div>
-          <div class="utilities-des-content_overlay_button">
+          <div class="utilities-des-content_overlay_button" @click="setReverse">
             <!-- Xử lý click ở đây -->
             <img :src="arrowRight" alt="Arrow Right" />
           </div>
@@ -96,6 +96,11 @@ function go(hash : string) {
     const el = document.querySelector(hash)
     if (el) el.scrollIntoView({behavior: 'smooth'})
   }
+}
+const isReverse = ref(false)
+
+const setReverse = () => {
+  isReverse.value = !isReverse.value
 }
 </script>
 <style scoped>
@@ -220,10 +225,48 @@ function go(hash : string) {
   transform: translateY(1px);
   transition: transform .18s ease;
 }
-.w-70 {
+.utilities-left {
+  width: 70%;
+  transform: translateX(0);
+  position: relative;
+  /* transition: width .4s ease, transform .4s ease; */
+}
+.utilities-right {
+  width: 30%;
+  transform: translateX(0);
+  /* transition: width .4s ease, transform .4s ease; */
+}
+.section-utilities.is-reverse  .utilities-left {
+  width: 30%;
+}
+.section-utilities.is-reverse  .utilities-right {
   width: 70%;
 }
-.w-30 {
-  width: 30%;
+.section-utilities.is-reverse  .utilities-des-content_overlay {
+  background: transparent;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.section-utilities.is-reverse  .utilities-des-content_overlay_button {
+ transform: rotate(180deg);
+}
+.utilities-left-content_overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  align-items: flex-end;
+  justify-content: flex-end;
+  color: #fff;
+  background: transparent;
+}
+.section-utilities.is-reverse .utilities-left-content_overlay {
+  background: linear-gradient(to bottom, rgba(0, 85, 102, 0.8), rgba(0, 150, 136, 0.8));
+  justify-content: center;
+  align-items: center;
 }
 </style>
