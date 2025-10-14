@@ -88,65 +88,7 @@
 
       <!-- wrapper phá max-width của container cha -->
       <div style="padding-top: 50px" class="mini-vegas w-screen relative left-1/2 -translate-x-1/2 mt-8 text-white">
-        <div class="mini-vegas-row px-4 sm:px-0">
-          <!-- Card 1 -->
-          <div class="relative rounded-xl" style="position: relative">
-            <div style="height: 70%;">
-              <img src="/images/Section-8.2.1.png" alt="Casino" class="perk-img">
-            </div>
-            <div style="height: 30%;"></div>
-            <div class="perk-gradient"></div>
-            <div class="perk-content" style="z-index: 9999;">
-              <div class="font-rosellinda text-xl sm:text-2xl leading-snug">
-                Dòng tiền thu nhập<br>tốt nhất
-              </div>
-              <div class="mt-2 flex items-baseline justify-center gap-1">
-                <span class="font-extrabold leading-none text-label text-item-color">40</span><span
-                  class="text-item-color text-percent">%</span>
-              </div>
-              <div class="text-sm sm:text-base font-sans opacity-90 mt-1">doanh thu &amp; ổn định</div>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="perk-card relative overflow-hidden rounded-xl">
-            <div style="height: 70%;">
-              <img src="/images/Section-8.2.2.png" alt="Cheers" class="perk-img">
-            </div>
-            <div style="height: 30%;"></div>
-            <div class="perk-gradient"></div>
-            <div class="perk-content">
-              <div class="font-rosellinda text-xl sm:text-2xl leading-snug">
-                Giá bán phòng<br>tốt nhất
-              </div>
-              <div class="text-sm sm:text-base font-sans opacity-90 mt-2">
-                vận hành dưới thương hiệu<br>quản lý nổi tiếng
-              </div>
-              <div class="font-extrabold mt-3 tracking-wide text-item-center text-item-color">
-                FUSION HOTEL GROUP
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="perk-card relative overflow-hidden rounded-xl">
-            <div style="height: 70%;">
-              <img src="/images/Section-8.2.3.png" alt="Waiter" class="perk-img">
-            </div>
-            <div style="height: 30%;"></div>
-            <div class="perk-gradient"></div>
-            <div class="perk-content">
-              <div class="font-rosellinda text-xl sm:text-2xl leading-snug">
-                Lịch thanh toán giản nhất<br>trên thị trường
-              </div>
-              <div class="mt-3 flex items-baseline justify-center gap-1">
-                <span class="font-extrabold leading-none text-label text-item-color">50</span><span
-                  class="text-item-color text-percent">%</span>
-              </div>
-              <div class="text-sm sm:text-base font-sans opacity-90 mt-1">là nhận nhà</div>
-            </div>
-          </div>
-        </div>
+        <img src="/assets/images/privilegeSlide/privileges-main.png" alt="Mini Vegas" width="100%" height="100%"/>
       </div>
 
     </div>

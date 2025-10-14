@@ -1,6 +1,6 @@
 <template>
     <div id="register" class="product-form">
-        <div class="product-form-title text-center">Happy Tower & Villa tại Maia Resort Ho Tram</div>
+        <div class="product-form-title text-center text-xl">Happy Tower & Villa tại Maia Resort Ho Tram</div>
         <div class="product-form-subtitle text-center mt-4">
             <span class="font-rosellinda main-text-cl text-2xl">
                 Giữa
@@ -24,7 +24,7 @@
             </span>
         </div>
         <div class="text-center">
-            <div class="font-rosellinda text-2xl main-text">
+            <div class="font-rosellinda text-xl main-text">
                 Muốn được tư vấn ngay ?
             </div>
         </div>
@@ -32,20 +32,20 @@
             <form>
                 <!-- Tên khách hàng -->
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="tenKhach" placeholder="Tên quý khách">
-                    <label for="tenKhach">Xin được biết tên quý khách</label>
+                    <input type="text" class="form-control px-0" id="tenKhach" placeholder="Tên quý khách">
+                    <label for="tenKhach" class="px-0">Xin được biết tên quý khách</label>
                 </div>
 
                 <!-- Số điện thoại -->
                 <div class="row mb-3">
                     <div class="col-md-6 form-floating mb-3">
-                        <input type="tel" class="form-control" id="soDienThoai" placeholder="Số điện thoại">
+                        <input type="tel" class="form-control  px-0" id="soDienThoai" placeholder="Số điện thoại">
                         <label for="soDienThoai">Số điện thoại</label>
                     </div>
 
                     <!-- Email -->
                     <div class="col-md-6 form-floating mb-3">
-                        <input type="email" class="form-control" id="email" placeholder="Email">
+                        <input type="email" class="form-control  px-0" id="email" placeholder="Email">
                         <label for="email">Email (nếu muốn)</label>
                     </div>
                 </div>
@@ -71,9 +71,7 @@
                         <option selected disabled>Chọn sản phẩm cần tư vấn:</option>
                         <option value="villa">Biệt thự</option>
                         <option value="condo">Căn hộ</option>
-                        <option value="resort">Khu nghỉ dưỡng</option>
                     </select>
-                    <!-- <label for="sanPham">Chọn sản phẩm cần tư vấn</label> -->
                 </div>
 
                 <!-- Nút gửi -->

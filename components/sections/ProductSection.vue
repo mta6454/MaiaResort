@@ -38,7 +38,7 @@
                         7ha
                     </div>
                     <div class="font-rosellinda text-2xl main-text">
-                        Bàn giao
+                        Bàn Giao
                     </div>
                     <div class="mb-4 text-size-normal">
                         Dự kiến quý 3/2027
@@ -53,27 +53,27 @@
             </div>
             <div class="devide-line my-16"></div>
             <div class="row">
-                <div class="col-md-4 font-rosellinda text-3xl main-text">
+                <div class="col-md-4 font-rosellinda text-2xl main-text">
                     Quy mô
                 </div>
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="font-rosellinda text-3xl main-text">Peace Tower</div>
+                            <div class="font-rosellinda text-2xl main-text">Peace Tower</div>
                             <div class="flex flex-row">
                                 <div class="text-3xl product-number">634</div>
                                 <div>CĂN<br>HỘ</div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="font-rosellinda text-3xl main-text">Happy Tower</div>
+                            <div class="font-rosellinda text-2xl main-text">Happy Tower</div>
                             <div class="flex flex-row">
                                 <div class="text-3xl product-number">610</div>
                                 <div>CĂN<br>HỘ</div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="font-rosellinda text-3xl main-text">Peace Tower</div>
+                            <div class="font-rosellinda text-2xl main-text">Biệt Thự</div>
                             <div class="flex flex-row">
                                 <div class="text-3xl product-number">63</div>
                                 <div><br>CĂN</div>
@@ -112,17 +112,17 @@
 							</div>
             </div>
             <div class="text-center">
-                <div class="font-rosellinda text-3xl main-text">
+                <div class="font-rosellinda text-2xl main-text">
                     Maia Ho Tram trở lại cùng tuyệt tác
                 </div>
-                <div class="mt-16">
+                <div class="mt-2 text-xl">
                     Happy Tower và bộ sưu tập 36 căn Villa.
                 </div>
                 <SectionDevide />
-                <div class="text-light">
+                <div class="text-light text-xl">
                     Tiếp nối sức hút thành công từ Peace Tower
                 </div>
-                <div>
+                <div class="text-xl">
                     97% căn hộ được mua chốt chỉ sau 1 tháng ra mắt
                 </div>
             </div>
