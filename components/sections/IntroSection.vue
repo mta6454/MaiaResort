@@ -66,7 +66,7 @@
         <div class="utilities-image utilities-left">
           <img :src="utilities" alt="Utilities" />
           <div class="utilities-left-content_overlay">
-            <div class="utilities-des-content_overlay_title text-3xl">100 %</div>
+            <div class="utilities-des-content_overlay_title text-3xl text-semibold">100 %</div>
             <div class="utilities-des-content_overlay_des text-xl">View biển trực diện</div>
           </div>
         </div>
@@ -268,5 +268,11 @@ const setReverse = () => {
   background: linear-gradient(to bottom, rgba(0, 85, 102, 0.8), rgba(0, 150, 136, 0.8));
   justify-content: center;
   align-items: center;
+}
+.section-utilities.is-reverse .utilities-des-content_overlay_title {
+  font-size: 3rem;
+}
+.section-utilities.is-reverse .utilities-left-content_overlay .utilities-des-content_overlay_title {
+font-size: 4rem;
 }
 </style>
