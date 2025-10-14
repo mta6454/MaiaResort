@@ -1,20 +1,20 @@
 <template>
-  <section id="utilities" class="mt-16">
-    <div class="container text-white text-center pb-8">
+  <section id="utilities" class="section-benefit mt-8">
+    <div class="container section-benefit-first text-white text-center pb-8">
       <div class="slide-title">
         <div class="slide-title-text">
           Hãy tưởng tượng một buổi sáng thức dậy, mở cửa ban công, hít căng lồng ngực làn gió mặn của <br> biển và hương
           rừng
           mát lành. Không còi xe, không khối bụi - chỉ còn sự tĩnh tại và<br> năng lượng mói mẻ cho một ngày trọn vẹn.
         </div>
-        <div class="text-2xl mt-16 text-semibold">
+        <div class="slide-title-sub-title text-2xl text-semibold">
           Ở Maia Resort Ho Tram,<br> bình yên trở thành thói quen hàng ngày.
         </div>
       </div>
-      <div class="slide-wrapper py-8 mt-6">
+      <div class="slide-wrapper py-8">
         <UtilitiesCarousel />
       </div>
-      <div class="font-rosellinda text-navy" style="color: #365967; font-size: 34px; margin-top: 35px; margin-bottom: 20px;">
+      <div class="after-slider font-rosellinda text-navy">
         Và không chỉ dừng lại ở sự tĩnh tại.
       </div>
       <div class="text-black" style="color: #365967; margin-bottom: 10px;">
@@ -27,8 +27,8 @@
       </div>
     </div>
     <SectionDevide />
-    <div class="container text-center pt-8 pb-1">
-      <div class="text-navy text-2xl text-semibold">
+    <div class="container section-benefit-second text-center pt-8">
+      <div class="section-benefit-second-title text-navy text-2xl text-semibold">
         Một điểm đến, triệu trải nghiệm
       </div>
       <p>
@@ -36,7 +36,7 @@
         kiến tạo trải nghiệm trọn vẹn chưa từng có.
       </p>
     </div>
-    <div class="hightlight-wrapper" style="margin-top: 4rem; margin-bottom: 150px;">
+    <div class="hightlight-wrapper">
       <div class="benefit-wrapper container d-flex justify-content-between">
         <div class="benefit-item benefit-item-1 d-flex flex-column justify-center align-items-center">
             <img src="/assets/images/benefit/benefit-icon-1.png" alt="benefit-1" />
@@ -66,6 +66,39 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
 </script>
 <style scoped>
+.section-benefit {
+  @media (max-width: 1440px) {
+    margin-top: 20px;
+  }
+}
+
+.section-benefit-first{
+  @media (max-width: 1440px) {
+    padding-bottom: 20px;
+  }
+}
+
+.section-benefit-second{
+  @media (max-width: 1440px) {
+    padding-top: 20px;
+  }
+}
+
+.section-benefit-second-title{
+  @media (max-width: 1440px) {
+    font-size: 28px;
+  }
+}
+
+.hightlight-wrapper {
+  margin-top: 4rem;
+  margin-bottom: 150px;
+  @media (max-width: 1440px) {
+    margin-top: 4rem;
+    margin-bottom: 70px;
+  }
+}
+
 .benefit-item {
   max-width: 1400px;
   border-radius: 50%;
@@ -82,9 +115,33 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
 
 .slide-title-text{
   font-size: 1.15rem;
+  @media (max-width: 1440px) {
+    font-size: 1rem;
+  }
+}
+
+.slide-title-sub-title{
+  margin-top: 4rem;
+  @media (max-width: 1440px) {
+    margin-top: 20px;
+  }
 }
 
 .slide-wrapper {
   width: 100vw;
+  @media (max-width: 1440px) {
+    padding: 15px 0;
+  }
+}
+
+.after-slider {
+  color: #365967;
+  font-size: 34px;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  @media (max-width: 1440px) {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 }
 </style>

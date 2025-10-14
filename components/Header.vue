@@ -129,6 +129,9 @@ onUnmounted(() => {
 .header_logo {
   width: 7rem;
   filter: brightness(0) invert(1);
+  @media (max-width: 1440px) {
+    width: 5.5rem;
+  }
 }
 .icon_menu {
   cursor: pointer;

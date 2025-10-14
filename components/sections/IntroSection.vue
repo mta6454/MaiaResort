@@ -25,7 +25,7 @@
           </span>
         </div>
       </div>
-      <div class="intro_description intro_description_first text-center mt-10 text-lg text-semibold">
+      <div class="intro_description intro_description_first text-center mt-10 text-semibold">
         Đây không chỉ là nơi để bạn tìm lại an vui, mà còn là giá trị bền vững được kiến tạo cho
       </div>
       <div class="text-second text-2xl text-center text-semibold text-intro mt-8">
@@ -34,7 +34,6 @@
       </div>
       <div class="cta-schedule mt-8 text-center">
         <div class="cta-title">ĐẶT LỊCH ĐỂ TRẢI NGHIỆM</div>
-
         <!-- Lỗi không căn giữa nên đặt 13px margin -->
         <span @click="go('#register')" class="cta-icon" aria-hidden="true" style="margin-right: 13px">
           <svg viewBox="0 0 24 24" class="icon" xmlns="http://www.w3.org/2000/svg">
@@ -49,20 +48,19 @@
             <path d="M9.75 11.5L12 14l2.25-2.5" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round" />
           </svg>
-
         </span>
       </div>
 
-      <div class="text-second text-2xl text-center mt-8  text-semibold text-intro" id="textIntro">
+      <div class="text-second text-2xl text-center mt-8 text-semibold text-intro" id="textIntro">
         Có những nơi thiên nhiên chỉ dừng lại ở phong cảnh,
       </div>
-      <div class="intro_description text-center" style="margin-top: 20px">
+      <div class="intro_description intro_description-second text-center">
         Nhưng ở Maia Resort Ho Tram,
       </div>
       <div class="text-second text-center text-semibold">
         rừng vàng và biển bạc trở thành đặc quyền hiếm có, ôm trọn từng khoảnh khắc sống.
       </div>
-      <div class="section-utilities w-100 py-16 row" :class="{'is-reverse': isReverse}">
+      <div class="section-utilities py-16 row" :class="{'is-reverse': isReverse}">
         <div class="utilities-image utilities-left">
           <img :src="utilities" alt="Utilities" />
           <div class="utilities-left-content_overlay">
@@ -107,6 +105,11 @@ const setReverse = () => {
 .section-intro{
   padding-top: 4rem;
   padding-bottom: 4rem;
+  @media (max-width: 1440px) {
+    border: 1px solid red;
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+  }
 }
 
 .intro_content {
@@ -117,32 +120,39 @@ const setReverse = () => {
   margin-bottom: 30rem;
   @media (max-width: 1440px) {
     font-size: 2.2rem;
-    margin-bottom: 30rem;
+    margin-bottom: 330px;
   }
-}
-
-#about {
-  margin-top: -80px;
 }
 
 .intro_description_first {
   font-size: 18px;
   padding-top: 400px;
   @media (max-width: 1440px) {
-    padding-top: 300px;
+    padding-top: 340px;
+    font-size: 16px;
+  }
+}
+
+.intro_description-second {
+    margin-top: 20px;
+  @media (max-width: 1440px) {
+    font-size: 16px;
+    margin-top: 10px;
   }
 }
 
 .cta-schedule {
   text-align: center;
-  /* padding: 16px 0 10px; */ /*Temp*/
+  @media (max-width: 1440px) {
+    margin-top: 10px;
+    padding: 0;
+  }
 }
 
 .cta-title {
   font-family: "SVN-Zona Pro", system-ui, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  /* letter-spacing: .16em; */ /*Temp*/
   font-size: 14px;
   color: #0A0A0A;
 }
@@ -171,10 +181,17 @@ const setReverse = () => {
 .text-intro {
   font-weight: 700;
   color: #014261;
+  @media (max-width: 1440px) {
+    margin-top: 10px;
+    font-size: 28px;
+  }
 }
 
-.utilities-image{
+.utilities-image, .utilities-des {
   position: relative;
+  @media (max-width: 1440px) {
+    height: 475px;
+  }
 }
 
 .utilities-image img {
@@ -194,28 +211,39 @@ const setReverse = () => {
   padding-right: 0;
   padding-left: 0;
 }
-.utilities-des {
-  position: relative;
-}
+
 .utilities-des img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.utilities-des-content_overlay {
-  background: linear-gradient(to bottom, rgba(16, 153, 135, 0.8), rgba(1, 66, 97, 0.9), rgba(1, 66, 97, 0.9));
+.utilities-des-content_overlay, .utilities-left-content_overlay{
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
+  padding: 3rem;
+  @media (max-width: 1440px) {
+    padding: 1rem;
+  }
+}
+.utilities-des-content_overlay {
+  background: linear-gradient(to bottom, rgba(16, 153, 135, 0.8), rgba(1, 66, 97, 0.9), rgba(1, 66, 97, 0.9));
+  top: 0;
+  left: 0;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  padding: 3rem;
   color: #fff;
+}
+.utilities-left-content_overlay {
+  bottom: 0;
+  left: 0;
+  align-items: flex-end;
+  justify-content: flex-end;
+  color: #fff;
+  background: transparent;
 }
 .utilities-des-content_overlay_button {
   position: absolute;
@@ -240,6 +268,15 @@ const setReverse = () => {
   transform: translateX(0);
   /* transition: width .4s ease, transform .4s ease; */
 }
+.section-utilities {
+  width: 100%;
+  
+  @media (max-width: 1440px) {
+    border: 1px solid blue;
+    padding-top: 50px;
+    padding-bottom: 0px;
+  }
+}
 .section-utilities.is-reverse  .utilities-left {
   width: 30%;
 }
@@ -254,20 +291,6 @@ const setReverse = () => {
 .section-utilities.is-reverse  .utilities-des-content_overlay_button {
  transform: rotate(180deg);
 }
-.utilities-left-content_overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 3rem;
-  align-items: flex-end;
-  justify-content: flex-end;
-  color: #fff;
-  background: transparent;
-}
 .section-utilities.is-reverse .utilities-left-content_overlay {
   background: linear-gradient(to bottom, rgba(0, 85, 102, 0.8), rgba(0, 150, 136, 0.8));
   justify-content: center;
@@ -277,6 +300,6 @@ const setReverse = () => {
   font-size: 3rem;
 }
 .section-utilities.is-reverse .utilities-left-content_overlay .utilities-des-content_overlay_title {
-font-size: 4rem;
+  font-size: 4rem;
 }
 </style>

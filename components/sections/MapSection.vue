@@ -1,10 +1,10 @@
 <template>
-  <section id="map">
-    <div class="container">
-      <div class="text-center font-rosellinda text-3xl third-cl mt-8">
+  <section id="map" class="section-map">
+    <div class="container section-map-title">
+      <div class="section-map-title-main text-center font-rosellinda text-3xl third-cl mt-8">
         Và hơn thế
       </div>
-      <div class="text-center text-white main-text mt-14 text-xl">
+      <div class="text-center text-white main-text text-xl">
         Maia Resort Ho Tram còn tọa lạc ngay trung tâm thủ phủ nghỉ dưỡng Hồ Tràm,<br>kết nối trực tiếp đến TP. Hồ Chí
         Minh và sân bay quốc tế Long Thành.
       </div>
@@ -51,27 +51,57 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 <style scoped>
 .map-wrapper {
   position: relative;
+  margin-top: 4rem;
+
+  @media (max-width: 1440px) {
+    margin-top: 50px;
+    height: 550px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .map {
   width: 50%;
   height: 100%;
-  object-fit: contain;
+  @media (max-width: 1440px) {
+    width: auto;
+    margin-left: 20px;
+  }
 }
 
-.container {
-  /* TODO: Update */
+.map img {
+  @media (max-width: 1440px) {
+    width: auto;
+    object-fit: contain;
+    height: 100%;
+  }
+}
+
+.section-map-title {
   margin-top: 0px;
   max-width: 1600px;
   padding: 0;
+  margin-bottom: 2rem;
   @media (max-width: 1440px) {
-    margin-top: 100px;
+    margin-top: 80px;
+    margin-bottom: 30px;
   }
-  margin-bottom: 20px;
+}
+
+/* Note: Chỗ ngày bị lỗi section overlap, cần phải handle sau */
+.section-map-title-main{
+  @media (max-width: 1440px) {
+    margin-top: 130px;
+    font-size: 2.5rem;
+  }
 }
 
 .main-text{
   margin-top: 2rem;
+  @media (max-width: 1440px) {
+    margin-top: 10px;
+  }
 }
 
 .schedule-item {
