@@ -62,10 +62,7 @@ body {
   margin: 0;
   overflow-x: hidden; 
 }
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 .pt-16 {
   padding-top: 4rem;
 }
