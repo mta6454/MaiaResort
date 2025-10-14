@@ -12,7 +12,7 @@
 
         </div>
       </div>
-      <div class="slide-wrapper w-100 py-8 mt-16">
+      <div class="slide-wrapper py-8 mt-16">
         <UtilitiesCarousel />
       </div>
       <div class="my-8 font-rosellinda text-3xl text-navy mt-16" style="color: #365967;">
@@ -88,5 +88,7 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
  object-fit: contain;
 }
 
-
+.slide-wrapper {
+  width: 100vw;
+}
 </style>
