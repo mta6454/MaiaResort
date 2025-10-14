@@ -200,4 +200,8 @@ select option {
     accent-color: #10B0A8;
   }
 }
+
+#sanPham {
+  margin-left: -10px;
+}
 </style>
