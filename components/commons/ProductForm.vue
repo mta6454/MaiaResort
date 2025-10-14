@@ -5,7 +5,7 @@
             <span class="font-rosellinda main-text-cl text-2xl">
                 Giữa
             </span>
-            <span class="sub-cl font-semibold text-xl">
+            <span class="sub-cl text-semibold text-xl">
                 Rừng Vàng, Biển Bạc
             </span>
         </div>
@@ -13,7 +13,7 @@
             <span class="font-rosellinda main-text-cl text-2xl">
                 chọn
             </span>
-            <span class="sub-cl font-semibold text-xl">
+            <span class="sub-cl text-semibold text-xl">
                 an vui,&nbsp;
             </span>
             <span class="font-rosellinda main-text-cl text-2xl">

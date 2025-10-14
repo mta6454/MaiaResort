@@ -9,19 +9,19 @@
       </div>
       <div class="mt-8 text-light font-sans font-normal">
         Ở đây, việc dung dưỡng thân - tâm - trí không còn là xa xỉ. Đó là hơi thở của rừng vàng giàu anion, là làn gió
-        biển <br> ion hóa tái tạo sức khỏe, cải thiện tinh thần.
+        biển <br>mang ion tinh khiết, là những trải nghiệm đã được khoa học chứng minh giúp tái tạo thể chất lẫn tinh thần.
       </div>
       <div class="second-slide-wrapper mt-16 mb-16">
         <CarouselsPrivilegeCarousel class="py-8"/>
       </div>
       <SectionDevide/>
-      <div class="second-slide-subtitle text-xl font-sans font-semibold mt-16">
+      <div class="second-slide-subtitle text-xl font-sans text-semibold mt-16">
         Maia Resort Ho Tram hội tụ uy tín quốc tế, <br/> sự am hiểu bản địa và chuẩn mực vận hành tinh hoa.
       </div>
       <div class="privilege-wrapper px-16 py-8 mt-16 mb-16">
         <div class="font-rosellinda text-3xl text-white font-light">Thuộc hệ sinh thái tài sản đầu tư</div>
         <div class="text-xl font-sans font-normal text-2xl">Quỹ đầu tư uy tín nước Mỹ</div>
-        <div class="py-8 privilege-name text-4xl font-sans font-bold text-uppercase">
+        <div class="py-8 privilege-name text-4xl font-sans text-bold text-uppercase">
           Warburg Pincus
         </div>
         <div class="flex flex-row flex-wrap">
@@ -76,7 +76,7 @@
         </div>
       </div>
       <SectionDevide/>
-      <p class="text-2xl font-sans font-semibold mt-16">
+      <p class="text-2xl font-sans text-semibold mt-16">
                 <span class="font-rosellinda text-3xl font-light">
                     Được ví như
                 </span> <b>"Las Vegas thu nhỏ"</b>

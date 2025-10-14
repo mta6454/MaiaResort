@@ -14,7 +14,7 @@
           <span class="font-rosellinda main-text-cl main-text text-2xl">
             chọn
           </span>
-          <span class="font-sans sub-cl font-semibold">
+          <span class="font-sans sub-cl text-semibold">
             An vui, 
           </span>
           <span class="font-rosellinda main-text-cl main-text text-2xl ms-2">
@@ -25,10 +25,10 @@
           </span>
         </div>
       </div>
-      <div class="intro_description intro_description_first text-center mt-10">
+      <div class="intro_description intro_description_first text-center mt-10 text-lg">
         Đây không chỉ là nơi để bạn tìm lại an vui, mà còn là giá trị bền vững được kiến tạo cho
       </div>
-      <div class="text-second text-2xl text-center font-semibold text-intro mt-8">
+      <div class="text-second text-2xl text-center text-semibold text-intro mt-8">
         Happy Tower & Villa tại Maia Resort Ho Tram, <br>
         chốn an trú độc tôn cho những chủ nhân tinh hoa.
       </div>
@@ -53,24 +53,27 @@
       </div>
 
 
-      <img src="/assets/images/arrow-down.svg" alt="" />
-      <div class="text-second text-2xl text-center mt-8  font-semibold text-intro">
+      <div class="text-second text-2xl text-center mt-8  text-semibold text-intro" id="textIntro">
         Có những nơi thiên nhiên chỉ dừng lại ở phong cảnh,
       </div>
       <div class="intro_description text-center" style="margin-top: 20px">
         Nhưng ở Maia Resort Ho Tram,
       </div>
-      <div class="text-second text-center font-semibold">
+      <div class="text-second text-center text-semibold">
         Rừng vàng và biển bạc trở thành đặc quyền hiếm có, ôm trọn từng khoảnh khắc sống.
       </div>
       <div class="section-utilities w-100 py-16 row">
         <div class="w-70 utilities-image">
           <img :src="utilities" alt="Utilities" />
+          <div class="utilities-image-content text-light">
+            <div class="text-semibold text-4xl text-end lh-1">100<span class="text-normal text-3xl">%</span></div>
+            <div class="text-xl">View biển trực diện</div>
+          </div>
         </div>
         <div class="w-30 utilities-des">
           <img :src="utilitiesSecond" alt="Utilities" />
           <div class="utilities-des-content_overlay">
-            <div class="utilities-des-content_overlay_title text-3xl">TOP 65</div>
+            <div class="utilities-des-content_overlay_title text-4xl text-semibold">TOP 65</div>
             <div class="utilities-des-content_overlay_des text-xl">Hệ sinh thái rừng<br> bền vững thế giới</div>
           </div>
           <div class="utilities-des-content_overlay_button">
@@ -88,7 +91,7 @@ import utilities from '~/assets/images/utilitiesImage.jpg'
 import utilitiesSecond from '~/assets/images/section-2_2.jpg'
 import arrowRight from '~/assets/images/arrow-right.svg'
 
-function go(hash) {
+function go(hash : string) {
   if (hash && hash.startsWith('#')) {
     const el = document.querySelector(hash)
     if (el) el.scrollIntoView({behavior: 'smooth'})
@@ -152,6 +155,11 @@ function go(hash) {
 
 .text-intro {
   font-weight: 700;
+  color: #014261;
+}
+
+.utilities-image{
+  position: relative;
 }
 
 .utilities-image img {
@@ -159,6 +167,14 @@ function go(hash) {
   height: 100%;
   object-fit: cover;
 }
+
+.utilities-image-content{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 2rem;
+}
+
 .row .utilities-image, .row .utilities-des{
   padding-right: 0;
   padding-left: 0;
@@ -172,7 +188,7 @@ function go(hash) {
   object-fit: cover;
 }
 .utilities-des-content_overlay {
-  background: linear-gradient(to bottom, rgba(0, 85, 102, 0.8), rgba(0, 150, 136, 0.8));
+  background: linear-gradient(to bottom, rgba(16, 153, 135, 0.8), rgba(1, 66, 97, 0.9), rgba(1, 66, 97, 0.9));
   position: absolute;
   top: 0;
   left: 0;

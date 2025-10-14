@@ -2,7 +2,7 @@
   <div class="bottom-menu w-40 text-size-normal">
     <div class="row">
       <div class="col-md-3 right-divide">
-        <div class="bottom-menu-item flex items-center justify-center">
+        <div class="bottom-menu-item flex items-center justify-center" @click="go('#textIntro')">
           TÌM HIỂU THÊM
         </div>
       </div>
@@ -69,8 +69,8 @@ a {
 }
 </style>
 <script setup lang="ts">
-function go(hash) {
-  close()
+function go( hash : string ) {
+  // close()
   if (hash && hash.startsWith('#')) {
     const el = document.querySelector(hash)
     if (el) el.scrollIntoView({behavior: 'smooth'})
