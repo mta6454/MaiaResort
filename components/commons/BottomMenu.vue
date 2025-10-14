@@ -1,22 +1,22 @@
 <template>
   <div class="bottom-menu w-40 text-size-normal">
     <div class="row">
-      <div class="col-md-3 right-divide">
+      <div class="col-md-3 col-xs-3 right-divide">
         <div class="bottom-menu-item flex items-center justify-center" @click="go('#textIntro')">
           TÌM HIỂU THÊM
         </div>
       </div>
-      <div class="col-md-3 right-divide">
+      <div class="col-md-3 col-xs-3 right-divide">
         <div class="bottom-menu-item flex items-center justify-center" @click="go('#map')">
           XEM BẢN ĐỒ
         </div>
       </div>
-      <div class="col-md-3 right-divide">
+      <div class="col-md-3 col-xs-3 right-divide">
         <div class="bottom-menu-item flex items-center justify-center" @click="go('#register')">
           TƯ VẤN NGAY
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 col-xs-3">
         <div class="bottom-menu-item flex items-center justify-center">
           <a target="_blank" href="https://vr360.maiaresorthotram.com/">360° DỰ ÁN</a>
         </div>
@@ -70,7 +70,7 @@ a {
 }
 </style>
 <script setup lang="ts">
-function go( hash : string ) {
+function go(hash: string) {
   // close()
   if (hash && hash.startsWith('#')) {
     const el = document.querySelector(hash)

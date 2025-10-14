@@ -130,8 +130,8 @@
                 </div>
             </div>
             <div class="py-8 row mt-16">
-                <div class="col-md-5"></div>
-                <div class="col-md-7">
+                <div class="col-md-5 d-col-prod-form"></div>
+                <div class="col-md-7 col-prod-form">
                     <ProductForm />
                 </div>
             </div>
@@ -215,5 +215,14 @@ const handleShowProductPopup = (data: ProductPopupProps) => {
 
 .project-item-content-button:hover {
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .d-col-prod-form {
+    display: none;
+  }
+  .col-prod-form {
+    width: 100%;
+  }
 }
 </style>

@@ -53,7 +53,7 @@
         <!-- Liên hệ qua -->
         <div class="mb-3 row">
           <label class="form-label col-md-4">Liên hệ cho tôi bằng:</label>
-          <div class="form-check col-md-4">
+          <div class="form-check col-md-4 form-check-phone">
             <input class="form-check-input" checked type="radio" name="contactMethod" id="contactPhone"
                    value="phone">
             <label class="form-check-label" for="contactPhone">Điện thoại</label>
@@ -195,6 +195,7 @@ select option {
 .form-check-email {
   margin-left: 60px;
 }
+
 @supports not (appearance: none) {
   .form-check-input {
     accent-color: #10B0A8;
@@ -204,4 +205,20 @@ select option {
 #sanPham {
   margin-left: -10px;
 }
+
+@media (max-width: 768px) {
+  .form-check {
+    width: 150px;
+  }
+
+  .form-check-email {
+    margin-left: 20px;
+  }
+
+  .form-check-phone {
+    margin-left: 10px;
+  }
+}
 </style>
+<script setup lang="ts">
+</script>

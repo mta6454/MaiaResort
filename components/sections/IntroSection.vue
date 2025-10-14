@@ -3,7 +3,7 @@
     <div class="container mt-8 px-0">
       <div class="intro_content">
         <div>
-          <span class="font-rosellinda main-text-cl text-2xl">
+          <span class="font-rosellinda main-text-cl text-2xl text-2sm">
             Giữa
           </span>
           <span class="font-sans sub-cl text-2xl font-light">
@@ -28,7 +28,7 @@
       <div class="intro_description intro_description_first text-center mt-10 text-semibold">
         Đây không chỉ là nơi để bạn tìm lại an vui, mà còn là giá trị bền vững được kiến tạo cho
       </div>
-      <div class="text-second text-2xl text-center text-semibold text-intro mt-8">
+      <div class="text-second text-2xl text-center text-semibold text-intro mt-8 intro-happy">
         Happy Tower & Villa tại Maia Resort Ho Tram, <br>
         chốn an trú độc tôn cho những chủ nhân tinh hoa.
       </div>
@@ -39,14 +39,14 @@
           <svg viewBox="0 0 24 24" class="icon" xmlns="http://www.w3.org/2000/svg">
 
             <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-dasharray="50 8" stroke-dashoffset="12" />
+                    stroke-dasharray="50 8" stroke-dashoffset="12"/>
 
             <!-- Thân mũi tên -->
-            <path d="M12 2v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M12 2v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 
             <!-- Đầu mũi tên -->
             <path d="M9.75 11.5L12 14l2.25-2.5" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" />
+                  stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </span>
       </div>
@@ -62,21 +62,21 @@
       </div>
       <div class="section-utilities py-16 row" :class="{'is-reverse': isReverse}">
         <div class="utilities-image utilities-left">
-          <img :src="utilities" alt="Utilities" />
+          <img :src="utilities" alt="Utilities"/>
           <div class="utilities-left-content_overlay">
             <div class="utilities-des-content_overlay_title text-3xl text-semibold">100 %</div>
             <div class="utilities-des-content_overlay_des text-xl">View biển trực diện</div>
           </div>
         </div>
         <div class="utilities-des utilities-right">
-          <img :src="utilitiesSecond" alt="Utilities" />
+          <img :src="utilitiesSecond" alt="Utilities"/>
           <div class="utilities-des-content_overlay">
             <div class="utilities-des-content_overlay_title text-4xl text-semibold">TOP 65</div>
             <div class="utilities-des-content_overlay_des text-xl">Hệ sinh thái rừng<br> bền vững thế giới</div>
           </div>
           <div class="utilities-des-content_overlay_button" @click="setReverse">
             <!-- Xử lý click ở đây -->
-            <img :src="arrowRight" alt="Arrow Right" />
+            <img :src="arrowRight" alt="Arrow Right"/>
           </div>
         </div>
       </div>
@@ -89,12 +89,13 @@ import utilities from '~/assets/images/utilitiesImage.jpg'
 import utilitiesSecond from '~/assets/images/section-2_2.jpg'
 import arrowRight from '~/assets/images/arrow-right.svg'
 
-function go(hash : string) {
+function go(hash: string) {
   if (hash && hash.startsWith('#')) {
     const el = document.querySelector(hash)
     if (el) el.scrollIntoView({behavior: 'smooth'})
   }
 }
+
 const isReverse = ref(false)
 
 const setReverse = () => {
@@ -102,7 +103,7 @@ const setReverse = () => {
 }
 </script>
 <style scoped>
-.section-intro{
+.section-intro {
   padding-top: 4rem;
   padding-bottom: 4rem;
   @media (max-width: 1440px) {
@@ -134,7 +135,7 @@ const setReverse = () => {
 }
 
 .intro_description-second {
-    margin-top: 20px;
+  margin-top: 20px;
   @media (max-width: 1440px) {
     font-size: 16px;
     margin-top: 10px;
@@ -200,14 +201,14 @@ const setReverse = () => {
   object-fit: cover;
 }
 
-.utilities-image-content{
+.utilities-image-content {
   position: absolute;
   bottom: 0;
   right: 0;
   padding: 2rem;
 }
 
-.row .utilities-image, .row .utilities-des{
+.row .utilities-image, .row .utilities-des {
   padding-right: 0;
   padding-left: 0;
 }
@@ -217,7 +218,8 @@ const setReverse = () => {
   width: 100%;
   object-fit: cover;
 }
-.utilities-des-content_overlay, .utilities-left-content_overlay{
+
+.utilities-des-content_overlay, .utilities-left-content_overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -228,6 +230,7 @@ const setReverse = () => {
     padding: 1rem;
   }
 }
+
 .utilities-des-content_overlay {
   background: linear-gradient(to bottom, rgba(16, 153, 135, 0.8), rgba(1, 66, 97, 0.9), rgba(1, 66, 97, 0.9));
   top: 0;
@@ -237,6 +240,7 @@ const setReverse = () => {
   gap: 8px;
   color: #fff;
 }
+
 .utilities-left-content_overlay {
   bottom: 0;
   left: 0;
@@ -245,6 +249,7 @@ const setReverse = () => {
   color: #fff;
   background: transparent;
 }
+
 .utilities-des-content_overlay_button {
   position: absolute;
   bottom: 3rem;
@@ -253,53 +258,112 @@ const setReverse = () => {
   height: 3rem;
   cursor: pointer;
 }
+
 .utilities-des-content_overlay_button:hover {
   transform: translateY(1px);
   transition: transform .18s ease;
 }
+
 .utilities-left {
   width: 70%;
   transform: translateX(0);
   position: relative;
   /* transition: width .4s ease, transform .4s ease; */
 }
+
 .utilities-right {
   width: 30%;
   transform: translateX(0);
   /* transition: width .4s ease, transform .4s ease; */
 }
+
 .section-utilities {
   width: 100%;
-  
+
   @media (max-width: 1440px) {
     border: 1px solid blue;
     padding-top: 50px;
     padding-bottom: 0px;
   }
 }
-.section-utilities.is-reverse  .utilities-left {
+
+.section-utilities.is-reverse .utilities-left {
   width: 30%;
 }
-.section-utilities.is-reverse  .utilities-right {
+
+.section-utilities.is-reverse .utilities-right {
   width: 70%;
 }
-.section-utilities.is-reverse  .utilities-des-content_overlay {
+
+.section-utilities.is-reverse .utilities-des-content_overlay {
   background: transparent;
   align-items: flex-end;
   justify-content: flex-end;
 }
-.section-utilities.is-reverse  .utilities-des-content_overlay_button {
- transform: rotate(180deg);
+
+.section-utilities.is-reverse .utilities-des-content_overlay_button {
+  transform: rotate(180deg);
 }
+
 .section-utilities.is-reverse .utilities-left-content_overlay {
   background: linear-gradient(to bottom, rgba(0, 85, 102, 0.8), rgba(0, 150, 136, 0.8));
   justify-content: center;
   align-items: center;
 }
+
 .section-utilities.is-reverse .utilities-des-content_overlay_title {
   font-size: 3rem;
 }
+
 .section-utilities.is-reverse .utilities-left-content_overlay .utilities-des-content_overlay_title {
   font-size: 4rem;
+}
+
+@media (max-width: 768px) {
+  .intro_content {
+    font-size: 16px !important;
+    margin-bottom: 40px;
+  }
+
+  .intro_description_first {
+    font-size: 13px;
+    padding: 10px 80px 0 80px;
+    word-break: break-word;
+  }
+
+  .intro-happy {
+    font-size: 16px !important;
+  }
+
+  .cta-title {
+    font-size: 14px;
+  }
+
+  #textIntro {
+    margin-top: 0 !important;;
+    font-size: 14px;
+  }
+
+  .section-utilities {
+    padding: 20px 10px 0 10px;
+    height: 80%;
+    border: none;
+  }
+
+  .utilities-des-content_overlay {
+    height: 80% !important;
+  }
+
+  .utilities-image {
+    height: 350px;
+  }
+
+  .utilities-right {
+    font-size: 14px;
+    height: 350px;
+  }
+  .utilities-des-content_overlay_title {
+    font-size: 20px;
+  }
 }
 </style>

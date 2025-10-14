@@ -4,25 +4,25 @@
       <div class="app_header_inner_left">
         <div class="btn_header">
           <a href="/" class="">
-            <img :src="phoneIcon" alt="Phone" class="phone" />
+            <img :src="phoneIcon" alt="Phone" class="phone"/>
           </a>
         </div>
         <div class="btn_header">
           <a target="_blank" href="https://vr360.maiaresorthotram.com/">
-            <img :src="View360" alt="View360" class="view360" />
+            <img :src="View360" alt="View360" class="view360"/>
           </a>
         </div>
       </div>
       <div class="header_logo_wrapper">
         <a href="/" class="">
-          <img :src="logo" alt="Logo" class="header_logo" />
+          <img :src="logo" alt="Logo" class="header_logo"/>
         </a>
       </div>
 
       <div class="header_right flex justify-content-end">
         <!-- icon menu -->
         <div class="icon_menu" @click.prevent="showMenu = true">
-          <img :src="menuIcon" alt="Menu" class="menu" />
+          <img :src="menuIcon" alt="Menu" class="menu"/>
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import {ref, onMounted, onUnmounted} from 'vue';
 import logo from '~/assets/images/Logo.svg'
 import View360 from '~/assets/images/View360.gif'
 import phoneIcon from '~/assets/images/phone.svg'
@@ -48,29 +48,29 @@ const headerContainerRef = ref<HTMLElement | null>(null);
 let lastScrollY: number;
 
 const handleScroll = () => {
-    const header = headerContainerRef.value;
-    if (!header) return;
+  const header = headerContainerRef.value;
+  if (!header) return;
 
-    // It's safe to access window.scrollY here because the event listener is only added on the client.
-    if (lastScrollY < window.scrollY && window.scrollY > 0) {
-        header.classList.add('header-hidden');
-    } else {
-        header.classList.remove('header-hidden');
-    }
+  // It's safe to access window.scrollY here because the event listener is only added on the client.
+  if (lastScrollY < window.scrollY && window.scrollY > 0) {
+    header.classList.add('header-hidden');
+  } else {
+    header.classList.remove('header-hidden');
+  }
 
-    lastScrollY = window.scrollY;
+  lastScrollY = window.scrollY;
 };
 
 // Use onMounted to ensure this code only runs on the client-side (in the browser).
 onMounted(() => {
-    // Initialize lastScrollY with the browser's current scroll position.
-    lastScrollY = window.scrollY;
-    window.addEventListener('scroll', handleScroll);
+  // Initialize lastScrollY with the browser's current scroll position.
+  lastScrollY = window.scrollY;
+  window.addEventListener('scroll', handleScroll);
 });
 
 onUnmounted(() => {
-    // Clean up the event listener to prevent memory leaks.
-    window.removeEventListener('scroll', handleScroll);
+  // Clean up the event listener to prevent memory leaks.
+  window.removeEventListener('scroll', handleScroll);
 });
 </script>
 
@@ -105,7 +105,7 @@ onUnmounted(() => {
   align-items: center;
 }
 
-.header_right{
+.header_right {
   width: 20%;
 }
 
@@ -133,13 +133,27 @@ onUnmounted(() => {
     width: 5.5rem;
   }
 }
+
 .icon_menu {
   cursor: pointer;
   width: 2.34375rem;
   height: 2.34375rem;
 }
+
 .icon_menu img {
   height: 100%;
   object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .app_header {
+    width: 45%;
+  }
+  .header_logo {
+    height: 60%;
+  }
+  .header_right {
+    width: 15%;
+  }
 }
 </style>
