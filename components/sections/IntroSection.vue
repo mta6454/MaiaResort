@@ -107,7 +107,6 @@ const setReverse = () => {
   padding-top: 4rem;
   padding-bottom: 4rem;
   @media (max-width: 1440px) {
-    border: 1px solid red;
     padding-top: 1rem;
     padding-bottom: 0rem;
   }
@@ -281,7 +280,6 @@ const setReverse = () => {
   width: 100%;
 
   @media (max-width: 1440px) {
-    border: 1px solid blue;
     padding-top: 50px;
     padding-bottom: 0px;
   }
