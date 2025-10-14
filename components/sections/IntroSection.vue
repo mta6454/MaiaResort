@@ -15,9 +15,9 @@
             chọn
           </span>
           <span class="font-sans sub-cl font-semibold">
-            An vui,
+            An vui, 
           </span>
-          <span class="font-rosellinda main-text-cl main-text text-2xl">
+          <span class="font-rosellinda main-text-cl main-text text-2xl ms-2">
             chọn
           </span>
           <span class="font-sans sub-cl font-extrabold">

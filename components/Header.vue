@@ -1,5 +1,5 @@
 <template>
-  <header class="app_header">
+  <header class="app_header" ref="headerContainerRef">
     <div class="app_header_inner container">
       <div class="app_header_inner_left">
         <div class="btn_header">
@@ -19,7 +19,7 @@
         </a>
       </div>
 
-      <div class="header_right">
+      <div class="header_right flex justify-content-end">
         <!-- icon menu -->
         <div class="icon_menu" @click.prevent="showMenu = true">
           <img :src="menuIcon" alt="Menu" class="menu" />
@@ -33,14 +33,47 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue';
 import logo from '~/assets/images/Logo.svg'
 import View360 from '~/assets/images/View360.gif'
 import phoneIcon from '~/assets/images/phone.svg'
 import menuIcon from '~/assets/images/menu.svg'
 import MenuOverlay from "~/components/sections/MenuOverlay.vue";
 
-const showMenu = ref(false)
+const showMenu = ref(false);
+
+const headerContainerRef = ref<HTMLElement | null>(null);
+
+// Declare lastScrollY here, but initialize it inside onMounted.
+let lastScrollY: number;
+
+const handleScroll = () => {
+    const header = headerContainerRef.value;
+    if (!header) return;
+
+    // It's safe to access window.scrollY here because the event listener is only added on the client.
+    if (lastScrollY < window.scrollY && window.scrollY > 0) {
+        header.classList.add('header-hidden');
+    } else {
+        header.classList.remove('header-hidden');
+    }
+
+    lastScrollY = window.scrollY;
+};
+
+// Use onMounted to ensure this code only runs on the client-side (in the browser).
+onMounted(() => {
+    // Initialize lastScrollY with the browser's current scroll position.
+    lastScrollY = window.scrollY;
+    window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+    // Clean up the event listener to prevent memory leaks.
+    window.removeEventListener('scroll', handleScroll);
+});
 </script>
+
 <style>
 .app_header {
   position: fixed;
@@ -51,7 +84,11 @@ const showMenu = ref(false)
   height: auto !important;
   padding-top: 0.7rem !important;
   padding-bottom: 0.7rem !important;
-  transition: .4s all;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-hidden {
+  transform: translateY(-100%); /* Moves the header completely out of the viewport */
 }
 
 .app_header_inner {
@@ -63,8 +100,13 @@ const showMenu = ref(false)
 }
 
 .app_header_inner_left {
+  width: 20%;
   display: flex;
   align-items: center;
+}
+
+.header_right{
+  width: 20%;
 }
 
 .btn_header {

@@ -27,7 +27,7 @@
 <style scoped>
 .bottom-menu {
   position: fixed;
-  bottom: 8rem;
+  bottom: 2rem;
   left: 0;
   right: 0;
   background-color: #ECBD6A;

@@ -149,7 +149,7 @@ import ProductForm from '~/components/commons/ProductForm.vue'
     margin-right: 0.5rem;
 }
 #product {
-  margin-top: 70vh;
+  /* margin-top: 70vh; */
 }
 
 .img-partner {
