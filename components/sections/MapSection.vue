@@ -37,7 +37,7 @@
           </div>
         </div>
         <div class="map col-md-8">
-          <img src="/assets/images/new-map.png" alt="Map" />
+          <img src="/assets/images/map.png" alt="Map" />
         </div>
       </div>
     </div>

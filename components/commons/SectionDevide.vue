@@ -7,7 +7,7 @@
 </template>
 <style scoped>
 .section-devide-line {
-  width: 1px;
+  width: 2px;
   height: 3rem;
   background-color: #fff;
 }

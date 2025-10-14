@@ -1,6 +1,6 @@
 <template>
     <div id="register" class="product-form">
-        <div class="product-form-title text-center text-normal">Happy Tower & Villa tại Maia Resort Ho Tram</div>
+        <div class="product-form-title text-center text-3xl">Happy Tower & Villa tại Maia Resort Ho Tram</div>
         <div class="product-form-subtitle text-center mt-4">
             <span class="font-rosellinda main-text-cl text-2xl">
                 Giữa
@@ -9,7 +9,7 @@
                 Rừng Vàng, Biển Bạc
             </span>
         </div>
-        <div class="product-form-subtitle text-center">
+        <div class="product-form-subtitle text-center mb-4">
             <span class="font-rosellinda main-text-cl text-2xl">
                 chọn
             </span>
@@ -20,7 +20,7 @@
                 chọn
             </span>
             <span class="sub-cl font-extrabold text-2xl">
-                Giá Trị Bền Vững.
+                Giá Trị Bền Vững
             </span>
         </div>
         <div class="text-center">
@@ -33,20 +33,20 @@
                 <!-- Tên khách hàng -->
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control px-0" id="tenKhach" placeholder="Tên quý khách">
-                    <label for="tenKhach" class="px-0">Xin được biết tên quý khách</label>
+                    <label for="tenKhach" class="px-0">Xin được biết tên quý khách:</label>
                 </div>
 
                 <!-- Số điện thoại -->
                 <div class="row mb-3">
                     <div class="col-md-6 form-floating mb-3">
                         <input type="tel" class="form-control  px-0" id="soDienThoai" placeholder="Số điện thoại">
-                        <label for="soDienThoai">Số điện thoại</label>
+                        <label for="soDienThoai">Số điện thoại:</label>
                     </div>
 
                     <!-- Email -->
                     <div class="col-md-6 form-floating mb-3">
                         <input type="email" class="form-control  px-0" id="email" placeholder="Email">
-                        <label for="email">Email (nếu muốn)</label>
+                        <label for="email">Email (nếu muốn):</label>
                     </div>
                 </div>
 
@@ -66,7 +66,7 @@
                 </div>
 
                 <!-- Sản phẩm cần tư vấn -->
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-5">
                     <select class="form-select" id="sanPham" aria-label="Chọn sản phẩm">
                         <option selected disabled>Chọn sản phẩm cần tư vấn:</option>
                         <option value="villa">Biệt thự</option>
@@ -84,7 +84,7 @@
 <style scoped>
 .product-form {
     /* background: linear-gradient(to bottom, rgba(0, 85, 102, 0.6), rgba(0, 150, 136, 0.6)); */
-    background: linear-gradient(to bottom, rgba(1, 66, 97, 1), rgba(16, 153, 135, 1));
+    background: linear-gradient(to bottom, rgba(1, 66, 97, 0.9), rgba(16, 153, 135, 0.9));
     padding: 2rem;
     border-radius: 1rem;
 }
@@ -138,7 +138,9 @@ select option {
     background-size: 16px 12px;
 }
 .form-submit {
-width: fit-content;
-background-color: #ECBD6A;
+    width: fit-content;
+    background: linear-gradient(to bottom, #c9a979 0%, #ecd4af 50%, #b79b70 100%);
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 </style>

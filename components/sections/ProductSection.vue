@@ -1,5 +1,5 @@
 <template>
-    <section id="product" style="margin-top: 70vh;">
+    <section id="product" style="margin-top: 10vh;">
         <div class="container text-white text-normal">
             <div class="d-flex justify-content-between">
                 <div class="">
@@ -52,7 +52,6 @@
                 </div>
             </div>
             <div class="devide-line my-16"></div>
-            tách riêng 2 component, cho component bên phải dính vào lề phải
             <div class="row">
                 <div class="col-md-4 font-rosellinda text-2xl main-text">
                     Quy mô
@@ -132,8 +131,8 @@
                 </div>
             </div>
             <div class="py-8 row mt-16">
-                <div class="col-md-6"></div>
-                <div class="col-md-6">
+                <div class="col-md-5"></div>
+                <div class="col-md-7">
                     <ProductForm />
                 </div>
             </div>
