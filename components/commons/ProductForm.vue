@@ -1,11 +1,11 @@
 <template>
     <div id="register" class="product-form">
-        <div class="product-form-title text-center text-xl">Happy Tower & Villa tại Maia Resort Ho Tram</div>
+        <div class="product-form-title text-center text-normal">Happy Tower & Villa tại Maia Resort Ho Tram</div>
         <div class="product-form-subtitle text-center mt-4">
             <span class="font-rosellinda main-text-cl text-2xl">
                 Giữa
             </span>
-            <span class="sub-cl text-semibold text-xl">
+            <span class="sub-cl text-semibold text-2xl">
                 Rừng Vàng, Biển Bạc
             </span>
         </div>
@@ -13,13 +13,13 @@
             <span class="font-rosellinda main-text-cl text-2xl">
                 chọn
             </span>
-            <span class="sub-cl text-semibold text-xl">
+            <span class="sub-cl text-semibold text-2xl">
                 An Vui,&nbsp;
             </span>
             <span class="font-rosellinda main-text-cl text-2xl">
                 chọn
             </span>
-            <span class="sub-cl font-extrabold text-xl">
+            <span class="sub-cl font-extrabold text-2xl">
                 Giá Trị Bền Vững.
             </span>
         </div>
@@ -83,9 +83,14 @@
 </template>
 <style scoped>
 .product-form {
-    background: linear-gradient(to bottom, rgba(0, 85, 102, 0.6), rgba(0, 150, 136, 0.6));
+    /* background: linear-gradient(to bottom, rgba(0, 85, 102, 0.6), rgba(0, 150, 136, 0.6)); */
+    background: linear-gradient(to bottom, rgba(1, 66, 97, 1), rgba(16, 153, 135, 1));
     padding: 2rem;
     border-radius: 1rem;
+}
+
+.product-form-title{
+    font-size: 1.4rem;
 }
 
 .form-control {

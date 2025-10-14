@@ -1,8 +1,8 @@
 <template>
-    <section id="product" class="">
+    <section id="product" style="margin-top: 70vh;">
         <div class="container text-white text-normal">
-            <div class="row">
-                <div class="col-md-4">
+            <div class="d-flex justify-content-between">
+                <div class="">
                     <div class="font-rosellinda text-2xl main-text">
                         Chủ đầu tư
                     </div>
@@ -10,17 +10,17 @@
                         CÔNG TY TNHH DỰ ÁN <br>HỒ TRÀM
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="">
                     <div class="font-rosellinda text-2xl main-text">
                         Vị trí
                     </div>
-                    <div class="mb-4 text-size-normal">
+                    <div class="mb-4 text-lg">
                         Xã Hồ Tràm, Thành phố Hồ Chí Minh
                     </div>
                     <div class="font-rosellinda text-2xl main-text">
                         Khởi công
                     </div>
-                    <div class="mb-4 text-size-normal">
+                    <div class="mb-4 text-lg">
                         Dự kiến quý 4/2025
                     </div>
                     <div class="font-rosellinda text-2xl main-text">
@@ -30,17 +30,17 @@
                       <img alt="" class="img-partner" src="/assets/images/Fusion-logo.png"/>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="">
                     <div class="font-rosellinda text-2xl main-text">
                         Diện tích
                     </div>
-                    <div class="mb-4 text-size-normal">
+                    <div class="mb-4 text-lg">
                         7ha
                     </div>
                     <div class="font-rosellinda text-2xl main-text">
                         Bàn Giao
                     </div>
-                    <div class="mb-4 text-size-normal">
+                    <div class="mb-4 text-lg">
                         Dự kiến quý 3/2027
                     </div>
                     <div class="font-rosellinda text-2xl main-text">
@@ -52,6 +52,7 @@
                 </div>
             </div>
             <div class="devide-line my-16"></div>
+            tách riêng 2 component, cho component bên phải dính vào lề phải
             <div class="row">
                 <div class="col-md-4 font-rosellinda text-2xl main-text">
                     Quy mô
@@ -59,23 +60,23 @@
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="font-rosellinda text-2xl main-text">Peace Tower</div>
-                            <div class="flex flex-row">
-                                <div class="text-3xl product-number">634</div>
+                            <div class="font-rosellinda text-2xl main-text text-center">Peace Tower</div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="text-4xl product-number">634</div>
                                 <div>CĂN<br>HỘ</div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="font-rosellinda text-2xl main-text">Happy Tower</div>
-                            <div class="flex flex-row">
-                                <div class="text-3xl product-number">610</div>
+                            <div class="font-rosellinda text-2xl main-text text-center">Happy Tower</div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="text-4xl product-number">610</div>
                                 <div>CĂN<br>HỘ</div>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="font-rosellinda text-2xl main-text">Biệt Thự</div>
-                            <div class="flex flex-row">
-                                <div class="text-3xl product-number">63</div>
+                            <div class="font-rosellinda text-2xl main-text text-center">Biệt Thự</div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="text-4xl product-number">63</div>
                                 <div><br>CĂN</div>
                             </div>
                         </div>
@@ -112,17 +113,17 @@
 							</div>
             </div>
             <div class="text-center">
-                <div class="font-rosellinda text-2xl main-text">
+                <div class="font-rosellinda main-text" style="font-size: 2.3rem;">
                     Maia Ho Tram trở lại cùng tuyệt tác
                 </div>
-                <div class="mt-2 text-xl">
+                <div class="mt-2 text-2xl">
                     Happy Tower và bộ sưu tập 36 căn Villa.
                 </div>
                 <SectionDevide />
-                <div class="text-light text-xl">
+                <div class="text-light text-2xl">
                     Tiếp nối sức hút thành công từ Peace Tower
                 </div>
-                <div class="text-xl">
+                <div class="text-2xl">
                     97% căn hộ được mua chốt chỉ sau 1 tháng ra mắt
                 </div>
             </div>
@@ -142,6 +143,7 @@ import ProductForm from '~/components/commons/ProductForm.vue'
     width: 100%;
     height: 2px;
     background-color: #ffffff60;
+    opacity: 50%;
 }
 
 .product-number {
@@ -173,7 +175,7 @@ import ProductForm from '~/components/commons/ProductForm.vue'
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	background: linear-gradient(to bottom, rgba(0, 85, 102, 0.6), rgba(0, 150, 136, 0.6));
+	background: linear-gradient(to bottom, rgba(0, 85, 102, 0.1), rgba(0, 150, 136, 0.1));
 }
 
 .project-item-content-button:hover{

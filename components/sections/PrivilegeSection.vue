@@ -4,10 +4,10 @@
       <div class="second-slide-title font-rosellinda text-2xl">
         Wellness từ thiên nhiên
       </div>
-      <div class="second-slide-subtitle text-xl font-sans font-light">
+      <div class="mt-4 second-slide-subtitle font-sans font-light" style="font-size: 1.75rem;">
         Không khí rừng giàu anion & gió biển ion hóa <br> tái tạo sức khỏe, cải thiện tinh thần.
       </div>
-      <div class="mt-8 text-light font-sans font-normal">
+      <div class="mt-4 text-light font-sans font-normal text-xl">
         Ở đây, việc dung dưỡng thân - tâm - trí không còn là xa xỉ. Đó là hơi thở của rừng vàng giàu anion, là làn gió
         biển <br>mang ion tinh khiết, là những trải nghiệm đã được khoa học chứng minh giúp tái tạo thể chất lẫn tinh thần.
       </div>
@@ -15,31 +15,31 @@
         <CarouselsPrivilegeCarousel class="py-8"/>
       </div>
       <SectionDevide/>
-      <div class="second-slide-subtitle text-xl font-sans text-semibold mt-16">
+      <div class="second-slide-subtitle font-sans text-semibold mt-16" style="font-size: 1.75rem;">
         Maia Resort Ho Tram hội tụ uy tín quốc tế, <br/> sự am hiểu bản địa và chuẩn mực vận hành tinh hoa.
       </div>
       <div class="privilege-wrapper px-16 py-8 mt-16 mb-16">
-        <div class="font-rosellinda text-3xl text-white font-light">Thuộc hệ sinh thái tài sản đầu tư</div>
+        <div class="font-rosellinda text-white font-light" style="font-size: 2.5rem;">Thuộc hệ sinh thái tài sản đầu tư</div>
         <div class="text-xl font-sans font-normal text-2xl">Quỹ đầu tư uy tín nước Mỹ</div>
         <div class="py-8 privilege-name text-4xl font-sans text-bold text-uppercase">
           Warburg Pincus
         </div>
         <div class="flex flex-row flex-wrap">
           <div class="privilege-item">
-            <div class="privilege-item-title font-sans font-extrabold">55+</div>
+            <div class="privilege-item-title text-4xl font-sans">55+</div>
             <div class="font-sans font-normal">Năm kinh nghiệm <br/> đầu tư quốc tế</div>
           </div>
           <div class="privilege-item">
-            <div class="privilege-item-title font-sans font-extrabold">$120+</div>
-            <div class="font-sans font-normal">Tỷ tổng vốn đầu tư</div>
+            <div class="privilege-item-title text-4xl font-sans">$120+</div>
+            <div class="font-sans font-normal">Tỷ tổng vốn <br/> đầu tư</div>
           </div>
           <div class="privilege-item">
-            <div class="privilege-item-title font-sans font-extrabold">1.000+</div>
-            <div class="font-sans font-normal">Doanh nghiệp trong doanh mục đầu tư</div>
+            <div class="privilege-item-title text-4xl font-sans">1.000+</div>
+            <div class="font-sans font-normal">Doanh nghiệp trong <br/> danh mục đầu tư</div>
           </div>
           <div class="privilege-item">
-            <div class="privilege-item-title font-sans font-extrabold">40+</div>
-            <div class="font-sans font-normal">Quốc gia hiện diện</div>
+            <div class="privilege-item-title text-4xl font-sans">40+</div>
+            <div class="font-sans font-normal">Quốc gia <br/> hiện diện</div>
           </div>
         </div>
 
@@ -48,7 +48,7 @@
         </div>
         <div class="flex flex-row">
           <div class="banner-left">
-            <div>
+            <div class="mb-4">
               <h5 class="font-rosellinda text-xl">Chủ đầu tư và đơn vị phát triển</h5>
             </div>
             <div class="flex-row flex justify-content-center">
@@ -64,7 +64,7 @@
             </div>
           </div>
           <div class="flex flex-column align-items-center banner-right">
-            <div>
+            <div class="mb-2">
               <h5 class="font-rosellinda font-normal text-xl">Vận hành dưới thương hiệu</h5>
             </div>
             <div class="flex-row flex">
@@ -77,9 +77,7 @@
       </div>
       <SectionDevide/>
       <p class="text-2xl font-sans text-semibold mt-16">
-                <span class="font-rosellinda text-3xl font-light">
-                    Được ví như
-                </span> <b>"Las Vegas thu nhỏ"</b>
+        <span class="font-rosellinda text-3xl font-light">Được ví như</span> <b>"Las Vegas thu nhỏ"</b>
       </p>
       <p class="font-sans text-xl">
         ngay tại trung tâm thủ phủ du lịch lớn nhất Việt Nam,<br>
@@ -143,7 +141,7 @@ function go( hash : string ) {
 }
 
 .privilege-item-title {
-  font-size: 3rem;
+  /* font-size: 3rem; */
 }
 
 .devide-line {

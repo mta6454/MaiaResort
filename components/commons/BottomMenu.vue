@@ -30,9 +30,9 @@
   bottom: 2rem;
   left: 0;
   right: 0;
-  background-color: #ECBD6A;
+  background: linear-gradient(to bottom, #c9a979 0%, #ecd4af 50%, #b79b70 100%);
   border-radius: 0.75rem;
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 0 auto;
   z-index: 100;
   font-weight: 700;
@@ -53,6 +53,7 @@
 }
 
 .bottom-menu-item, .bottom-menu-item a {
+  font-size: 1rem;
   text-shadow: none;
   transition: color 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
   cursor: pointer;

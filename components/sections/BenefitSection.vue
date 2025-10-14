@@ -15,10 +15,10 @@
       <div class="slide-wrapper w-100 py-8 mt-16">
         <UtilitiesCarousel />
       </div>
-      <div class="my-8 font-rosellinda text-3xl text-navy mt-16" style="color: #365967;">
+      <div class="my-8 font-rosellinda text-navy mt-16" style="color: #365967; font-size: 34px;">
         Và không chỉ dừng lại ở sự tĩnh tại.
       </div>
-      <div class="text-black mt-16">
+      <div class="text-black">
         Maia Resort Ho Tram còn nằm trong lòng tổ hợp tỷ đô The Grand Ho Tram - trung tâm nghỉ dưỡng & giải trí hàng đầu
         Việt Nam.<br>
         Tại đây, quý khách được tận hưởng những đặc quyền hiếm có
@@ -42,19 +42,19 @@
         <div class="benefit-wrapper container d-flex justify-content-between">
           <div class="benefit-item benefit-item-1 d-flex flex-column justify-center align-items-center">
               <img src="/assets/images/benefit/benefit-icon-1.png" alt="benefit-1" />
-              <p class="text-4xl md:text-5xl text-bold text-light mb-0">164<span class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
+              <p class="text-4xl md:text-5xl text-light mt-2 mb-0 lh-1">164<span class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
               <p class="text-center text-sm font-light text-light my-0">Tổng diện tích <br/> khu tổ hợp tỷ đô</p>
           </div>
 
           <div class="benefit-item benefit-item-2 d-flex flex-column justify-center align-items-center">
               <img src="/assets/images/benefit/benefit-icon-2.png" alt="benefit-2" />
-              <p class="text-4xl md:text-5xl text-bold text-light mb-0">86<span class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
+              <p class="text-4xl md:text-5xl text-light mt-2 mb-0 lh-1">86<span class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
               <p class="text-center text-sm font-light text-light my-0">Quy mô sân golf <br/> tiêu chuẩn quốc tế</p>
           </div>
 
           <div class="benefit-item benefit-item-3 d-flex flex-column justify-center align-items-center">
               <img src="/assets/images/benefit/benefit-icon-3.png" alt="benefit-3" />
-              <p class="text-4xl md:text-5xl text-bold text-light mb-0">240<span class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
+              <p class="text-4xl md:text-5xl text-light mt-2 mb-0 lh-1">240<span class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
               <p class="text-center text-sm font-light text-light my-0">Khoảng rộng của <br/> sân bay chuyên dụng</p>
           </div>
         </div>
@@ -74,11 +74,6 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   border-radius: 50%;
   width: 280px;
   height: 280px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 15px; */
   background: linear-gradient(to bottom, rgb(6, 89, 108), rgb(12, 130, 125));
 }
 
@@ -88,5 +83,8 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
  object-fit: contain;
 }
 
+.slide-title-text{
+  font-size: 1.15rem;
+}
 
 </style>

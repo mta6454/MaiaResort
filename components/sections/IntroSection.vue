@@ -25,7 +25,7 @@
           </span>
         </div>
       </div>
-      <div class="intro_description intro_description_first text-center mt-10 text-lg">
+      <div class="intro_description intro_description_first text-center mt-10 text-lg text-semibold">
         Đây không chỉ là nơi để bạn tìm lại an vui, mà còn là giá trị bền vững được kiến tạo cho
       </div>
       <div class="text-second text-2xl text-center text-semibold text-intro mt-8">
@@ -60,7 +60,7 @@
         Nhưng ở Maia Resort Ho Tram,
       </div>
       <div class="text-second text-center text-semibold">
-        Rừng vàng và biển bạc trở thành đặc quyền hiếm có, ôm trọn từng khoảnh khắc sống.
+        rừng vàng và biển bạc trở thành đặc quyền hiếm có, ôm trọn từng khoảnh khắc sống.
       </div>
       <div class="section-utilities w-100 py-16 row">
         <div class="w-70 utilities-image">
@@ -104,7 +104,7 @@ function go(hash : string) {
   color: #fff;
   font-size: 2.5rem;
   line-height: 1.4;
-  margin-bottom: 33rem;
+  margin-bottom: 30rem;
   @media (max-width: 1440px) {
     font-size: 2.2rem;
     margin-bottom: 30rem;

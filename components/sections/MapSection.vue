@@ -4,7 +4,7 @@
       <div class="text-center font-rosellinda text-3xl third-cl mt-8">
         Và hơn thế
       </div>
-      <div class="text-center text-white main-text mt-16">
+      <div class="text-center text-white main-text mt-14 text-xl">
         Maia Resort Ho Tram còn tọa lạc ngay trung tâm thủ phủ nghỉ dưỡng Hồ Tràm,<br>kết nối trực tiếp đến TP. Hồ Chí
         Minh và sân bay quốc tế Long Thành.
       </div>
@@ -66,6 +66,10 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   @media (max-width: 1440px) {
     margin-top: 10vh;
   }
+}
+
+.main-text{
+  margin-top: 2rem;
 }
 
 .schedule-item {
