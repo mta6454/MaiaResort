@@ -4,7 +4,7 @@
       <div class="section-map-title-main text-center font-rosellinda text-3xl third-cl mt-8">
         Và hơn thế
       </div>
-      <div class="text-center text-white main-text text-xl">
+      <div class="text-center text-white main-text text-xl text-des">
         Maia Resort Ho Tram còn tọa lạc ngay trung tâm thủ phủ nghỉ dưỡng Hồ Tràm,<br>kết nối trực tiếp đến TP. Hồ Chí
         Minh và sân bay quốc tế Long Thành.
       </div>
@@ -14,13 +14,14 @@
             <div class="schedule-item_dot"></div>
             <div class="schedule-item-content">
               <img src="/assets/images/logo-gold.png"
-                alt="pin_logo">
+                   alt="pin_logo">
             </div>
           </div>
           <div class="schedule-item">
             <div class="schedule-item_dot"></div>
             <div class="schedule-item-content">
-              <div><span class="text-semibold text-3xl sub-cl">30 </span> <span class="font-rosellinda text-white text-xl">Phút</span></div>
+              <div><span class="text-semibold text-3xl sub-cl">30 </span> <span
+                  class="font-rosellinda text-white text-xl">Phút</span></div>
               <div class="text-white text-size-normal">
                 Là thời gian di chuyển từ đây tới sân bay quốc tế Long Thành
               </div>
@@ -29,7 +30,8 @@
           <div class="schedule-item">
             <div class="schedule-item_dot"></div>
             <div class="schedule-item-content">
-              <div><span class="text-semibold text-3xl sub-cl">90 </span> <span class="font-rosellinda text-white text-xl">Phút</span></div>
+              <div><span class="text-semibold text-3xl sub-cl">90 </span> <span
+                  class="font-rosellinda text-white text-xl">Phút</span></div>
               <div class="text-white text-size-normal">
                 Là thời gian di chuyển giữa Maia Resort Ho Tram và Siêu Đô thị Hồ Chí Minh
               </div>
@@ -37,11 +39,11 @@
           </div>
         </div>
         <div class="map col-md-8">
-          <img src="/assets/images/map.png" alt="Map" />
+          <img src="/assets/images/map.png" alt="Map"/>
         </div>
       </div>
     </div>
-    <SectionDevide />
+    <SectionDevide/>
   </section>
 </template>
 
@@ -90,14 +92,14 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 }
 
 /* Note: Chỗ ngày bị lỗi section overlap, cần phải handle sau */
-.section-map-title-main{
+.section-map-title-main {
   @media (max-width: 1440px) {
     margin-top: 130px;
     font-size: 2.5rem;
   }
 }
 
-.main-text{
+.main-text {
   margin-top: 2rem;
   @media (max-width: 1440px) {
     margin-top: 10px;
@@ -123,12 +125,15 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   border-radius: 99px;
   z-index: 1;
 }
+
 .schedule-item:not(:first-child):not(:last-child) {
   padding: 6.5rem 0;
 }
+
 .schedule-item-content {
   margin-left: 1rem;
 }
+
 .schedule-item:first-child::before {
   content: '';
   position: absolute;
@@ -137,6 +142,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   height: 50%;
   border-left: 2px dashed #fff;
 }
+
 .schedule-item:last-child::before {
   content: '';
   position: absolute;
@@ -145,11 +151,40 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   height: 50%;
   border-left: 2px dashed #fff;
 }
+
 .schedule-item::before {
   content: '';
   position: absolute;
   left: calc(0.5rem - 1px);
   height: 100%;
   border-left: 2px dashed #fff;
+}
+
+@media (max-width: 768px) {
+  .schedule-wrapper {
+    display: none;
+  }
+
+  .map img {
+    width: 100% !important;
+  }
+
+  .section-map-title-main {
+    margin-top: -30px;
+  }
+
+  .section-map-title-main {
+    font-size: 20px;
+  }
+
+  .text-des {
+    font-size: 18px;
+    padding: 0 10px 0 10px;
+    word-break: break-word;
+  }
+  .map-wrapper {
+    margin-top: -70px;
+    margin-bottom: -50px;
+  }
 }
 </style>

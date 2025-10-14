@@ -79,7 +79,6 @@ onMounted(() => {
 <style scoped>
 
 .flicking-panel {
-  /* 1.5 slides per viewport: 1 current + 0.5 next */
   width: calc(100% / 1.5);
 }
 
@@ -143,14 +142,11 @@ onMounted(() => {
   aspect-ratio: 16/9;
   object-fit: cover;
   margin: 0 1rem;
-  /* ✨ THÊM TRANSITION TẠI ĐÂY ✨ */
-  /* Di chuyển transition từ selector :not(.active) lên đây */
-  transition: filter .5s ease; /* Tăng thời gian lên 0.5s để cảm nhận độ mượt rõ hơn */
+  transition: filter .5s ease;
 }
 
 .flicking-panel:not(.active) .flicking-panel-img {
   filter: brightness(.55);
-  /* XÓA: transition: filter .2s ease; */ /* Loại bỏ dòng này */
 }
 
 .flicking-panel.active .flicking-panel-img {

@@ -281,7 +281,7 @@ const setReverse = () => {
 
   @media (max-width: 1440px) {
     padding-top: 50px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 }
 
@@ -320,13 +320,11 @@ const setReverse = () => {
 @media (max-width: 768px) {
   .intro_content {
     font-size: 16px !important;
-    margin-bottom: 40px;
+    margin-bottom: 260px;
   }
 
   .intro_description_first {
-    font-size: 13px;
-    padding: 10px 80px 0 80px;
-    word-break: break-word;
+    display: none;
   }
 
   .intro-happy {
@@ -344,12 +342,8 @@ const setReverse = () => {
 
   .section-utilities {
     padding: 20px 10px 0 10px;
-    height: 80%;
     border: none;
-  }
-
-  .utilities-des-content_overlay {
-    height: 80% !important;
+    margin: 0 auto;
   }
 
   .utilities-image {
@@ -360,8 +354,32 @@ const setReverse = () => {
     font-size: 14px;
     height: 350px;
   }
+
   .utilities-des-content_overlay_title {
-    font-size: 20px;
+    font-size: 20px !important;
+  }
+
+  .utilities-des-content_overlay_des {
+    font-size: 14px !important;
+    word-break: break-word;
+  }
+
+  .utilities-des-content_overlay_button img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .main-text-cl, .sub-cl {
+    z-index: 9999;
+    font-size: 20px !important;
+  }
+
+  .container {
+    margin-top: -36px;
+  }
+
+  .utilities-right, .utilities-left {
+    height: 260px;
   }
 }
 </style>

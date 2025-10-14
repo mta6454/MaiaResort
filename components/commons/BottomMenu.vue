@@ -68,6 +68,12 @@ a {
   text-decoration: none;
   color: #000000;
 }
+
+@media (max-width: 768px) {
+  .bottom-menu {
+    display: none;
+  }
+}
 </style>
 <script setup lang="ts">
 function go(hash: string) {

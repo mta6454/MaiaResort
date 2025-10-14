@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="slide-wrapper py-8">
-        <UtilitiesCarousel />
+        <UtilitiesCarousel/>
       </div>
       <div class="after-slider font-rosellinda text-navy">
         Và không chỉ dừng lại ở sự tĩnh tại.
@@ -26,7 +26,7 @@
         sân golf đằng cấp thế giới, sân bay chuyên dụng cho khách cao cấp, cùng tổ hợp mua sắm và giải trí hiện đại.
       </div>
     </div>
-    <SectionDevide />
+    <SectionDevide/>
     <div class="container section-benefit-second text-center pt-8">
       <div class="section-benefit-second-title text-navy text-2xl text-semibold">
         Một điểm đến, triệu trải nghiệm
@@ -39,25 +39,28 @@
     <div class="hightlight-wrapper">
       <div class="benefit-wrapper container d-flex justify-content-between">
         <div class="benefit-item benefit-item-1 d-flex flex-column justify-center align-items-center">
-            <img src="/assets/images/benefit/benefit-icon-1.png" alt="benefit-1" />
-            <p class="text-4xl md:text-5xl text-light mt-2 mb-0 lh-1">164<span class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
-            <p class="text-center text-sm font-light text-light my-0">Tổng diện tích <br/> khu tổ hợp tỷ đô</p>
+          <img src="/assets/images/benefit/benefit-icon-1.png" alt="benefit-1"/>
+          <p class="text-4xl md:text-5xl text-light mt-2 mb-0 lh-1">164<span
+              class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
+          <p class="text-center text-sm font-light text-light my-0">Tổng diện tích <br/> khu tổ hợp tỷ đô</p>
         </div>
 
         <div class="benefit-item benefit-item-2 d-flex flex-column justify-center align-items-center">
-            <img src="/assets/images/benefit/benefit-icon-2.png" alt="benefit-2" />
-            <p class="text-4xl md:text-5xl text-light mt-2 mb-0 lh-1">86<span class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
-            <p class="text-center text-sm font-light text-light my-0">Quy mô sân golf <br/> tiêu chuẩn quốc tế</p>
+          <img src="/assets/images/benefit/benefit-icon-2.png" alt="benefit-2"/>
+          <p class="text-4xl md:text-5xl text-light mt-2 mb-0 lh-1">86<span
+              class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
+          <p class="text-center text-sm font-light text-light my-0">Quy mô sân golf <br/> tiêu chuẩn quốc tế</p>
         </div>
 
         <div class="benefit-item benefit-item-3 d-flex flex-column justify-center align-items-center">
-            <img src="/assets/images/benefit/benefit-icon-3.png" alt="benefit-3" />
-            <p class="text-4xl md:text-5xl text-light mt-2 mb-0 lh-1">240<span class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
-            <p class="text-center text-sm font-light text-light my-0">Khoảng rộng của <br/> sân bay chuyên dụng</p>
+          <img src="/assets/images/benefit/benefit-icon-3.png" alt="benefit-3"/>
+          <p class="text-4xl md:text-5xl text-light mt-2 mb-0 lh-1">240<span
+              class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
+          <p class="text-center text-sm font-light text-light my-0">Khoảng rộng của <br/> sân bay chuyên dụng</p>
         </div>
       </div>
     </div>
-    <SectionDevide />
+    <SectionDevide/>
   </section>
 </template>
 
@@ -72,19 +75,19 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   }
 }
 
-.section-benefit-first{
+.section-benefit-first {
   @media (max-width: 1440px) {
     padding-bottom: 20px;
   }
 }
 
-.section-benefit-second{
+.section-benefit-second {
   @media (max-width: 1440px) {
     padding-top: 20px;
   }
 }
 
-.section-benefit-second-title{
+.section-benefit-second-title {
   @media (max-width: 1440px) {
     font-size: 28px;
   }
@@ -107,20 +110,20 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   background: linear-gradient(to bottom, rgba(6, 89, 108, 0.9), rgba(12, 130, 125, 0.9));
 }
 
-.benefit-item img{
- height: 80px;
- width: auto;
- object-fit: contain;
+.benefit-item img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
 }
 
-.slide-title-text{
+.slide-title-text {
   font-size: 1.15rem;
   @media (max-width: 1440px) {
     font-size: 1rem;
   }
 }
 
-.slide-title-sub-title{
+.slide-title-sub-title {
   margin-top: 4rem;
   @media (max-width: 1440px) {
     margin-top: 20px;
@@ -142,6 +145,35 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   @media (max-width: 1440px) {
     margin-top: 15px;
     margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-title-text, .after-slider, .text-black, .section-benefit-second {
+    display: none;
+  }
+
+  .benefit-wrapper {
+    width: 100%;
+    gap: 10px;
+    padding: 0 10px 0 10px;
+  }
+
+  .text-light {
+    font-size: 18px;
+  }
+
+  .benefit-item {
+    height: 180px;
+  }
+
+  .benefit-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .font-light {
+    font-size: 12px;
   }
 }
 </style>

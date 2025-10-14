@@ -372,4 +372,9 @@ function go( hash : string ) {
   transform: translateY(1px);
   transition: transform .18s ease;
 }
+@media (max-width: 768px) {
+  #privilege {
+    display: none;
+  }
+}
 </style>

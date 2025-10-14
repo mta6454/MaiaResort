@@ -26,12 +26,14 @@
 
             <div class="socials">
               <a href="#" aria-label="Call">
-                <img :src="phoneIcon" alt="Phone" class="phone" />
+                <img :src="phoneIcon" alt="Phone" class="phone"/>
               </a>
               <a href="#" aria-label="Facebook">
-                <img :src="facebookIcon" alt="Facebook" class="facebook" />
+                <img :src="facebookIcon" alt="Facebook" class="facebook"/>
               </a>
-              <a href="https://vr360.maiaresorthotram.com/" aria-label="360"><img :src="View360" alt="View360" class="view360" width="24px" height="24px"/></a>
+              <a href="https://vr360.maiaresorthotram.com/" aria-label="360"><img :src="View360" alt="View360"
+                                                                                  class="view360" width="24px"
+                                                                                  height="24px"/></a>
             </div>
           </div>
         </section>
@@ -94,6 +96,7 @@ import View360 from "assets/images/View360.gif";
 import logo from '~/assets/images/logo-white.png'
 import phoneIcon from '~/assets/images/phone.svg'
 import facebookIcon from '~/assets/images/facebook.svg'
+
 const props = defineProps({
   open: {type: Boolean, default: false},   // v-model:open
   logo: {type: String, default: ''}
@@ -247,8 +250,9 @@ onBeforeUnmount(() => {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  
+
 }
+
 .socials a img {
   width: 60%;
   height: 60%;
@@ -256,6 +260,7 @@ onBeforeUnmount(() => {
   margin: auto;
 
 }
+
 .menu-right ol {
   list-style: none;
   padding: 0;
@@ -312,6 +317,12 @@ onBeforeUnmount(() => {
 
   .rule {
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-left {
+    display: none;
   }
 }
 </style>
