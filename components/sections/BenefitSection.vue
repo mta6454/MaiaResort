@@ -28,7 +28,7 @@
     </div>
     <SectionDevide />
     <div class="container section-benefit-second text-center pt-8">
-      <div class="section-benefit-second-title text-navy text-2xl text-semibold pb-0 pb-md-4">
+      <div class="section-benefit-second-title text-navy text-2xl text-semibold">
         Một điểm đến, triệu trải nghiệm
       </div>
       <p>
