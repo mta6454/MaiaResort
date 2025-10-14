@@ -36,6 +36,12 @@
   margin: 0 auto;
   z-index: 100;
   font-weight: 700;
+  opacity: 0.5;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.bottom-menu:hover {
+  opacity: 1;
 }
 
 .right-divide {
@@ -46,8 +52,15 @@
   width: 40%;
 }
 
-.bottom-menu-item {
+.bottom-menu-item, .bottom-menu-item a {
+  text-shadow: none;
+  transition: color 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
   cursor: pointer;
+}
+
+.bottom-menu-item:hover, .bottom-menu-item:hover a {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(255, 255, 255, 0.6);
 }
 
 a {
