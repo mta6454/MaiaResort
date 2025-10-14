@@ -1,10 +1,10 @@
 <template>
     <div class="utilities-carousel row">
         <div class="col-md-2 row align-items-end">
-            <div class="utilities-carousel-prev" @click="handlePrev">
+            <div class="utilities-carousel-prev" :class="{ 'disabled': isReachStart }" @click="handlePrev">
                 <img :src="arrowLeft" alt="Arrow Left" />
             </div>
-            <div class="utilities-carousel-next" @click="handleNext">
+            <div class="utilities-carousel-next" :class="{ 'disabled': isReachEnd }" @click="handleNext">
                 <img :src="arrowRight" alt="Arrow Right" />
             </div>
         </div>
@@ -82,10 +82,26 @@ onMounted(() => {
 .utilities-carousel-prev, .utilities-carousel-next {
     width: 4rem;
     cursor: pointer;
+    transition: all .18s ease;
 }
+
 .utilities-carousel-prev:hover, .utilities-carousel-next:hover {
     transform: translateY(1px);
-    transition: transform .18s ease;
+}
+
+/* Disabled state styles */
+.utilities-carousel-prev.disabled, .utilities-carousel-next.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.utilities-carousel-prev.disabled:hover, .utilities-carousel-next.disabled:hover {
+    transform: none;
+}
+
+.utilities-carousel-prev.disabled img, .utilities-carousel-next.disabled img {
+    filter: grayscale(100%);
 }
 .flicking-panel-img {
     width: calc(100% - 2rem);

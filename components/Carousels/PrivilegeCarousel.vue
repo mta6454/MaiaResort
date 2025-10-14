@@ -1,7 +1,7 @@
 <template>
     <div class="privilege-carousel row align-items-center">
         <div class="col-md-1">
-            <div class="privilege-carousel-prev" @click="handlePrev">
+            <div class="privilege-carousel-prev" :class="{ 'disabled': isReachStart }" @click="handlePrev">
                 <img :src="arrowLeft" alt="Arrow Left" />
             </div>
         </div>
@@ -13,8 +13,8 @@
                 </Flicking>
        </div>
        <div class="col-md-1">
-            <div class="privilege-carousel-prev" @click="handleNext">
-                <img :src="arrowRight" alt="Arrow Left" />
+            <div class="privilege-carousel-next" :class="{ 'disabled': isReachEnd }" @click="handleNext">
+                <img :src="arrowRight" alt="Arrow Right" />
             </div>
         </div>
     </div>
@@ -83,9 +83,25 @@ onMounted(() => {
 .privilege-carousel-prev, .privilege-carousel-next {
     width: 3rem;
     cursor: pointer;
+    transition: all .18s ease;
 }
+
 .privilege-carousel-prev:hover, .privilege-carousel-next:hover {
     transform: translateY(1px);
-    transition: transform .18s ease;
+}
+
+/* Disabled state styles */
+.privilege-carousel-prev.disabled, .privilege-carousel-next.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.privilege-carousel-prev.disabled:hover, .privilege-carousel-next.disabled:hover {
+    transform: none;
+}
+
+.privilege-carousel-prev.disabled img, .privilege-carousel-next.disabled img {
+    filter: grayscale(100%);
 }
 </style>
