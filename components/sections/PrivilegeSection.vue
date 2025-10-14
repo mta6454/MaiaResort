@@ -116,7 +116,7 @@
 
 <script setup lang="ts">
 import SectionDevide from '~/components/commons/SectionDevide.vue'
-function go(hash) {
+function go( hash : string ) {
   if (hash && hash.startsWith('#')) {
     const el = document.querySelector(hash)
     if (el) el.scrollIntoView({behavior: 'smooth'})

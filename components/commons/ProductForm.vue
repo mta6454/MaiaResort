@@ -14,13 +14,13 @@
                 chọn
             </span>
             <span class="sub-cl text-semibold text-xl">
-                an vui,&nbsp;
+                An Vui,&nbsp;
             </span>
             <span class="font-rosellinda main-text-cl text-2xl">
                 chọn
             </span>
             <span class="sub-cl font-extrabold text-xl">
-                giá trị bền vững.
+                Giá Trị Bền Vững.
             </span>
         </div>
         <div class="text-center">

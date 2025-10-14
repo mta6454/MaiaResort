@@ -1,12 +1,12 @@
 <template>
   <section id="intro" class="py-16">
-    <div class="container mt-16">
-      <div class="intro_content mb-160">
+    <div class="container mt-16 px-0">
+      <div class="intro_content">
         <div>
           <span class="font-rosellinda main-text-cl text-2xl">
             Giữa
           </span>
-          <span class="font-sans sub-cl sub-text font-light">
+          <span class="font-sans sub-cl text-2xl font-light">
             Rừng Vàng, Biển Bạc
           </span>
         </div>
@@ -32,7 +32,7 @@
         Happy Tower & Villa tại Maia Resort Ho Tram, <br>
         chốn an trú độc tôn cho những chủ nhân tinh hoa.
       </div>
-      <div class="cta-schedule mt-16 text-center">
+      <div class="cta-schedule mt-8 text-center">
         <div class="cta-title">ĐẶT LỊCH ĐỂ TRẢI NGHIỆM</div>
 
         <span @click="go('#register')" class="cta-icon" aria-hidden="true">
@@ -104,6 +104,11 @@ function go(hash : string) {
   color: #fff;
   font-size: 2.5rem;
   line-height: 1.4;
+  margin-bottom: 33rem;
+  @media (max-width: 1440px) {
+    font-size: 2.2rem;
+    margin-bottom: 30rem;
+  }
 }
 
 #about {
@@ -111,6 +116,7 @@ function go(hash : string) {
 }
 
 .intro_description_first {
+  font-size: 18px;
   /* TODO: Update */
   padding-top: 40vh;
   @media (max-width: 1440px) {
@@ -120,14 +126,14 @@ function go(hash : string) {
 
 .cta-schedule {
   text-align: center;
-  padding: 16px 0 10px;
+  /* padding: 16px 0 10px; */ /*Temp*/
 }
 
 .cta-title {
   font-family: "SVN-Zona Pro", system-ui, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  letter-spacing: .16em;
+  /* letter-spacing: .16em; */ /*Temp*/
   font-size: 14px;
   color: #0A0A0A;
 }
