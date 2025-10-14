@@ -1,6 +1,6 @@
 <template>
     <div class="utilities-carousel row">
-        <div class="col-md-2 row align-items-end">
+        <div class="col-md-1 row align-items-end justify-content-end">
             <div class="utilities-carousel-prev" :class="{ 'disabled': isReachStart }" @click="handlePrev">
                 <img :src="arrowLeft" alt="Arrow Left" />
             </div>

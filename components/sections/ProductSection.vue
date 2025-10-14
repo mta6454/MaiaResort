@@ -27,7 +27,7 @@
                         Thương hiệu vận hành
                     </div>
                     <div class="text-size-normal">
-                      <img alt="" class="img-partner" src="/assets/images/Fusion-logo.png"/>
+                        <img alt="" class="img-partner" src="/assets/images/Fusion-logo.png" />
                     </div>
                 </div>
                 <div class="">
@@ -46,9 +46,9 @@
                     <div class="font-rosellinda text-2xl main-text">
                         Đơn vị thiết kế
                     </div>
-                  <div class="text-size-normal">
-                    <img alt="" class="img-partner" src="/assets/images/dewan-logo.png"/>
-                  </div>
+                    <div class="text-size-normal">
+                        <img alt="" class="img-partner" src="/assets/images/dewan-logo.png" />
+                    </div>
                 </div>
             </div>
             <div class="devide-line my-16"></div>
@@ -85,32 +85,36 @@
                 </div>
             </div>
             <div class="project-wrapper">
-							<div class="d-flex justify-content-between gap-4">
-								<div class="project-item">
-									<img alt="test-image" src="/assets/images/project/project-1.jpg" width="100%" height="100%"/>
-									<div class="project-item-content p-4 d-flex justify-content-between">
-										<div class="text-uppercase d-flex align-items-end text-2xl md:text-3xl">Happy Tower</div>
-										<div class="project-item-content-button">
-											<div class="d-flex justify-content-end mb-2">
-												<img alt="icon" src="/assets/images/arrow-right.svg" width="45" height="45" class="me-2"/>
-											</div>
-											<div class="md:text-xl">Xem thêm ảnh</div>
-										</div>
-									</div>
-								</div>
-								<div class="project-item">
-									<img alt="test-image" src="/assets/images/project/project-2.jpg" width="100%" height="100%"/>
-									<div class="project-item-content p-4 d-flex justify-content-between">
-										<div class="text-uppercase d-flex align-items-end text-2xl md:text-3xl">Villa</div>
-										<div class="project-item-content-button">
-											<div class="d-flex justify-content-end mb-2">
-												<img alt="icon" src="/assets/images/arrow-right.svg" width="45" height="45" class="me-2"/>
-											</div>
-											<div class="md:text-xl">Xem thêm ảnh</div>
-										</div>
-									</div>
-								</div>
-							</div>
+                <div class="d-flex justify-content-between gap-4">
+                    <div class="project-item">
+                        <img alt="test-image" src="/assets/images/project/project-1.jpg" width="100%" height="100%" />
+                        <div class="project-item-content p-4 d-flex justify-content-between"
+                            @click="handleShowProductPopup(happyTowerData)">
+                            <div class="text-uppercase d-flex align-items-end text-2xl md:text-3xl">Happy Tower</div>
+                            <div class="project-item-content-button">
+                                <div class="d-flex justify-content-end mb-2">
+                                    <img alt="icon" src="/assets/images/arrow-right.svg" width="45" height="45"
+                                        class="me-2" />
+                                </div>
+                                <div class="md:text-xl">Xem thêm ảnh</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item">
+                        <img alt="test-image" src="/assets/images/project/project-2.jpg" width="100%" height="100%" />
+                        <div class="project-item-content p-4 d-flex justify-content-between"
+                            @click="handleShowProductPopup(villaData)">
+                            <div class="text-uppercase d-flex align-items-end text-2xl md:text-3xl">Villa</div>
+                            <div class="project-item-content-button">
+                                <div class="d-flex justify-content-end mb-2">
+                                    <img alt="icon" src="/assets/images/arrow-right.svg" width="45" height="45"
+                                        class="me-2" />
+                                </div>
+                                <div class="md:text-xl">Xem thêm ảnh</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="text-center">
                 <div class="font-rosellinda main-text" style="font-size: 2.3rem;">
@@ -129,14 +133,45 @@
             </div>
             <div class="py-8 row mt-16">
                 <div class="col-md-6"></div>
-                <div class="col-md-6"><ProductForm /></div>
+                <div class="col-md-6">
+                    <ProductForm />
+                </div>
             </div>
         </div>
+        <ProductPopup v-model:open="showProductPopup" :data="currentProductData" />
     </section>
 </template>
 <script setup lang="ts">
 import SectionDevide from '~/components/commons/SectionDevide.vue'
 import ProductForm from '~/components/commons/ProductForm.vue'
+import ProductPopup, { type ProductPopupProps } from '~/components/commons/ProductPopup.vue'
+import project1 from '~/assets/images/project/project-1.jpg'
+const showProductPopup = ref(false)
+const happyTowerData = ref({
+    title: 'Căn hộ',
+    subtitle: '2 phòng ngủ chuẩn',
+    description: 'Diện tích căn: <strong>65m2</strong>',
+    images: [
+        project1,
+        project1,
+        project1,
+    ]
+})
+const villaData = ref({
+    title: 'Villa',
+    subtitle: '3 phòng ngủ chuẩn',
+    description: 'Diện tích căn: <strong>100m2</strong>',
+    images: [
+        project1,
+        project1,
+        project1,
+    ]
+})
+const currentProductData = ref(happyTowerData.value)
+const handleShowProductPopup = (data: ProductPopupProps) => {
+    currentProductData.value = data
+    showProductPopup.value = true
+}
 </script>
 <style>
 .devide-line {
@@ -150,25 +185,26 @@ import ProductForm from '~/components/commons/ProductForm.vue'
     line-height: 1.1;
     margin-right: 0.5rem;
 }
+
 #product {
   /* margin-top: 70vh; */
 }
 
 .img-partner {
-  width: 200px;
-  height: 80px;
-  object-fit: contain;
+    width: 200px;
+    height: 80px;
+    object-fit: contain;
 }
 
-.project-wrapper{
-	margin: 3.5rem 0;
+.project-wrapper {
+    margin: 3.5rem 0;
 }
 
-.project-item{
-	height: 100%;
-	width: 100%;
-	position: relative;
-	
+.project-item {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
 }
 
 .project-item-content{
@@ -178,7 +214,8 @@ import ProductForm from '~/components/commons/ProductForm.vue'
 	background: linear-gradient(to bottom, rgba(0, 85, 102, 0.1), rgba(0, 150, 136, 0.1));
 }
 
-.project-item-content-button:hover{
-	cursor: pointer; /* TODO: Add animation */
+.project-item-content-button:hover {
+    cursor: pointer;
+    /* TODO: Add animation */
 }
 </style>

@@ -62,10 +62,7 @@ body {
   margin: 0;
   overflow-x: hidden; 
 }
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 .pt-16 {
   padding-top: 4rem;
 }
@@ -75,7 +72,7 @@ body {
 .mt-16 {
   margin-top: 4rem;
 }
-.overlay:has(.menu-overlay) .bottom-menu {
+.overlay:has(.menu-overlay.active) .bottom-menu {
   display: none;
 }
 </style>
