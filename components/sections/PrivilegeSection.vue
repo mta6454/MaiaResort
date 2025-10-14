@@ -1,49 +1,49 @@
 <template>
-  <section id="privilege" class="mt-16">
+  <section id="privilege" class="section-privilege">
     <div class="container text-center text-white">
       <div class="second-slide-title font-rosellinda text-2xl">
         Wellness từ thiên nhiên
       </div>
-      <div class="second-slide-subtitle font-sans font-light" style="font-size: 1.75rem; margin-top: 10px;">
+      <div class="second-slide-subtitle second-slide-subtitle-first font-sans font-light">
         Không khí rừng giàu anion & gió biển ion hóa <br> tái tạo sức khỏe, cải thiện tinh thần.
       </div>
-      <div class="text-light font-sans font-normal text-xl" style="margin-top: 25px;">
+      <div class="section-privilege-content text-light font-sans font-normal text-xl">
         Ở đây, việc dung dưỡng thân - tâm - trí không còn là xa xỉ. Đó là hơi thở của rừng vàng giàu anion, là làn gió
         biển <br>mang ion tinh khiết, là những trải nghiệm đã được khoa học chứng minh giúp tái tạo thể chất lẫn tinh thần.
       </div>
-      <div class="second-slide-wrapper mt-4 mb-4">
+      <div class="second-slide-wrapper">
         <CarouselsPrivilegeCarousel class="py-4"/>
       </div>
       <SectionDevide/>
-      <div class="second-slide-subtitle font-sans text-semibold" style="font-size: 1.75rem; margin-top: 3rem;">
+      <div class="second-slide-subtitle second-slide-subtitle-second font-sans text-semibold">
         Maia Resort Ho Tram hội tụ uy tín quốc tế, <br/> sự am hiểu bản địa và chuẩn mực vận hành tinh hoa.
       </div>
-      <div class="privilege-wrapper px-16 py-8" style="margin-top: 4rem; margin-bottom: 4rem;">
-        <div class="font-rosellinda text-white font-light" style="font-size: 2.5rem;">Thuộc hệ sinh thái tài sản đầu tư</div>
-        <div class="text-xl font-sans font-normal text-2xl">Quỹ đầu tư uy tín nước Mỹ</div>
-        <div class="py-8 privilege-name text-4xl font-sans text-bold text-uppercase">
+      <div class="privilege-wrapper">
+      <div class="privilege-wrapper-title font-rosellinda text-white font-light">Thuộc hệ sinh thái tài sản đầu tư</div>
+        <div class="privilege-wrapper-title-2 text-xl font-sans font-normal text-2xl">Quỹ đầu tư uy tín nước Mỹ</div>
+        <div class="privilege-wrapper-title-3 py-8 privilege-name text-4xl font-sans text-bold text-uppercase">
           Warburg Pincus
         </div>
         <div class="flex flex-row flex-wrap">
           <div class="privilege-item">
             <div class="privilege-item-title text-4xl font-sans">55+</div>
-            <div class="font-sans font-normal">Năm kinh nghiệm <br/> đầu tư quốc tế</div>
+            <div class="privilege-item-content font-sans font-normal">Năm kinh nghiệm <br/> đầu tư quốc tế</div>
           </div>
           <div class="privilege-item">
             <div class="privilege-item-title text-4xl font-sans">$120+</div>
-            <div class="font-sans font-normal">Tỷ tổng vốn <br/> đầu tư</div>
+            <div class="privilege-item-content font-sans font-normal">Tỷ tổng vốn <br/> đầu tư</div>
           </div>
           <div class="privilege-item">
             <div class="privilege-item-title text-4xl font-sans">1.000+</div>
-            <div class="font-sans font-normal">Doanh nghiệp trong <br/> danh mục đầu tư</div>
+            <div class="privilege-item-content font-sans font-normal">Doanh nghiệp trong <br/> danh mục đầu tư</div>
           </div>
           <div class="privilege-item">
             <div class="privilege-item-title text-4xl font-sans">40+</div>
-            <div class="font-sans font-normal">Quốc gia <br/> hiện diện</div>
+            <div class="privilege-item-content font-sans font-normal">Quốc gia <br/> hiện diện</div>
           </div>
         </div>
 
-        <div class="my-8">
+        <div class="devide-line-wrapper my-8">
           <div class="devide-line"></div>
         </div>
         <div class="flex flex-row">
@@ -76,16 +76,16 @@
         </div>
       </div>
       <SectionDevide/>
-      <p class="text-2xl font-sans text-semibold mt-16">
+      <p class="section-privilege-vegas text-2xl font-sans text-semibold">
         <span class="font-rosellinda text-3xl font-light">Được ví như</span> <b>"Las Vegas thu nhỏ"</b>
       </p>
-      <p class="font-sans text-xl">
+      <p class="section-privilege-vegas-content font-sans text-xl">
         ngay tại trung tâm thủ phủ du lịch lớn nhất Việt Nam,<br>
         Maia Resort Ho Tram chính là sự đầu tư thích đáng và mang về giá trị bền vững cho tương lai
       </p>
 
       <!-- wrapper phá max-width của container cha -->
-      <div style="padding-top: 50px" class="mini-vegas w-screen relative left-1/2 -translate-x-1/2 mt-8 text-white">
+      <div class="mini-vegas w-screen relative left-1/2 -translate-x-1/2 mt-8 text-white">
         <img src="/assets/images/privilegeSlide/privileges-main.png" alt="Mini Vegas" width="100%" height="100%"/>
       </div>
 
@@ -109,13 +109,75 @@ function go( hash : string ) {
 }
 </script>
 <style>
-/* #second-slide {
-  margin-bottom: 30vh;
-} */
+.section-privilege {
+  margin-top: 4rem;
+  @media (max-width: 1440px) {
+    margin-top: 60px;
+  }
+}
+
+.second-slide-subtitle{
+  font-size: 1.75rem;
+  margin-top: 10px;
+  @media (max-width: 1440px) {
+    font-size: 1.5rem;
+  }
+}
+
+.second-slide-subtitle-second{
+  margin-top: 3rem;
+  @media (max-width: 1440px) {
+    margin-top: 10px;
+  }
+}
+
+.section-privilege-content{
+  margin-top: 25px;
+  @media (max-width: 1440px) {
+    font-size: 1.25rem;
+    margin-top: 15px;
+  }
+}
 
 .privilege-wrapper {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 4rem 2rem;
   background: linear-gradient(to bottom, rgba(1, 66, 97, 1), rgba(16, 153, 135, 1));
   opacity: 93%;
+  @media (max-width: 1440px) {
+    font-size: 1.25rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 1.5rem 1rem;
+  }
+}
+
+.second-slide-wrapper{
+  margin: 1rem 0;
+  @media (max-width: 1440px) {
+    margin: 0;;
+  }
+}
+
+.privilege-wrapper-title{
+  @media (max-width: 1440px) {
+    font-size: 2rem;
+  }
+}
+
+.privilege-wrapper-title-2{
+  @media (max-width: 1440px) {
+    font-size: 1.5rem;
+  }
+}
+
+.privilege-wrapper-title-3{
+  @media (max-width: 1440px) {
+    font-size: 2.5rem;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 
 .privilege-name {
@@ -128,13 +190,43 @@ function go( hash : string ) {
 }
 
 .privilege-item-title {
-  /* font-size: 3rem; */
+  @media (max-width: 1440px) {
+    font-size: 2.5rem;
+  }
+}
+
+.privilege-item-content{
+  @media (max-width: 1440px) {
+    font-size: 1rem;
+  }
+}
+
+.devide-line-wrapper{
+  @media (max-width: 1440px) {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 }
 
 .devide-line {
   width: 100%;
   height: 2px;
   background-color: #ffffff60;
+}
+
+.section-privilege-vegas{
+  margin-top: 4rem;
+  @media (max-width: 1440px) {
+    margin-top: 15px;
+    margin-bottom: 0px;
+  }
+}
+
+.section-privilege-vegas-content{
+  @media (max-width: 1440px) {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
 }
 
 .perk-card {
@@ -185,69 +277,20 @@ function go( hash : string ) {
   background: rgba(255, 255, 255, .22);
 }
 
-.mini-vegas-row {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid !important;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-
-@media (min-width: 768px) {
-  .mini-vegas-row {
-    grid-template-columns: repeat(3, 1fr);
+.mini-vegas{
+  padding-top: 50px;
+  margin-top: 2rem;
+  @media (max-width: 1440px) {
+    padding-top: 10px;
+    margin-top: 10px;
+    height: 600px;
   }
 }
 
-.perk-card {
-  height: 800px;
-}
-
-@media (max-width: 767.98px) {
-  .perk-card {
-    height: 420px;
+.mini-vegas img{
+  @media (max-width: 1440px) {
+    object-fit: contain;
   }
-}
-
-.perk-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  z-index: 0;
-}
-
-.perk-card {
-  position: relative;
-  height: 520px;
-  overflow: hidden;
-}
-
-@media (max-width: 767.98px) {
-  .perk-card {
-    height: 420px;
-  }
-}
-
-.perk-gradient {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 55%;
-  background: linear-gradient(0deg, rgba(0, 20, 10, .0), rgba(0, 20, 10, .45), rgba(0, 0, 0, 0));
-  z-index: 1;
-}
-
-.perk-content {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 22px 20px 26px;
-  text-align: center;
-  color: #fff;
-  z-index: 2;
 }
 
 .img-partner {
