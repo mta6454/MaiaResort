@@ -165,6 +165,8 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
 
   .benefit-item {
     height: 180px;
+    width: 180px;
+    border-radius: 99px;
   }
 
   .benefit-item img {

@@ -147,7 +147,6 @@ onUnmounted(() => {
 
 @media (max-width: 768px) {
   .app_header {
-    width: 45%;
   }
   .header_logo {
     height: 60%;

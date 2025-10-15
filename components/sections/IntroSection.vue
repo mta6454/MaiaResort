@@ -375,7 +375,7 @@ const setReverse = () => {
   }
 
   .container {
-    margin-top: -36px;
+    margin-top: 4px;
   }
 
   .utilities-right, .utilities-left {

@@ -254,7 +254,7 @@
     display: none;
   }
   .col-prod-form {
-    width: 100%;
+    width: calc(100% - 24px);
   }
 }
 </style>

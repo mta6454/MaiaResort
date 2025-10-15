@@ -162,16 +162,13 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 
 @media (max-width: 768px) {
   .schedule-wrapper {
-    display: none;
+    /* display: none; */
   }
 
   .map img {
     width: 100% !important;
   }
 
-  .section-map-title-main {
-    margin-top: -30px;
-  }
 
   .section-map-title-main {
     font-size: 20px;
@@ -182,9 +179,30 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
     padding: 0 10px 0 10px;
     word-break: break-word;
   }
+}
+@media (max-width: 1280px) {
   .map-wrapper {
-    margin-top: -70px;
-    margin-bottom: -50px;
+    flex-direction: column !important;
+    justify-content: center;
+    height: auto !important;
+    flex-wrap: wrap;
+  }
+  .schedule-wrapper {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .schedule-item-content {
+    width: 10rem;
+  }
+  .map {
+    width: 100%;
+  }
+  .map img {
+    width: 100%;
+    object-fit: contain;
   }
 }
 </style>
