@@ -76,12 +76,18 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
 }
 
 .section-benefit-first {
+  @media (max-width: 1520px) {
+    padding-bottom: 30px;
+  }
   @media (max-width: 1440px) {
     padding-bottom: 20px;
   }
 }
 
 .section-benefit-second {
+  @media (max-width: 1520px) {
+    padding-top: 20px;
+  }
   @media (max-width: 1440px) {
     padding-top: 20px;
   }
@@ -96,6 +102,10 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
 .hightlight-wrapper {
   margin-top: 5rem;
   margin-bottom: 150px;
+  @media (max-width: 1520px) {
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
   @media (max-width: 1440px) {
     margin-top: 4rem;
     margin-bottom: 70px;
@@ -129,6 +139,9 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
 
 .slide-title-sub-title {
   margin-top: 4rem;
+  @media (max-width: 1520px) {
+    margin-top: 25px;
+  }
   @media (max-width: 1440px) {
     margin-top: 20px;
   }
@@ -138,6 +151,9 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   width: 100vw;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  @media (max-width: 1520px) {
+    padding: 20px 0;
+  }
   @media (max-width: 1440px) {
     padding: 15px 0;
   }
@@ -148,6 +164,10 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   font-size: 34px;
   margin-top: 35px;
   margin-bottom: 35px;
+  @media (max-width: 1520px) {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
   @media (max-width: 1440px) {
     margin-top: 15px;
     margin-bottom: 15px;

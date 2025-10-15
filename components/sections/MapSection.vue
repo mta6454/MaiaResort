@@ -54,7 +54,12 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 .map-wrapper {
   position: relative;
   margin-top: 4rem;
-
+  @media (max-width: 1520px) {
+    margin-top: 50px;
+    height: 600px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
   @media (max-width: 1440px) {
     margin-top: 50px;
     height: 550px;
@@ -66,6 +71,10 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 .map {
   width: 1350px;
   height: 100%;
+  @media (max-width: 1520px) {
+    width: auto;
+    margin-left: 80px;
+  }
   @media (max-width: 1440px) {
     width: auto;
     margin-left: 20px;
@@ -77,6 +86,10 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   height: auto;
   object-fit: contain;
   display: block;
+  @media (max-width: 1520px) {
+    width: auto;
+    max-height: 100%;
+  }
   @media (max-width: 1440px) {
     width: auto;
     max-height: 100%;
@@ -100,6 +113,10 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 
 /* Note: Chỗ ngày bị lỗi section overlap, cần phải handle sau */
 .section-map-title-main {
+  @media (max-width: 1520px) {
+    margin-top: 25px;
+    font-size: 2.5rem;
+  }
   @media (max-width: 1440px) {
     margin-top: 130px;
     font-size: 2.5rem;
@@ -108,6 +125,9 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 
 .main-text {
   margin-top: 2rem;
+  @media (max-width: 1520px) {
+    margin-top: 15px;
+  }
   @media (max-width: 1440px) {
     margin-top: 10px;
   }

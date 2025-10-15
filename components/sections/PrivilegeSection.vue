@@ -111,6 +111,9 @@ function go( hash : string ) {
 <style>
 .section-privilege {
   margin-top: 4rem;
+  @media (max-width: 1520px) {
+    margin-top: 30px;
+  }
   @media (max-width: 1440px) {
     margin-top: 60px;
   }
@@ -119,6 +122,9 @@ function go( hash : string ) {
 .second-slide-subtitle{
   font-size: 1.75rem;
   margin-top: 10px;
+  @media (max-width: 1520px) {
+    font-size: 1.5rem;
+  }
   @media (max-width: 1440px) {
     font-size: 1.5rem;
   }
@@ -126,6 +132,9 @@ function go( hash : string ) {
 
 .second-slide-subtitle-second{
   margin-top: 3rem;
+  @media (max-width: 1520px) {
+    margin-top: 25px;
+  }
   @media (max-width: 1440px) {
     margin-top: 10px;
   }
@@ -133,6 +142,10 @@ function go( hash : string ) {
 
 .section-privilege-content{
   margin-top: 25px;
+  @media (max-width: 1520px) {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
   @media (max-width: 1440px) {
     font-size: 1.25rem;
     margin-top: 15px;
@@ -145,6 +158,12 @@ function go( hash : string ) {
   padding: 4rem 2rem;
   background: linear-gradient(to bottom, rgba(1, 66, 97, 1), rgba(16, 153, 135, 1));
   opacity: 93%;
+  @media (max-width: 1520px) {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 1.75rem 1.5rem;
+  }
   @media (max-width: 1440px) {
     font-size: 1.25rem;
     margin-top: 15px;
@@ -155,25 +174,39 @@ function go( hash : string ) {
 
 .second-slide-wrapper{
   margin: 1rem 0;
+  @media (max-width: 1520px) {
+    margin: 10px 0;
+  }
   @media (max-width: 1440px) {
-    margin: 0;;
+    margin: 0;
   }
 }
 
 .privilege-wrapper-title{
-    font-size: 2.5rem;
+  font-size: 2.5rem;
+  @media (max-width: 1520px) {
+    font-size: 2rem;
+  }
   @media (max-width: 1440px) {
     font-size: 2rem;
   }
 }
 
 .privilege-wrapper-title-2{
+  @media (max-width: 1520px) {
+    font-size: 1.75rem;
+  }
   @media (max-width: 1440px) {
     font-size: 1.5rem;
   }
 }
 
 .privilege-wrapper-title-3{
+  @media (max-width: 1520px) {
+    font-size: 3rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
   @media (max-width: 1440px) {
     font-size: 2.5rem;
     padding-top: 0px;
@@ -191,6 +224,9 @@ function go( hash : string ) {
 }
 
 .privilege-item-title {
+  @media (max-width: 1520px) {
+    font-size: 3rem;
+  }
   @media (max-width: 1440px) {
     font-size: 2.5rem;
   }
@@ -217,6 +253,10 @@ function go( hash : string ) {
 
 .section-privilege-vegas{
   margin-top: 4rem;
+  @media (max-width: 1520px) {
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
   @media (max-width: 1440px) {
     margin-top: 15px;
     margin-bottom: 0px;
@@ -281,6 +321,11 @@ function go( hash : string ) {
 .mini-vegas {
   padding-top: 50px;
   margin-top: 2rem;
+  @media (max-width: 1520px) {
+    padding-top: 20px;
+    margin-top: 20px;
+    height: auto;
+  }
   @media (max-width: 1440px) {
     padding-top: 10px;
     margin-top: 10px;
@@ -293,6 +338,9 @@ function go( hash : string ) {
   height: auto;
   display: block;
   object-fit: contain;
+  @media (max-width: 1520px) {
+    max-height: 600px;
+  }
   @media (max-width: 1440px) {
     max-height: 600px;
   }

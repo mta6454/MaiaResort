@@ -42,7 +42,6 @@ const appStyle = {
   background-position: top center;
   width: 100vw;
   position: relative;
-  overflow-x: hidden;
 }
 
 .bg-sizer {
@@ -81,6 +80,7 @@ body {
 /* Mobile responsive improvements */
 @media (max-width: 768px) {
   .app {
+    overflow-x: hidden;
     background-size: cover;
     background-position: center top;
   }

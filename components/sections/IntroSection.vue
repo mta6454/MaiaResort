@@ -32,7 +32,7 @@
         Happy Tower & Villa tại Maia Resort Ho Tram, <br>
         chốn an trú độc tôn cho những chủ nhân tinh hoa.
       </div>
-      <div class="cta-schedule mt-8 text-center">
+      <div class="cta-schedule text-center">
         <div class="cta-title">ĐẶT LỊCH ĐỂ TRẢI NGHIỆM</div>
         <!-- Lỗi không căn giữa nên đặt 13px margin -->
         <span @click="go('#register')" class="cta-icon" aria-hidden="true" style="margin-right: 13px">
@@ -110,6 +110,9 @@ const setReverse = () => {
 .section-intro {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  @media (max-width: 1520px) {
+    padding-bottom: 2rem;
+  }
   @media (max-width: 1440px) {
     padding-top: 1rem;
     padding-bottom: 0rem;
@@ -122,6 +125,9 @@ const setReverse = () => {
   font-size: 2.5rem;
   line-height: 1.4;
   margin-bottom: 30rem;
+  @media (max-width: 1520px) {
+    margin-bottom: 200px;
+  }
   @media (max-width: 1440px) {
     font-size: 2.2rem;
     margin-bottom: 330px;
@@ -131,6 +137,9 @@ const setReverse = () => {
 .intro_description_first {
   font-size: 18px;
   padding-top: 450px;
+  @media (max-width: 1520px) {
+    /* padding-top: 200px; */
+  }
   @media (max-width: 1440px) {
     padding-top: 340px;
     font-size: 16px;
@@ -139,6 +148,9 @@ const setReverse = () => {
 
 .intro_description-second {
   margin-top: 20px;
+  @media (max-width: 1520px) {
+    margin-top: 15px !important;
+  }
   @media (max-width: 1440px) {
     font-size: 16px;
     margin-top: 10px;
@@ -147,6 +159,11 @@ const setReverse = () => {
 
 .cta-schedule {
   text-align: center;
+  margin-top: 2rem;
+  @media (max-width: 1520px) {
+    margin-top: 15px;
+    padding: 0;
+  }
   @media (max-width: 1440px) {
     margin-top: 10px;
     padding: 0;
@@ -185,6 +202,9 @@ const setReverse = () => {
 .text-intro {
   font-weight: 700;
   color: #014261;
+  @media (max-width: 1520px) {
+    margin-top: 15px;
+  }
   @media (max-width: 1440px) {
     margin-top: 10px;
     font-size: 28px;
@@ -291,7 +311,10 @@ const setReverse = () => {
 
 .section-utilities {
   width: 100%;
-
+  @media (max-width: 1520px) {
+    padding-top: 25px;
+    padding-bottom: 0;
+  }
   @media (max-width: 1440px) {
     padding-top: 50px;
     padding-bottom: 0;

@@ -174,6 +174,9 @@
 <style>
 .section-product{
     margin-top: 730px;
+    @media (max-width: 1520px) {
+        margin-top: 450px;
+    }
     @media (max-width: 1440px) {
         margin-top: 475px;
     }
@@ -184,6 +187,9 @@
     height: 2px;
     background-color: #ffffff60;
     opacity: 50%;
+    @media (max-width: 1520px) {
+        margin: 30px 0 !important;
+    }
     @media (max-width: 1440px) {
         margin: 20px 0 !important;
     }
@@ -192,6 +198,9 @@
 .product-number {
     line-height: 1.1;
     margin-right: 0.5rem;
+    @media (max-width: 1520px) {
+        font-size: 3rem !important;
+    }
     @media (max-width: 1440px) {
         font-size: 3rem !important;
     }
@@ -205,6 +214,10 @@
 
 .project-wrapper {
     margin: 3.5rem 0;
+    @media (max-width: 1520px) {
+        margin: 2rem 0;
+        height: 400px;
+    }
     @media (max-width: 1440px) {
         margin: 1.5rem 0;
         height: 350px;
