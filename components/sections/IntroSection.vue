@@ -110,7 +110,7 @@ const setReverse = () => {
 .section-intro {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  @media (max-width: 1520px) {
+  @media (max-width: 1521px) {
     padding-bottom: 2rem;
   }
   @media (max-width: 1440px) {
@@ -125,7 +125,7 @@ const setReverse = () => {
   font-size: 2.5rem;
   line-height: 1.4;
   margin-bottom: 30rem;
-  @media (max-width: 1520px) {
+  @media (max-width: 1521px) {
     margin-bottom: 200px;
   }
   @media (max-width: 1440px) {
@@ -137,7 +137,7 @@ const setReverse = () => {
 .intro_description_first {
   font-size: 18px;
   padding-top: 450px;
-  @media (max-width: 1520px) {
+  @media (max-width: 1521px) {
     /* padding-top: 200px; */
   }
   @media (max-width: 1440px) {
@@ -148,7 +148,7 @@ const setReverse = () => {
 
 .intro_description-second {
   margin-top: 20px;
-  @media (max-width: 1520px) {
+  @media (max-width: 1521px) {
     margin-top: 15px !important;
   }
   @media (max-width: 1440px) {
@@ -160,7 +160,7 @@ const setReverse = () => {
 .cta-schedule {
   text-align: center;
   margin-top: 2rem;
-  @media (max-width: 1520px) {
+  @media (max-width: 1521px) {
     margin-top: 15px;
     padding: 0;
   }
@@ -202,7 +202,7 @@ const setReverse = () => {
 .text-intro {
   font-weight: 700;
   color: #014261;
-  @media (max-width: 1520px) {
+  @media (max-width: 1521px) {
     margin-top: 15px;
   }
   @media (max-width: 1440px) {
@@ -311,7 +311,7 @@ const setReverse = () => {
 
 .section-utilities {
   width: 100%;
-  @media (max-width: 1520px) {
+  @media (max-width: 1521px) {
     padding-top: 25px;
     padding-bottom: 0;
   }
