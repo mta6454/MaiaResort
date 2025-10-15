@@ -350,7 +350,6 @@ function go( hash : string ) {
 }
 
 .img-partner {
-  width: 200px;
   height: 80px;
   object-fit: contain;
   max-width: 100%;
