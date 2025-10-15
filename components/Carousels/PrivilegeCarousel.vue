@@ -8,7 +8,7 @@
        <div class="col-md-10">
                 <Flicking :hideBeforeInit="true" :firstPanelSize="'200px'" :options="flickingOptions" ref="flickingPrivilegeCompRef" @ready="onReady">
                     <div v-for="(item, idx) in list" class="flicking-panel" :key="idx">
-                        <img :src="item?.img" alt="privilege" class="flicking-panel-img"/>
+                        <img :src="item?.img" alt="privilege" loading="lazy" class="flicking-panel-img"/>
                     </div>
                 </Flicking>
        </div>
@@ -103,5 +103,44 @@ onMounted(() => {
 
 .privilege-carousel-prev.disabled img, .privilege-carousel-next.disabled img {
     filter: grayscale(100%);
+}
+
+.flicking-panel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .privilege-carousel {
+        display: none;
+    }
+
+    .privilege-carousel-prev,
+    .privilege-carousel-next {
+        width: 2rem;
+    }
+
+    .flicking-panel {
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+
+    .flicking-panel-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .col-md-10 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .col-md-1 {
+        width: auto;
+        padding: 0 0.5rem;
+    }
 }
 </style>

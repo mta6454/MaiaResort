@@ -13,7 +13,7 @@
                 @ready="onReady">
         <div v-for="(item, idx) in list" class="flicking-panel" :key="idx"
              :class="{ active: idx === currentPanelIndex }">
-          <img :src="item?.img" alt="Utilities" class="flicking-panel-img"/>
+          <img :src="item?.img" alt="Utilities" loading="lazy" class="flicking-panel-img"/>
         </div>
       </Flicking>
     </div>
@@ -151,5 +151,36 @@ onMounted(() => {
 
 .flicking-panel.active .flicking-panel-img {
   filter: none;
+}
+
+@media (max-width: 768px) {
+  .utilities-carousel {
+    display: none;
+  }
+
+  .utilities-carousel-prev,
+  .utilities-carousel-next {
+    width: 2.5rem;
+  }
+
+  .flicking-panel {
+    width: 100%;
+  }
+
+  .flicking-panel-img {
+    width: calc(100% - 1rem);
+    margin: 0 0.5rem;
+    aspect-ratio: 16/9;
+  }
+
+  .col-md-10 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .col-md-1 {
+    width: auto;
+    padding: 0 0.5rem;
+  }
 }
 </style>

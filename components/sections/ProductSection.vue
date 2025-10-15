@@ -85,7 +85,7 @@
             <div class="project-wrapper">
                 <div class="d-flex justify-content-between gap-4" style="height: 100%;">
                     <div class="project-item">
-                        <img alt="test-image" src="/assets/images/project/project-1.jpg" width="100%" height="100%" style="object-fit: cover;"/>
+                        <img alt="test-image" src="/assets/images/project/project-1.jpg" loading="lazy" class="project-item-img"/>
                         <div class="project-item-content p-4 d-flex justify-content-between"
                             @click="handleShowProductPopup(happyTowerData)">
                             <div class="text-uppercase d-flex align-items-end text-2xl md:text-3xl">Happy Tower</div>
@@ -99,7 +99,7 @@
                         </div>
                     </div>
                     <div class="project-item">
-                        <img alt="test-image" src="/assets/images/project/project-2.jpg" width="100%" height="100%" style="object-fit: cover;"/>
+                        <img alt="test-image" src="/assets/images/project/project-2.jpg" loading="lazy" class="project-item-img"/>
                         <div class="project-item-content p-4 d-flex justify-content-between"
                             @click="handleShowProductPopup(villaData)">
                             <div class="text-uppercase d-flex align-items-end text-2xl md:text-3xl">Villa</div>
@@ -215,6 +215,14 @@
     height: 100%;
     width: 100%;
     position: relative;
+    overflow: hidden;
+}
+
+.project-item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .project-item-content{
@@ -250,11 +258,68 @@
 
 
 @media (max-width: 768px) {
+  .section-product {
+    margin-top: 300px;
+  }
+
   .d-col-prod-form {
     display: none;
   }
+
   .col-prod-form {
     width: calc(100% - 24px);
+  }
+
+  .project-wrapper {
+    margin: 1rem 0;
+    height: auto !important;
+  }
+
+  .project-wrapper .d-flex {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  .project-item {
+    min-height: 250px;
+    height: auto;
+  }
+
+  .project-item-img {
+    min-height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .project-item-content {
+    padding: 1rem !important;
+  }
+
+  .project-item-content-button img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .text-uppercase {
+    font-size: 1.25rem !important;
+  }
+
+  .section-product-after-quote-wrapper {
+    padding: 0 1rem;
+  }
+
+  .font-rosellinda {
+    font-size: 1.5rem !important;
+  }
+
+  .section-product-after-quote-first,
+  .section-product-after-quote-second {
+    font-size: 1rem !important;
+  }
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 </style>

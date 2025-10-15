@@ -147,12 +147,54 @@ onUnmounted(() => {
 
 @media (max-width: 768px) {
   .app_header {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
   }
+
+  .app_header_inner_left {
+    width: 25%;
+  }
+
   .header_logo {
-    height: 60%;
+    width: 4.5rem;
+    height: auto;
   }
+
+  .header_logo_wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
   .header_right {
-    width: 15%;
+    width: 25%;
+  }
+
+  .btn_header {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem !important;
+  }
+
+  .icon_menu {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header_logo {
+    width: 4rem;
+  }
+
+  .btn_header {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .icon_menu {
+    width: 1.75rem;
+    height: 1.75rem;
   }
 }
 </style>

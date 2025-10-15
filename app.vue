@@ -1,19 +1,24 @@
 <template>
-  <div class="app" :style="appStyle">
-    <img :src="bg" alt="" aria-hidden="true" class="bg-sizer" />
+  <div>
+    <Head>
+      <Meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    </Head>
+    <div class="app" :style="appStyle">
+      <img :src="bg" alt="" aria-hidden="true" class="bg-sizer" />
 
-    <div class="overlay">
-      <Header />
-      <main class="pt-32">
-        <IntroSection />
-        <MapSection />
-        <BenefitSection />
-        <PrivilegeSection />
-        <ProductSection />
-      </main>
-      <BottomMenu />
+      <div class="overlay">
+        <Header />
+        <main class="pt-32">
+          <IntroSection />
+          <MapSection />
+          <BenefitSection />
+          <PrivilegeSection />
+          <ProductSection />
+        </main>
+        <BottomMenu />
+      </div>
+      <Footer />
     </div>
-    <Footer />
   </div>
 </template>
 
@@ -25,6 +30,7 @@ import BenefitSection from '~/components/sections/BenefitSection.vue'
 import PrivilegeSection from '~/components/sections/PrivilegeSection.vue'
 import ProductSection from '~/components/sections/ProductSection.vue'
 import BottomMenu from '~/components/commons/BottomMenu.vue'
+
 const appStyle = {
   backgroundImage: `url(${bg})`
 }
@@ -36,6 +42,7 @@ const appStyle = {
   background-position: top center;
   width: 100vw;
   position: relative;
+  overflow-x: hidden;
 }
 
 .bg-sizer {
@@ -47,7 +54,6 @@ const appStyle = {
   z-index: 1;
 }
 
-
 .overlay {
   position: absolute;
   inset: 0;
@@ -55,21 +61,48 @@ const appStyle = {
 }
 
 body {
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
+  padding: 0;
   margin: 0;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 .pt-16 {
   padding-top: 4rem;
 }
-.pt-32  {
+
+.pt-32 {
   padding-top: 8rem;
 }
+
 .overlay:has(.menu-overlay.active) .bottom-menu {
   display: none;
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 768px) {
+  .app {
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .pt-32 {
+    padding-top: 4rem;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    background-size: auto 100%;
+    min-height: 100vh;
+  }
+
+  .pt-32 {
+    padding-top: 3rem;
+  }
 }
 </style>

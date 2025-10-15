@@ -62,7 +62,7 @@
       </div>
       <div class="section-utilities py-16 row" :class="{'is-reverse': isReverse}">
         <div class="utilities-image utilities-left">
-          <img :src="utilities" alt="Utilities"/>
+          <img :src="utilities" alt="Utilities" loading="lazy" class="responsive-img"/>
           <div class="utilities-left-content_overlay">
             <div class="utilities-des-content_overlay_title text-3xl text-semibold">100 %</div>
             <div class="utilities-des-content_overlay_des text-xl">View biển trực diện</div>
@@ -72,7 +72,7 @@
           </div>
         </div>
         <div class="utilities-des utilities-right">
-          <img :src="utilitiesSecond" alt="Utilities"/>
+          <img :src="utilitiesSecond" alt="Utilities" loading="lazy" class="responsive-img"/>
           <div class="utilities-des-content_overlay">
             <div class="utilities-des-content_overlay_title text-4xl text-semibold">TOP 65</div>
             <div class="utilities-des-content_overlay_des text-xl">Hệ sinh thái rừng<br> bền vững thế giới</div>
@@ -202,6 +202,12 @@ const setReverse = () => {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
 }
 
 .utilities-image-content {
@@ -343,7 +349,7 @@ const setReverse = () => {
   }
 
   #textIntro {
-    margin-top: 0 !important;;
+    margin-top: 0 !important;
     font-size: 14px;
   }
 
@@ -351,15 +357,32 @@ const setReverse = () => {
     padding: 20px 10px 0 10px;
     border: none;
     margin: 0 auto;
+    flex-direction: column !important;
   }
 
   .utilities-image {
-    height: 350px;
+    height: auto;
+    min-height: 260px;
   }
 
   .utilities-right {
     font-size: 14px;
-    height: 350px;
+    height: auto;
+    min-height: 260px;
+  }
+
+  .utilities-left, .utilities-right {
+    width: 100% !important;
+    height: auto;
+    min-height: 260px;
+    margin-bottom: 1rem;
+  }
+
+  .utilities-image img, .utilities-des img {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    object-fit: cover;
   }
 
   .utilities-des-content_overlay_title {
@@ -385,8 +408,14 @@ const setReverse = () => {
     margin-top: 4px;
   }
 
-  .utilities-right, .utilities-left {
-    height: 260px;
+  .section-utilities.is-reverse .utilities-left,
+  .section-utilities.is-reverse .utilities-right {
+    width: 100% !important;
+  }
+
+  .row.section-utilities {
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>

@@ -39,21 +39,21 @@
     <div class="hightlight-wrapper">
       <div class="benefit-wrapper container d-flex justify-content-between">
         <div class="benefit-item benefit-item-1 d-flex flex-column justify-center align-items-center">
-          <img src="/assets/images/benefit/benefit-icon-1.png" alt="benefit-1"/>
+          <img src="/assets/images/benefit/benefit-icon-1.png" alt="benefit-1" loading="lazy"/>
           <p class="text-4xl md:text-5xl text-light mt-2 mb-0 lh-1">164<span
               class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
           <p class="text-center text-sm font-light text-light my-0">Tổng diện tích <br/> khu tổ hợp tỷ đô</p>
         </div>
 
         <div class="benefit-item benefit-item-2 d-flex flex-column justify-center align-items-center">
-          <img src="/assets/images/benefit/benefit-icon-2.png" alt="benefit-2"/>
+          <img src="/assets/images/benefit/benefit-icon-2.png" alt="benefit-2" loading="lazy"/>
           <p class="text-4xl md:text-5xl text-light mt-2 mb-0 lh-1">86<span
               class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
           <p class="text-center text-sm font-light text-light my-0">Quy mô sân golf <br/> tiêu chuẩn quốc tế</p>
         </div>
 
         <div class="benefit-item benefit-item-3 d-flex flex-column justify-center align-items-center">
-          <img src="/assets/images/benefit/benefit-icon-3.png" alt="benefit-3"/>
+          <img src="/assets/images/benefit/benefit-icon-3.png" alt="benefit-3" loading="lazy"/>
           <p class="text-4xl md:text-5xl text-light mt-2 mb-0 lh-1">240<span
               class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
           <p class="text-center text-sm font-light text-light my-0">Khoảng rộng của <br/> sân bay chuyên dụng</p>
@@ -114,6 +114,10 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   height: 80px;
   width: auto;
   object-fit: contain;
+  max-width: 100%;
+  @media (max-width: 768px) {
+    height: 50px;
+  }
 }
 
 .slide-title-text {

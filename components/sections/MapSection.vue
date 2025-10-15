@@ -39,7 +39,7 @@
           </div>
         </div>
         <div class="map col-md-8">
-          <img src="/assets/images/map.png" alt="Map"/>
+          <img src="/assets/images/map.png" alt="Map" loading="lazy" class="map-img"/>
         </div>
       </div>
     </div>
@@ -72,11 +72,18 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   }
 }
 
-.map img {
+.map-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
   @media (max-width: 1440px) {
     width: auto;
-    object-fit: contain;
-    height: 100%;
+    max-height: 100%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -162,22 +169,37 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 
 @media (max-width: 768px) {
   .schedule-wrapper {
-    /* display: none; */
+    padding: 0 1rem;
   }
 
-  .map img {
-    width: 100% !important;
+  .schedule-item-content img {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
+  .schedule-item:not(:first-child):not(:last-child) {
+    padding: 4rem 0;
+  }
+
+  .schedule-item-content {
+    font-size: 0.875rem;
+  }
 
   .section-map-title-main {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .text-des {
-    font-size: 18px;
-    padding: 0 10px 0 10px;
+    font-size: 0.875rem;
+    padding: 0 1rem;
     word-break: break-word;
+  }
+
+  .map-wrapper {
+    margin-top: 2rem;
+    height: auto !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 @media (max-width: 1280px) {

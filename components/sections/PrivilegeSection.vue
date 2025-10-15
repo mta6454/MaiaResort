@@ -86,7 +86,7 @@
 
       <!-- wrapper phá max-width của container cha -->
       <div class="mini-vegas w-screen relative left-1/2 -translate-x-1/2 mt-8 text-white">
-        <img src="/assets/images/privilegeSlide/privileges-main.png" alt="Mini Vegas" width="100%" height="100%"/>
+        <img src="/assets/images/privilegeSlide/privileges-main.png" alt="Mini Vegas" loading="lazy" class="mini-vegas-img"/>
       </div>
 
     </div>
@@ -277,19 +277,26 @@ function go( hash : string ) {
   background: rgba(255, 255, 255, .22);
 }
 
-.mini-vegas{
+.mini-vegas {
   padding-top: 50px;
   margin-top: 2rem;
   @media (max-width: 1440px) {
     padding-top: 10px;
     margin-top: 10px;
-    height: 600px;
+    height: auto;
   }
 }
 
-.mini-vegas img{
+.mini-vegas-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
   @media (max-width: 1440px) {
-    object-fit: contain;
+    max-height: 600px;
+  }
+  @media (max-width: 768px) {
+    max-height: 400px;
   }
 }
 
@@ -297,6 +304,11 @@ function go( hash : string ) {
   width: 200px;
   height: 80px;
   object-fit: contain;
+  max-width: 100%;
+  @media (max-width: 768px) {
+    width: 120px;
+    height: 50px;
+  }
 }
 
 .banner-left {
@@ -373,8 +385,73 @@ function go( hash : string ) {
   transition: transform .18s ease;
 }
 @media (max-width: 768px) {
-  #privilege {
-    display: none;
+  .second-slide-title {
+    font-size: 1.5rem;
+  }
+
+  .second-slide-subtitle {
+    font-size: 1rem !important;
+    padding: 0 1rem;
+  }
+
+  .section-privilege-content {
+    font-size: 0.875rem !important;
+    padding: 0 1rem;
+  }
+
+  .privilege-wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .privilege-wrapper-title {
+    font-size: 1.5rem !important;
+  }
+
+  .privilege-wrapper-title-2 {
+    font-size: 1.125rem !important;
+  }
+
+  .privilege-wrapper-title-3 {
+    font-size: 1.75rem !important;
+  }
+
+  .privilege-item {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .privilege-item-title {
+    font-size: 1.5rem !important;
+  }
+
+  .privilege-item-content {
+    font-size: 0.75rem !important;
+  }
+
+  .banner-left,
+  .banner-right {
+    width: 100% !important;
+    border: none !important;
+    margin-top: 1rem;
+  }
+
+  .banner-left {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #21a39a !important;
+  }
+
+  .section-privilege-vegas {
+    font-size: 1.125rem !important;
+    padding: 0 1rem;
+  }
+
+  .section-privilege-vegas-content {
+    font-size: 0.875rem !important;
+    padding: 0 1rem;
+  }
+
+  .flex-row {
+    flex-direction: column !important;
   }
 }
 </style>
