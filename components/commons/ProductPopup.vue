@@ -5,38 +5,46 @@
             <button class="btn-close" type="button" @click="close" aria-label="Đóng menu">
                 <span></span><span></span>
             </button>
-
-            <div class="menu-wrap h-100 row p-4 align-items-center" @click.stop>
-                <!-- Cột trái -->
-                <div class="col-md-4">
-                    <div class="product-popup-left">
-                        <div class="product-popup-left-title font-rosellinda text-3xl sub-cl">{{ data?.title }}</div>
-                        <div class="product-popup-left-subtitle text-2xl">{{ data?.subtitle }}</div>
-                        <div class="product-popup-left-description mt-16 text-xl" v-html="data?.description"></div>
-                        <div class="more-button mt-16">
-                            Xem mặt bằng tầng
-                        </div>
-                    </div>
+            <div class="popup-container">
+                <div class="popup-background-container">
+                    <img :src="PopupBackground" alt="product" class="product-popup-img-background desktop" />
+                    <img :src="PopupBackgroundMobile" alt="product" class="product-popup-img-background mobile" />
                 </div>
-                <div class="col-md-8 row align-items-center">
-                    <div class="col-md-1">
-                        <div class="privilege-carousel-prev" :class="{ 'disabled': isReachStart }" @click="handlePrev">
-                            <img :src="arrowLeft" alt="Arrow Left" />
-                        </div>
-                    </div>
-                    <div class="slider-container col-md-10">
-                        <Flicking :hideBeforeInit="true" :firstPanelSize="'200px'" :options="flickingOptions"
-                            ref="flickingProductCompRef" @ready="onReady">
-                            <div v-for="(item, idx) in data?.images" class="flicking-panel" :key="idx">
-                                <img :src="item" alt="product" class="flicking-panel-img" />
+                <div class="menu-wrap h-100 row p-4 align-items-center" @click.stop>
+                    <!-- Cột trái -->
+                    <div class="col-md-4">
+                        <div class="product-popup-left">
+                            <div class="product-popup-left-title font-rosellinda text-3xl sub-cl">{{ data?.title }}
                             </div>
-                        </Flicking>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="privilege-carousel-next" :class="{ 'disabled': isReachEnd }" @click="handleNext">
-                            <img :src="arrowRight" alt="Arrow Right" />
+                            <div class="product-popup-left-subtitle text-2xl">{{ data?.subtitle }}</div>
+                            <div class="product-popup-left-description mt-16 text-xl" v-html="data?.description"></div>
+                            <div class="more-button mt-16">
+                                Xem mặt bằng tầng
+                            </div>
                         </div>
+                    </div>
+                    <div class="col-md-8 row align-items-center">
+                        <div class="col-md-1">
+                            <div class="privilege-carousel-prev" :class="{ 'disabled': isReachStart }"
+                                @click="handlePrev">
+                                <img :src="arrowLeft" alt="Arrow Left" />
+                            </div>
+                        </div>
+                        <div class="slider-container col-md-10">
+                            <Flicking :hideBeforeInit="true" :firstPanelSize="'200px'" :options="flickingOptions"
+                                ref="flickingProductCompRef" @ready="onReady">
+                                <div v-for="(item, idx) in data?.images" class="flicking-panel" :key="idx">
+                                    <img :src="item" alt="product" class="flicking-panel-img" />
+                                </div>
+                            </Flicking>
+                        </div>
+                        <div class="col-md-1">
+                            <div class="privilege-carousel-next" :class="{ 'disabled': isReachEnd }"
+                                @click="handleNext">
+                                <img :src="arrowRight" alt="Arrow Right" />
+                            </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -50,6 +58,8 @@ import type { PropType, Ref } from 'vue'
 import Flicking, { useFlickingReactiveAPI } from "@egjs/vue3-flicking";
 import arrowLeft from '~/assets/images/arrow-left.svg'
 import arrowRight from '~/assets/images/arrow-right.svg'
+import PopupBackground from '~/assets/images/PopUp.png'
+import PopupBackgroundMobile from '~/assets/images/PopupMobile.png'
 export interface ProductPopupProps {
     title: string
     subtitle: string
@@ -90,6 +100,7 @@ function close() {
 const onReady = (_e: any) => { }
 
 onMounted(() => {
+    document.body.style.overflow = 'hidden'
     console.log('ProductPopup mounted')
     if (flickingProductCompRef.value) {
         console.log('Flicking Product instance mounted')
@@ -141,7 +152,7 @@ const handleNext = () => {
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background: linear-gradient(170deg, #19a89a 0%, #0a3f54 70%, #08384a 100%);
+    /* background: linear-gradient(170deg, #19a89a 0%, #0a3f54 70%, #08384a 100%); */
     color: #fff;
     outline: none;
 }
@@ -175,6 +186,44 @@ const handleNext = () => {
 
 .btn-close span:last-child {
     transform: translateY(-50%) rotate(-45deg);
+}
+
+.popup-background-container {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.popup-background-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.popup-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.product-popup-img-background.mobile {
+    display: none;
+}
+@media (max-width: 768px) {
+    .product-popup-img-background.mobile {
+        display: block;
+    }
+    .product-popup-img-background.desktop {
+        display: none;
+    }
+}
+
+
+.menu-wrap {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
 }
 
 .flicking-panel {
