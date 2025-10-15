@@ -13,13 +13,13 @@
           </a>
         </div>
       </div>
-      <div class="header_logo_wrapper">
+      <div class="header_logo_wrapper" ref="logoWrapperRef">
         <a href="/" class="">
           <img :src="logo" alt="Logo" class="header_logo"/>
         </a>
       </div>
 
-      <div class="header_right flex justify-content-end">
+      <div class="header_right flex justify-content-end align-items-center">
         <!-- icon menu -->
         <div class="icon_menu" @click.prevent="showMenu = true">
           <img :src="menuIcon" alt="Menu" class="menu"/>
@@ -43,33 +43,29 @@ import MenuOverlay from "~/components/sections/MenuOverlay.vue";
 const showMenu = ref(false);
 
 const headerContainerRef = ref<HTMLElement | null>(null);
+const logoWrapperRef = ref<HTMLElement | null>(null);
 
-// Declare lastScrollY here, but initialize it inside onMounted.
-let lastScrollY: number;
-
+// This function now targets the logo wrapper specifically.
 const handleScroll = () => {
-  const header = headerContainerRef.value;
-  if (!header) return;
+  const logoWrapper = logoWrapperRef.value;
+  if (!logoWrapper) return;
 
-  // It's safe to access window.scrollY here because the event listener is only added on the client.
-  if (lastScrollY < window.scrollY && window.scrollY > 0) {
-    header.classList.add('header-hidden');
+  // If the user is NOT at the very top of the page, hide the logo.
+  if (window.scrollY > 0) {
+    logoWrapper.classList.add('logo-hidden');
   } else {
-    header.classList.remove('header-hidden');
+    // Otherwise, if they are at the top (scrollY is 0), show it.
+    logoWrapper.classList.remove('logo-hidden');
   }
-
-  lastScrollY = window.scrollY;
 };
 
-// Use onMounted to ensure this code only runs on the client-side (in the browser).
+// Use onMounted to ensure this code only runs on the client-side.
 onMounted(() => {
-  // Initialize lastScrollY with the browser's current scroll position.
-  lastScrollY = window.scrollY;
   window.addEventListener('scroll', handleScroll);
 });
 
+// Clean up the event listener when the component is removed.
 onUnmounted(() => {
-  // Clean up the event listener to prevent memory leaks.
   window.removeEventListener('scroll', handleScroll);
 });
 </script>
@@ -84,12 +80,13 @@ onUnmounted(() => {
   height: auto !important;
   padding-top: 0.7rem !important;
   padding-bottom: 0.7rem !important;
-  transition: transform 0.3s ease-in-out;
+  /* The transition is no longer needed on the main header */
 }
 
-.header-hidden {
-  transform: translateY(-100%); /* Moves the header completely out of the viewport */
-}
+/* This class is no longer used */
+/* .header-hidden {
+  transform: translateY(-100%);
+} */
 
 .app_header_inner {
   display: flex;
@@ -124,6 +121,17 @@ onUnmounted(() => {
 .btn_header a img {
   height: 100%;
   object-fit: contain;
+}
+
+.header_logo_wrapper {
+  /* Add a transition for a smooth fade/scale effect */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.logo-hidden {
+  opacity: 0;
+  transform: scale(0.9); /* Slightly shrink the logo when hiding */
+  pointer-events: none; /* Prevent clicking the logo when it's hidden */
 }
 
 .header_logo {
@@ -198,3 +206,4 @@ onUnmounted(() => {
   }
 }
 </style>
+

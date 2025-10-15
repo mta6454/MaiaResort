@@ -3,7 +3,7 @@
     <div class="container mt-8 px-0">
       <div class="intro_content">
         <div>
-          <span class="font-rosellinda main-text-cl text-2xl text-2sm">
+          <span class="font-rosellinda main-text-cl text-2xl text-2sm" style="margin-right: -10px;">
             Giữa
           </span>
           <span class="font-sans sub-cl text-2xl font-light">
@@ -11,13 +11,13 @@
           </span>
         </div>
         <div class="intro-subtitle">
-          <span class="font-rosellinda main-text-cl main-text text-2xl">
+          <span class="font-rosellinda main-text-cl main-text text-2xl" style="margin-right: -10px;">
             chọn
           </span>
           <span class="font-sans sub-cl text-semibold">
             An vui, 
           </span>
-          <span class="font-rosellinda main-text-cl main-text text-2xl ms-2">
+          <span class="font-rosellinda main-text-cl main-text text-2xl ms-2" style="margin-right: -10px;">
             chọn
           </span>
           <span class="font-sans sub-cl font-extrabold">

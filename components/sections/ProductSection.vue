@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-7 d-flex justify-content-between">
                     <div class="">
-                        <div class="font-rosellinda text-2xl main-text">
+                        <div class="font-rosellinda text-2xl main-text hand-draw-text">
                             Vị trí
                         </div>
                         <div class="column-margin mb-4 text-lg">
@@ -206,8 +206,13 @@
     }
 }
 
+.main-text{
+    @media (max-width: 1521px) {
+        margin-bottom: 10px;
+    }
+}
+
 .img-partner {
-    width: 200px;
     height: 80px;
     object-fit: contain;
 }

@@ -2,7 +2,7 @@
   <div id="register" class="product-form">
     <div class="product-form-title text-center text-3xl">Happy Tower & Villa tại Maia Resort Ho Tram</div>
     <div class="product-form-subtitle text-center mt-4">
-            <span class="font-rosellinda main-text-cl text-2xl">
+            <span class="font-rosellinda main-text-cl text-2xl" style="margin-right: -10px;">
                 Giữa
             </span>
       <span class="sub-cl text-semibold text-2xl">
@@ -10,13 +10,13 @@
             </span>
     </div>
     <div class="product-form-subtitle text-center mb-4">
-            <span class="font-rosellinda main-text-cl text-2xl">
+            <span class="font-rosellinda main-text-cl text-2xl" style="margin-right: -10px;">
                 chọn
             </span>
       <span class="sub-cl text-semibold text-2xl">
                 An Vui,&nbsp;
             </span>
-      <span class="font-rosellinda main-text-cl text-2xl">
+      <span class="font-rosellinda main-text-cl text-2xl" style="margin-right: -10px;">
                 chọn
             </span>
       <span class="sub-cl font-extrabold text-2xl">
