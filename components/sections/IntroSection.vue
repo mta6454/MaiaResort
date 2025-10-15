@@ -130,7 +130,7 @@ const setReverse = () => {
 
 .intro_description_first {
   font-size: 18px;
-  padding-top: 400px;
+  padding-top: 450px;
   @media (max-width: 1440px) {
     padding-top: 340px;
     font-size: 16px;

@@ -161,6 +161,7 @@ function go( hash : string ) {
 }
 
 .privilege-wrapper-title{
+    font-size: 2.5rem;
   @media (max-width: 1440px) {
     font-size: 2rem;
   }
@@ -391,7 +392,7 @@ function go( hash : string ) {
 
   .second-slide-subtitle {
     font-size: 1rem !important;
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
 
   .section-privilege-content {

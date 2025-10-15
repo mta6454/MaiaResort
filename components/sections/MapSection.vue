@@ -64,7 +64,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 }
 
 .map {
-  width: 50%;
+  width: 1350px;
   height: 100%;
   @media (max-width: 1440px) {
     width: auto;

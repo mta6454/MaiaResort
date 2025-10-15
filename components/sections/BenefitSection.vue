@@ -94,7 +94,7 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
 }
 
 .hightlight-wrapper {
-  margin-top: 4rem;
+  margin-top: 5rem;
   margin-bottom: 150px;
   @media (max-width: 1440px) {
     margin-top: 4rem;
@@ -136,6 +136,8 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
 
 .slide-wrapper {
   width: 100vw;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   @media (max-width: 1440px) {
     padding: 15px 0;
   }
@@ -145,7 +147,7 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   color: #365967;
   font-size: 34px;
   margin-top: 35px;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   @media (max-width: 1440px) {
     margin-top: 15px;
     margin-bottom: 15px;
