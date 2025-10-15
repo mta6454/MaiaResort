@@ -66,6 +66,9 @@
           <div class="utilities-left-content_overlay">
             <div class="utilities-des-content_overlay_title text-3xl text-semibold">100 %</div>
             <div class="utilities-des-content_overlay_des text-xl">View biển trực diện</div>
+            <div v-if="isReverse" class="utilities-des-content_overlay_button" @click="setReverse">
+              <img :src="arrowRight" alt="Arrow Right"/>
+            </div>
           </div>
         </div>
         <div class="utilities-des utilities-right">
@@ -73,8 +76,9 @@
           <div class="utilities-des-content_overlay">
             <div class="utilities-des-content_overlay_title text-4xl text-semibold">TOP 65</div>
             <div class="utilities-des-content_overlay_des text-xl">Hệ sinh thái rừng<br> bền vững thế giới</div>
+
           </div>
-          <div class="utilities-des-content_overlay_button" @click="setReverse">
+          <div v-if="!isReverse" class="utilities-des-content_overlay_button" @click="setReverse">
             <!-- Xử lý click ở đây -->
             <img :src="arrowRight" alt="Arrow Right"/>
           </div>
@@ -248,7 +252,10 @@ const setReverse = () => {
   color: #fff;
   background: transparent;
 }
-
+.utilities-left-content_overlay .utilities-des-content_overlay_button {
+  left: unset;
+  right: 3rem;
+}
 .utilities-des-content_overlay_button {
   position: absolute;
   bottom: 3rem;
@@ -295,7 +302,7 @@ const setReverse = () => {
 
 .section-utilities.is-reverse .utilities-des-content_overlay {
   background: transparent;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-end;
 }
 
