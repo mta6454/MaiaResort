@@ -46,7 +46,7 @@
         <div class="devide-line-wrapper my-8">
           <div class="devide-line"></div>
         </div>
-        <div class="flex flex-row">
+        <div class="flex flex-row flex-wrap">
           <div class="banner-left">
             <div class="mb-4">
               <h5 class="font-rosellinda text-xl">Chủ đầu tư và đơn vị phát triển</h5>
@@ -501,8 +501,5 @@ function go( hash : string ) {
     padding: 0 1rem;
   }
 
-  .flex-row {
-    flex-direction: column !important;
-  }
 }
 </style>
