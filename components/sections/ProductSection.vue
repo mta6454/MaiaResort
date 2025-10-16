@@ -85,7 +85,8 @@
             <div class="project-wrapper">
                 <div class="d-flex justify-content-between gap-4" style="height: 100%;">
                     <div class="project-item">
-                        <img alt="test-image" src="/assets/images/project/project-1.jpg" loading="lazy" class="project-item-img"/>
+                        <img alt="test-image" src="/assets/images/project/project-1.jpg" loading="lazy"
+                            class="project-item-img" />
                         <div class="project-item-content p-4 d-flex justify-content-between"
                             @click="handleShowProductPopup(happyTowerData)">
                             <div class="text-uppercase d-flex align-items-end text-2xl md:text-3xl">Happy Tower</div>
@@ -99,7 +100,8 @@
                         </div>
                     </div>
                     <div class="project-item">
-                        <img alt="test-image" src="/assets/images/project/project-2.jpg" loading="lazy" class="project-item-img"/>
+                        <img alt="test-image" src="/assets/images/project/project-2.jpg" loading="lazy"
+                            class="project-item-img" />
                         <div class="project-item-content p-4 d-flex justify-content-between"
                             @click="handleShowProductPopup(villaData)">
                             <div class="text-uppercase d-flex align-items-end text-2xl md:text-3xl">Villa</div>
@@ -140,43 +142,70 @@
     </section>
 </template>
 <script setup lang="ts">
-    import SectionDevide from '~/components/commons/SectionDevide.vue'
-    import ProductForm from '~/components/commons/ProductForm.vue'
-    import ProductPopup, { type ProductPopupProps } from '~/components/commons/ProductPopup.vue'
-    import project1 from '~/assets/images/project/project-1.jpg'
-    const showProductPopup = ref(false)
-    const happyTowerData = ref({
+import SectionDevide from '~/components/commons/SectionDevide.vue'
+import ProductForm from '~/components/commons/ProductForm.vue'
+import ProductPopup, { type ProductPopupProps } from '~/components/commons/ProductPopup.vue'
+import productImage1 from '~/assets/images/happyTower/1.jpg'
+import productImage2 from '~/assets/images/happyTower/2.jpg'
+import productImage3 from '~/assets/images/happyTower/3.jpg'
+import productImage4 from '~/assets/images/happyTower/4.jpg'
+import villaImage1 from '~/assets/images/villa/1.jpg'
+import villaImage2 from '~/assets/images/villa/2.jpg'
+const showProductPopup = ref(false)
+const happyTowerData = ref([
+    {
+        title: 'Căn hộ',
+        subtitle: 'Studio',
+        description: 'Diện tích căn: <strong>35m2</strong>',
+        image: productImage1
+    },
+    {
+        title: 'Căn hộ',
+        subtitle: '1 phòng ngủ',
+        description: 'Diện tích căn: <strong>49m2</strong>',
+        image: productImage2
+    },
+    {
         title: 'Căn hộ',
         subtitle: '2 phòng ngủ chuẩn',
         description: 'Diện tích căn: <strong>65m2</strong>',
-        images: [
-            project1,
-            project1,
-            project1,
-        ]
-    })
-    const villaData = ref({
+        image: productImage3
+    },
+    {
+        title: 'Căn hộ',
+        subtitle: '2 phòng ngủ Luxury',
+        description: 'Diện tích căn: <strong>80m2</strong>',
+        image: productImage4
+    },
+])
+const villaData = ref([
+    {
         title: 'Villa',
-        subtitle: '3 phòng ngủ chuẩn',
-        description: 'Diện tích căn: <strong>100m2</strong>',
-        images: [
-            project1,
-            project1,
-            project1,
-        ]
-    })
-    const currentProductData = ref(happyTowerData.value)
-    const handleShowProductPopup = (data: ProductPopupProps) => {
-        currentProductData.value = data
-        showProductPopup.value = true
-    }
+        subtitle: '2 phòng ngủ',
+        description: 'Diện tích căn: <strong>256m2</strong>',
+        image: villaImage1,
+    },
+    {
+        title: 'Villa',
+        subtitle: '3 phòng ngủ',
+        description: 'Diện tích căn: <strong>380m2</strong>',
+        image: villaImage2,
+    },
+])
+const currentProductData = ref(happyTowerData.value)
+const handleShowProductPopup = (data: ProductPopupProps[]) => {
+    currentProductData.value = data
+    showProductPopup.value = true
+}
 </script>
 <style>
-.section-product{
+.section-product {
     margin-top: 730px;
+
     @media (max-width: 1521px) {
         margin-top: 450px;
     }
+
     @media (max-width: 1440px) {
         margin-top: 475px;
     }
@@ -187,9 +216,11 @@
     height: 2px;
     background-color: #ffffff60;
     opacity: 50%;
+
     @media (max-width: 1521px) {
         margin: 30px 0 !important;
     }
+
     @media (max-width: 1440px) {
         margin: 20px 0 !important;
     }
@@ -198,9 +229,11 @@
 .product-number {
     line-height: 1.1;
     margin-right: 0.5rem;
+
     @media (max-width: 1521px) {
         font-size: 3rem !important;
     }
+
     @media (max-width: 1440px) {
         font-size: 3rem !important;
     }
@@ -217,10 +250,12 @@
 
 .project-wrapper {
     margin: 3.5rem 0;
+
     @media (max-width: 1521px) {
         margin: 2rem 0;
         height: 400px;
     }
+
     @media (max-width: 1440px) {
         margin: 1.5rem 0;
         height: 350px;
@@ -241,18 +276,18 @@
     display: block;
 }
 
-.project-item-content{
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	background: linear-gradient(to bottom, rgba(0, 85, 102, 0.1), rgba(0, 150, 136, 0.1));
+.project-item-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 85, 102, 0.1), rgba(0, 150, 136, 0.1));
 }
 
 .project-item-content-button:hover {
     cursor: pointer;
 }
 
-.column-margin{
+.column-margin {
     @media (max-width: 1440px) {
         margin-bottom: 15px !important;
     }
@@ -260,6 +295,7 @@
 
 .section-product-after-quote-first {
     margin-bottom: 4.75rem;
+
     @media (max-width: 1440px) {
         margin-bottom: 2rem;
     }
@@ -267,6 +303,7 @@
 
 .section-product-after-quote-second {
     margin-top: 4.75rem;
+
     @media (max-width: 1440px) {
         margin-top: 2rem;
     }
@@ -274,68 +311,68 @@
 
 
 @media (max-width: 768px) {
-  .section-product {
-    margin-top: 300px;
-  }
+    .section-product {
+        margin-top: 300px;
+    }
 
-  .d-col-prod-form {
-    display: none;
-  }
+    .d-col-prod-form {
+        display: none;
+    }
 
-  .col-prod-form {
-    width: calc(100% - 24px);
-  }
+    .col-prod-form {
+        width: calc(100% - 24px);
+    }
 
-  .project-wrapper {
-    margin: 1rem 0;
-    height: auto !important;
-  }
+    .project-wrapper {
+        margin: 1rem 0;
+        height: auto !important;
+    }
 
-  .project-wrapper .d-flex {
-    flex-direction: column !important;
-    gap: 1rem !important;
-  }
+    .project-wrapper .d-flex {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
 
-  .project-item {
-    min-height: 250px;
-    height: auto;
-  }
+    .project-item {
+        min-height: 250px;
+        height: auto;
+    }
 
-  .project-item-img {
-    min-height: 250px;
-    width: 100%;
-    object-fit: cover;
-  }
+    .project-item-img {
+        min-height: 250px;
+        width: 100%;
+        object-fit: cover;
+    }
 
-  .project-item-content {
-    padding: 1rem !important;
-  }
+    .project-item-content {
+        padding: 1rem !important;
+    }
 
-  .project-item-content-button img {
-    width: 30px !important;
-    height: 30px !important;
-  }
+    .project-item-content-button img {
+        width: 30px !important;
+        height: 30px !important;
+    }
 
-  .text-uppercase {
-    font-size: 1.25rem !important;
-  }
+    .text-uppercase {
+        font-size: 1.25rem !important;
+    }
 
-  .section-product-after-quote-wrapper {
-    padding: 0 1rem;
-  }
+    .section-product-after-quote-wrapper {
+        padding: 0 1rem;
+    }
 
-  .font-rosellinda {
-    font-size: 1.5rem !important;
-  }
+    .font-rosellinda {
+        font-size: 1.5rem !important;
+    }
 
-  .section-product-after-quote-first,
-  .section-product-after-quote-second {
-    font-size: 1rem !important;
-  }
+    .section-product-after-quote-first,
+    .section-product-after-quote-second {
+        font-size: 1rem !important;
+    }
 
-  .row {
-    margin-right: 0;
-    margin-left: 0;
-  }
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
 }
 </style>

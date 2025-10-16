@@ -14,13 +14,17 @@
                     <!-- Cột trái -->
                     <div class="col-md-4">
                         <div class="product-popup-left">
-                            <div class="product-popup-left-title font-rosellinda text-3xl sub-cl">{{ data?.title }}
-                            </div>
-                            <div class="product-popup-left-subtitle text-2xl">{{ data?.subtitle }}</div>
-                            <div class="product-popup-left-description mt-16 text-xl" v-html="data?.description"></div>
-                            <div class="more-button mt-16">
-                                Xem mặt bằng tầng
-                            </div>
+                            <transition name="fade-text" mode="out-in">
+                                <div :key="currentPanelIndex">
+                                    <div class="product-popup-left-title font-rosellinda text-3xl sub-cl">{{ data[currentPanelIndex]?.title }}
+                                    </div>
+                                    <div class="product-popup-left-subtitle text-2xl">{{ data[currentPanelIndex]?.subtitle }}</div>
+                                    <div class="product-popup-left-description mt-16 text-xl" v-html="data[currentPanelIndex]?.description"></div>
+                                    <div class="more-button mt-16">
+                                        Xem mặt bằng tầng
+                                    </div>
+                                </div>
+                            </transition>
                         </div>
                     </div>
                     <div class="col-md-8 row align-items-center">
@@ -33,8 +37,8 @@
                         <div class="slider-container col-md-10">
                             <Flicking :hideBeforeInit="true" :firstPanelSize="'200px'" :options="flickingOptions"
                                 ref="flickingProductCompRef" @ready="onReady">
-                                <div v-for="(item, idx) in data?.images" class="flicking-panel" :key="idx">
-                                    <img :src="item" alt="product" class="flicking-panel-img" />
+                                <div v-for="(item, idx) in data" class="flicking-panel" :key="idx">
+                                    <img :src="item.image" alt="product" class="flicking-panel-img" />
                                 </div>
                             </Flicking>
                         </div>
@@ -64,11 +68,11 @@ export interface ProductPopupProps {
     title: string
     subtitle: string
     description: string
-    images: string[]
+    image: string
 }
 const props = defineProps({
     open: { type: Boolean, default: false },   // v-model:open
-    data: { type: Object as PropType<ProductPopupProps>, default: () => ({}) }
+    data: { type: Array as PropType<ProductPopupProps[]>, default: () => [] }
 })
 const flickingProductCompRef = ref<InstanceType<typeof Flicking> | null>(null)
 const flickingOptions = reactive({
@@ -129,6 +133,8 @@ const handlePrev = () => {
 }
 
 const handleNext = () => {
+    console.log(currentPanelIndex.value);
+    
     if (!isReachEnd.value) {
         moveTo(currentPanelIndex.value + 1)
     }
@@ -145,6 +151,17 @@ const handleNext = () => {
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
+}
+
+/* text fade */
+.fade-text-enter-active,
+.fade-text-leave-active {
+    transition: opacity .22s ease, transform .22s ease;
+}
+.fade-text-enter-from,
+.fade-text-leave-to {
+    opacity: 0;
+    transform: translateY(6px);
 }
 
 /* overlay */
