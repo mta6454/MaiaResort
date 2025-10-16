@@ -212,7 +212,8 @@ select option {
   }
 
   .form-check-email {
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
   }
 
   .form-check-phone {

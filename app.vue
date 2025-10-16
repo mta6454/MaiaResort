@@ -15,10 +15,10 @@
           <PrivilegeSection />
           <ProductSection />
         </main>
+        <Footer />
         <BottomMenu />
       </div>
     </div>
-    <Footer />
   </div>
 </template>
 

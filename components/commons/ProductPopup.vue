@@ -322,4 +322,21 @@ const handleNext = () => {
         margin-left: 64px;
     }
 }
+@media (max-width: 768px) {
+    .product-popup-left-subtitle {
+        font-size: 1.5rem;
+    }
+    .product-popup-left-description {
+        font-size: 1.25rem;
+    }
+    .more-button {
+        font-size: 1rem;
+    }
+    .privilege-carousel-next {
+        margin-top: 1rem !important;
+    }
+    .privilege-carousel-prev {
+        margin-bottom: 1rem !important;
+    }
+}
 </style>
