@@ -51,14 +51,14 @@
         </div>
 
         <!-- Liên hệ qua -->
-        <div class="mb-3 row">
+        <div class="mb-3 row form-check-wrapper">
           <label class="form-label col-md-4">Liên hệ cho tôi bằng:</label>
-          <div class="form-check col-md-4 form-check-phone">
+          <div class="form-check col-md-4 col-6 form-check-phone">
             <input class="form-check-input" checked type="radio" name="contactMethod" id="contactPhone"
                    value="phone">
             <label class="form-check-label" for="contactPhone">Điện thoại</label>
           </div>
-          <div class="form-check form-check-email col-md-4">
+          <div class="form-check form-check-email col-md-4 col-6">
             <input class="form-check-input" type="radio" name="contactMethod" id="contactEmail"
                    value="email">
             <label class="form-check-label" for="contactEmail">Email</label>
@@ -209,6 +209,10 @@ select option {
 @media (max-width: 768px) {
   .form-check {
     width: 150px;
+  }
+
+  .form-check-wrapper {
+    gap: 10px;
   }
 
   .form-check-email {
