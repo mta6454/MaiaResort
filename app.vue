@@ -15,9 +15,10 @@
           <PrivilegeSection />
           <ProductSection />
         </main>
-        <Footer />
+        <Footer  class="footer-mobile"/>
         <BottomMenu />
       </div>
+      <Footer class="footer-desktop"/>
     </div>
   </div>
 </template>
@@ -42,6 +43,14 @@ const appStyle = {
   background-position: top center;
   width: 100vw;
   position: relative;
+}
+
+.footer-mobile {
+  display: none;
+}
+
+.footer-desktop {
+  display: block;
 }
 
 .bg-sizer {
@@ -81,6 +90,14 @@ html:has(.menu-overlay.active) {
 }
 /* Mobile responsive improvements */
 @media (max-width: 768px) {
+  .footer-mobile {
+    display: block;
+  }
+
+  .footer-desktop {
+    display: none;
+  }
+
   .app {
     overflow-x: hidden;
     background-size: cover;
