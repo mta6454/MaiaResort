@@ -183,6 +183,8 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
     width: 100%;
     gap: 10px;
     padding: 0 10px 0 10px;
+    flex-direction: column;
+    align-items: center;
   }
 
   .text-light {

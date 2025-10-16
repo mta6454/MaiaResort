@@ -4,12 +4,10 @@
     <Head>
       <Meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
     </Head>
-    <div class="app" :style="appStyle" ref="appEl">
-      <img :src="bg" alt="" aria-hidden="true" class="bg-sizer" ref="bgSizerEl" />
-
-      <div class="overlay" ref="overlayEl">
+    <div class="app" ref="appEl" :style="appStyle">
+      <div class="overlay">
         <Header />
-        <main class="pt-32">
+        <main class="pt-32"  ref="overlayEl">
           <IntroSection />
           <MapSection />
           <BenefitSection />
@@ -42,34 +40,16 @@ const appEl = ref<HTMLElement | null>(null)
 const overlayEl = ref<HTMLElement | null>(null)
 const bgSizerEl = ref<HTMLImageElement | null>(null)
 
-function onResize() {
-  if (!appEl.value || !overlayEl.value || !bgSizerEl.value) return
-  const overlayHeight = overlayEl.value.scrollHeight
-  appEl.value.style.minHeight = `${overlayHeight}px`
-}
-
-onMounted(() => {
-  if (bgSizerEl.value) {
-    if (!bgSizerEl.value.complete) {
-      bgSizerEl.value.addEventListener('load', onResize, { once: true })
-    }
-  }
-  onResize()
-  window.addEventListener('resize', onResize)
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('resize', onResize)
-})
 
 </script>
 <style>
 .app {
-  background-size: 100vw auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
   width: 100vw;
   position: relative;
+  overflow-y: visible;
 }
 
 .footer-mobile {
@@ -84,15 +64,14 @@ onBeforeUnmount(() => {
   display: block;
   width: 100vw;
   height: auto;
-  visibility: hidden;
+  position: relative;
   pointer-events: none;
   z-index: 1;
-
+  object-fit: cover;
 }
 
 .overlay {
-  position: absolute;
-  inset: 0;
+  position: relative;
   z-index: 2;
 }
 
@@ -133,8 +112,9 @@ html:has(.menu-overlay.active) {
     background-size: cover;
     background-position: center top;
   }
-
-
+  .bg-sizer {
+    max-width: 100%;
+  }
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
