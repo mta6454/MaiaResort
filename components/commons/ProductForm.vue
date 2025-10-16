@@ -213,7 +213,6 @@ select option {
 
   .form-check-email {
     margin-left: 10px;
-    margin-top: 10px;
   }
 
   .form-check-phone {
