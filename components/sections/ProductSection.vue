@@ -2,15 +2,15 @@
     <section id="product" class="section-product">
         <div class="container text-white text-normal">
             <div class="row">
-                <div class="col-5">
+                <div class="col-12 col-md-5">
                     <div class="font-rosellinda text-2xl main-text">
                         Chủ đầu tư
                     </div>
-                    <div class="text-2xl">
+                    <div class="text-2xl mb-4">
                         CÔNG TY TNHH DỰ ÁN <br>HỒ TRÀM
                     </div>
                 </div>
-                <div class="col-7 d-flex justify-content-between">
+                <div class="col-12 col-md-7 d-flex justify-content-between">
                     <div class="">
                         <div class="font-rosellinda text-2xl main-text hand-draw-text">
                             Vị trí
@@ -55,10 +55,10 @@
             </div>
             <div class="devide-line my-16"></div>
             <div class="row">
-                <div class="col-5 font-rosellinda text-2xl main-text">
+                <div class="col-12 col-md-5 font-rosellinda text-2xl main-text mb-4">
                     Quy mô
                 </div>
-                <div class="col-7 d-flex justify-content-between">
+                <div class="col-12 col-md-7 d-flex justify-content-between">
                     <div class="">
                         <div class="font-rosellinda text-2xl main-text text-center">Peace Tower</div>
                         <div class="d-flex justify-content-center align-items-center">
