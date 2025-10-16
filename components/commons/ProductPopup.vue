@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-        <aside v-show="open" class="menu-overlay" tabindex="0" @keydown.esc="close()" @click.self="close()">
+        <aside v-show="open" class="menu-overlay" tabindex="0" @keydown.esc="close()" @click.self="close()" :class="{'active': open}">
             <!-- Nút đóng -->
             <button class="btn-close" type="button" @click="close" aria-label="Đóng menu">
                 <span></span><span></span>
@@ -283,5 +283,10 @@ const handleNext = () => {
     font-weight: 600;
     font-size: 1.2rem;
     width: fit-content;
+}
+@media (min-width: 769px) {
+    .product-popup-left {
+        margin-left: 2rem;
+    }
 }
 </style>

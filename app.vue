@@ -76,7 +76,9 @@ body {
 .overlay:has(.menu-overlay.active) .bottom-menu {
   display: none;
 }
-
+html:has(.menu-overlay.active) {
+  overflow: hidden;
+}
 /* Mobile responsive improvements */
 @media (max-width: 768px) {
   .app {
