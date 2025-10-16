@@ -2,27 +2,27 @@
   <div class="utilities-carousel row">
     <div class="col-md-1 row align-items-end justify-content-end">
       <div class="utilities-carousel-prev" :class="{ 'disabled': isReachStart }" @click="handlePrev">
-        <img :src="arrowLeft" alt="Arrow Left"/>
+        <img :src="arrowLeft" alt="Arrow Left" />
       </div>
-      <div class="utilities-carousel-next" :class="{ 'disabled': isReachEnd }" @click="handleNext">
-        <img :src="arrowRight" alt="Arrow Right"/>
+      <div class="utilities-carousel-next" :class="{ 'disabled': isLastPanel }" @click="handleNext">
+        <img :src="arrowRight" alt="Arrow Right" />
       </div>
     </div>
     <div class="col-md-10">
       <Flicking :hideBeforeInit="true" :firstPanelSize="'200px'" :options="flickingOptions" ref="flickingCompRef"
-                @ready="onReady">
+        @ready="onReady">
         <div v-for="(item, idx) in list" class="flicking-panel" :key="idx"
-             :class="{ active: idx === currentPanelIndex }">
-          <img :src="item?.img" alt="Utilities" loading="lazy" class="flicking-panel-img"/>
+          :class="{ active: idx === currentPanelIndex }">
+          <img :src="item?.img" alt="Utilities" loading="lazy" class="flicking-panel-img" />
         </div>
       </Flicking>
     </div>
   </div>
 </template>
 <script setup lang="ts">
-import Flicking, {useFlickingReactiveAPI} from "@egjs/vue3-flicking";
+import Flicking, { useFlickingReactiveAPI } from "@egjs/vue3-flicking";
 
-import type {Ref} from 'vue'
+import type { Ref } from 'vue'
 import sectionImg from '~/assets/images/utilitiesSlide/section-4.jpg'
 import arrowLeft from '~/assets/images/arrow-left.svg'
 import arrowRight from '~/assets/images/arrow-right.svg'
@@ -35,7 +35,8 @@ const list = ref([{
   img: sectionImg
 }, {
   img: sectionImg
-}]);
+  // Fake ảnh cuối, opacity của ảnh cuối là 0 để đôn ảnh trước đó lên center
+},]);
 const flickingCompRef = ref<InstanceType<typeof Flicking> | null>(null)
 // Flicking options
 const flickingOptions = reactive({
@@ -65,8 +66,13 @@ const handlePrev = () => {
   }
 }
 
+const isLastPanel = computed(() => {
+  return currentPanelIndex.value === totalPanelCount.value - 2
+})
+// Case ảnh cuối opacity 0
+
 const handleNext = () => {
-  if (!isReachEnd.value) {
+  if (!isLastPanel.value) {
     moveTo(currentPanelIndex.value + 1)
   }
 }
@@ -77,33 +83,37 @@ onMounted(() => {
 })
 </script>
 <style scoped>
-
 .flicking-panel {
   width: calc(100% / 1.5);
 }
 
-.utilities-carousel-prev, .utilities-carousel-next {
+.utilities-carousel-prev,
+.utilities-carousel-next {
   width: 4rem;
   cursor: pointer;
   transition: all .18s ease;
 }
 
-.utilities-carousel-prev:hover, .utilities-carousel-next:hover {
+.utilities-carousel-prev:hover,
+.utilities-carousel-next:hover {
   transform: translateY(1px);
 }
 
 /* Disabled state styles */
-.utilities-carousel-prev.disabled, .utilities-carousel-next.disabled {
+.utilities-carousel-prev.disabled,
+.utilities-carousel-next.disabled {
   opacity: 0.3;
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.utilities-carousel-prev.disabled:hover, .utilities-carousel-next.disabled:hover {
+.utilities-carousel-prev.disabled:hover,
+.utilities-carousel-next.disabled:hover {
   transform: none;
 }
 
-.utilities-carousel-prev.disabled img, .utilities-carousel-next.disabled img {
+.utilities-carousel-prev.disabled img,
+.utilities-carousel-next.disabled img {
   filter: grayscale(100%);
 }
 
@@ -151,6 +161,10 @@ onMounted(() => {
 
 .flicking-panel.active .flicking-panel-img {
   filter: none;
+}
+
+.flicking-panel:last-child {
+  opacity: 0;
 }
 
 @media (max-width: 768px) {
