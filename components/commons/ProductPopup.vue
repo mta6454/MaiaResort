@@ -14,22 +14,22 @@
                 <div class="menu-wrap h-100 row p-4 align-items-center" @click.stop>
                     <!-- Cột trái -->
                     <div class="col-md-3">
-                        <transition class="product-popup-left" name="fade-text" mode="out-in">
-
-                            <div :key="currentPanelIndex">
-                                <div class="product-popup-left-title font-rosellinda text-3xl sub-cl">{{
-                                    data[currentPanelIndex]?.title }}
+                        <div class="product-popup-left">
+                            <transition name="fade-text" mode="out-in">
+                                <div :key="currentPanelIndex">
+                                    <div class="product-popup-left-title font-rosellinda sub-cl">{{
+                                        data[currentPanelIndex]?.title }}
+                                    </div>
+                                    <div class="product-popup-left-subtitle">{{ data[currentPanelIndex]?.subtitle
+                                    }}</div>
+                                    <div class="product-popup-left-description mt-16"
+                                        v-html="data[currentPanelIndex]?.description"></div>
+                                    <div class="more-button mt-16">
+                                        Xem mặt bằng tầng
+                                    </div>
                                 </div>
-                                <div class="product-popup-left-subtitle text-2xl">{{ data[currentPanelIndex]?.subtitle
-                                }}</div>
-                                <div class="product-popup-left-description mt-16 text-xl"
-                                    v-html="data[currentPanelIndex]?.description"></div>
-                                <div class="more-button mt-16">
-                                    Xem mặt bằng tầng
-                                </div>
-                            </div>
-
-                        </transition>
+                            </transition>
+                        </div>
                     </div>
                     <div class="col-md-9 row align-items-center">
                         <div class="col-md-1 ">
@@ -296,8 +296,14 @@ const handleNext = () => {
 
 .product-popup-left-title {
     line-height: 1.1;
+    font-size: 3.5rem;
 }
-
+.product-popup-left-subtitle {
+    font-size: 2.5rem;
+}
+.product-popup-left-description {
+    font-size: 1.75rem;
+}
 .more-button {
     background-color: #ECBD6A;
     color: #000;
