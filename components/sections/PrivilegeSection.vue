@@ -436,8 +436,13 @@ function go( hash : string ) {
   transition: transform .18s ease;
 }
 @media (max-width: 768px) {
+  .section-privilege {
+    text-shadow: 0 0 2px #22222270;
+
+  }
   .second-slide-title {
     font-size: 1.5rem;
+    margin-top: 2rem;
   }
 
   .second-slide-subtitle {

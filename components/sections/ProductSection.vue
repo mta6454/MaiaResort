@@ -237,6 +237,9 @@ const handleShowProductPopup = (data: ProductPopupProps[]) => {
     @media (max-width: 1440px) {
         font-size: 3rem !important;
     }
+    @media (max-width: 768px) {
+        font-size: 2.5rem !important;
+    }
 }
 
 .main-text{
