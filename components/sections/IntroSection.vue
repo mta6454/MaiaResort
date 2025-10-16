@@ -420,6 +420,7 @@ const setReverse = () => {
   .utilities-des-content_overlay_button img {
     width: 40px;
     height: 40px;
+    min-height: unset;
   }
 
   .main-text-cl, .sub-cl {
