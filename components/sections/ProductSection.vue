@@ -76,7 +76,7 @@
                     <div class="">
                         <div class="font-rosellinda text-2xl main-text text-center">Biệt Thự</div>
                         <div class="d-flex justify-content-center align-items-center">
-                            <div class="text-4xl product-number">63</div>
+                            <div class="text-4xl product-number">36</div>
                             <div><br>CĂN</div>
                         </div>
                     </div>
@@ -207,9 +207,7 @@
 }
 
 .main-text{
-    @media (max-width: 1521px) {
-        margin-bottom: 10px;
-    }
+    margin-bottom: 15px;
 }
 
 .img-partner {

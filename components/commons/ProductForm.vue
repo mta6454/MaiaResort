@@ -19,7 +19,7 @@
       <span class="font-rosellinda main-text-cl text-2xl" style="margin-right: -10px;">
                 chọn
             </span>
-      <span class="sub-cl font-extrabold text-2xl">
+      <span class="sub-cl text-semibold text-2xl">
                 Giá Trị Bền Vững
             </span>
     </div>

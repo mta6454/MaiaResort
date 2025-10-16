@@ -14,13 +14,13 @@
           <span class="font-rosellinda main-text-cl main-text text-2xl" style="margin-right: -10px;">
             chọn
           </span>
-          <span class="font-sans sub-cl text-semibold">
+          <span class="font-sans sub-cl">
             An vui, 
           </span>
           <span class="font-rosellinda main-text-cl main-text text-2xl ms-2" style="margin-right: -10px;">
             chọn
           </span>
-          <span class="font-sans sub-cl font-extrabold">
+          <span class="font-sans sub-cl">
             Giá trị bền vững.
           </span>
         </div>
