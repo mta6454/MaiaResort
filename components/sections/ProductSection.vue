@@ -322,10 +322,6 @@ const handleShowProductPopup = (data: ProductPopupProps[]) => {
         display: none;
     }
 
-    .col-prod-form {
-        width: calc(100% - 24px);
-    }
-
     .project-wrapper {
         margin: 1rem 0;
         height: auto !important;
