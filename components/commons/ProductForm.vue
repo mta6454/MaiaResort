@@ -2,50 +2,57 @@
   <div id="register" class="product-form">
     <div class="product-form-title text-center text-3xl">Happy Tower & Villa tại Maia Resort Ho Tram</div>
     <div class="product-form-subtitle text-center mt-4">
-            <span class="font-rosellinda main-text-cl text-2xl" style="margin-right: -10px;">
-                Giữa
-            </span>
-      <span class="sub-cl text-semibold text-2xl">
-                Rừng Vàng, Biển Bạc
-            </span>
+      <span class="font-rosellinda main-text-cl text-2xl" style="margin-right: -10px;">Giữa</span>
+      <span class="sub-cl text-semibold text-2xl">Rừng Vàng, Biển Bạc</span>
     </div>
     <div class="product-form-subtitle text-center mb-4">
-            <span class="font-rosellinda main-text-cl text-2xl" style="margin-right: -10px;">
-                chọn
-            </span>
-      <span class="sub-cl text-semibold text-2xl">
-                An Vui,&nbsp;
-            </span>
-      <span class="font-rosellinda main-text-cl text-2xl" style="margin-right: -10px;">
-                chọn
-            </span>
-      <span class="sub-cl text-semibold text-2xl">
-                Giá Trị Bền Vững
-            </span>
+      <span class="font-rosellinda main-text-cl text-2xl" style="margin-right: -10px;">chọn</span>
+      <span class="sub-cl text-semibold text-2xl">An Vui,&nbsp;</span>
+      <span class="font-rosellinda main-text-cl text-2xl" style="margin-right: -10px;">chọn</span>
+      <span class="sub-cl text-semibold text-2xl">Giá Trị Bền Vững</span>
     </div>
+
     <div class="text-center">
-      <div class="font-rosellinda text-xl main-text">
-        Muốn được tư vấn ngay ?
-      </div>
+      <div class="font-rosellinda text-xl main-text">Muốn được tư vấn ngay ?</div>
     </div>
+
     <div class="mt-5">
-      <form>
+      <form @submit.prevent="onSubmit">
         <!-- Tên khách hàng -->
         <div class="form-floating mb-3">
-          <input type="text" class="form-control px-0" id="tenKhach" placeholder="Tên quý khách">
+          <input
+              type="text"
+              class="form-control px-0"
+              id="tenKhach"
+              placeholder="Tên quý khách"
+              v-model.trim="form.name"
+              required
+          />
           <label for="tenKhach" class="px-0">Xin được biết tên quý khách:</label>
         </div>
 
-        <!-- Số điện thoại -->
+        <!-- Số điện thoại + Email -->
         <div class="row mb-3">
           <div class="col-md-6 form-floating mb-3">
-            <input type="tel" class="form-control  px-0" id="soDienThoai" placeholder="Số điện thoại">
+            <input
+                type="tel"
+                class="form-control px-0"
+                id="soDienThoai"
+                placeholder="Số điện thoại"
+                v-model.trim="form.phone"
+                required
+            />
             <label for="soDienThoai">Số điện thoại:</label>
           </div>
 
-          <!-- Email -->
           <div class="col-md-6 form-floating mb-3">
-            <input type="email" class="form-control  px-0" id="email" placeholder="Email">
+            <input
+                type="email"
+                class="form-control px-0"
+                id="email"
+                placeholder="Email"
+                v-model.trim="form.email"
+            />
             <label for="email">Email (nếu muốn):</label>
           </div>
         </div>
@@ -53,34 +60,137 @@
         <!-- Liên hệ qua -->
         <div class="mb-3 row form-check-wrapper">
           <label class="form-label col-md-4">Liên hệ cho tôi bằng:</label>
+
           <div class="form-check col-md-4 col-6 form-check-phone">
-            <input class="form-check-input" checked type="radio" name="contactMethod" id="contactPhone"
-                   value="phone">
+            <input
+                class="form-check-input"
+                type="radio"
+                name="contactMethod"
+                id="contactPhone"
+                value="phone"
+                v-model="form.contactMethod"
+            />
             <label class="form-check-label" for="contactPhone">Điện thoại</label>
           </div>
+
           <div class="form-check form-check-email col-md-4 col-6">
-            <input class="form-check-input" type="radio" name="contactMethod" id="contactEmail"
-                   value="email">
+            <input
+                class="form-check-input"
+                type="radio"
+                name="contactMethod"
+                id="contactEmail"
+                value="email"
+                v-model="form.contactMethod"
+            />
             <label class="form-check-label" for="contactEmail">Email</label>
           </div>
         </div>
 
         <!-- Sản phẩm cần tư vấn -->
         <div class="form-floating mb-5">
-          <select class="form-select" id="sanPham" aria-label="Chọn sản phẩm">
-            <option selected disabled>Chọn sản phẩm cần tư vấn:</option>
+          <select class="form-select" id="sanPham" aria-label="Chọn sản phẩm" v-model="form.product" required>
+            <option value="" disabled>Chọn sản phẩm cần tư vấn:</option>
             <option value="villa">Biệt thự</option>
             <option value="condo">Căn hộ</option>
           </select>
+          <label for="sanPham">Sản phẩm cần tư vấn</label>
         </div>
 
         <!-- Nút gửi -->
-        <button type="submit" class="btn form-submit px-4">GỬI NGAY</button>
+        <button type="submit" class="btn form-submit px-4" :disabled="submitting">
+          <span v-if="!submitting">GỬI NGAY</span>
+          <span v-else>Đang gửi...</span>
+        </button>
+
+        <!-- Thông báo -->
+        <p v-if="message" class="mt-3" :class="{'text-success': success, 'text-danger': !success}">
+          {{ message }}
+        </p>
       </form>
     </div>
-
   </div>
 </template>
+
+<script setup lang="ts">
+import { reactive, ref } from 'vue'
+
+const API_URL = import.meta.env.VITE_API_URL as string
+
+const form = reactive({
+  name: '',
+  email: '',
+  phone: '',
+  contactMethod: 'phone', // 'phone' | 'email'
+  product: '' // 'villa' | 'condo'
+})
+
+const submitting = ref(false)
+const message = ref('')
+const success = ref(false)
+
+// Ánh xạ value -> text đúng như sheet
+const contactMethodLabel = (v: string) => (v === 'email' ? 'Email' : 'Phone')
+const productLabel = (v: string) => (v === 'condo' ? 'Căn hộ' : 'Biệt thự')
+
+async function onSubmit() {
+  if (!form.name || !form.phone || !form.product) {
+    message.value = 'Vui lòng điền đủ Tên, SĐT và Sản phẩm.'
+    success.value = false
+    return
+  }
+
+  submitting.value = true
+  message.value = ''
+
+  // Payload theo các cột trong sheet:
+  // Name | Email | Phone | Cách liên hệ | Sản phẩm cần tư vấn
+  const payload = {
+    name: form.name,
+    email: form.email || '',
+    phone: form.phone,
+    'contact_type': contactMethodLabel(form.contactMethod),
+    'product_type': productLabel(form.product)
+  }
+
+  try {
+    // Thử gửi tiêu chuẩn (đọc được phản hồi nếu CORS OK)
+    const res = await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+
+    const data = await res.json().catch(() => ({}))
+    success.value = true
+    message.value = data?.message || 'Đã ghi nhận thông tin. Chúng tôi sẽ liên hệ sớm nhất!'
+    // Reset form
+    Object.assign(form, { name: '', email: '', phone: '', contactMethod: 'phone', product: '' })
+  } catch (err: any) {
+    // Fallback nếu CORS chưa bật trên GAS: dùng no-cors (không đọc được response)
+    try {
+      await fetch(API_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+      success.value = true
+      message.value =
+          'Đã gửi yêu cầu. Nếu chưa thấy dòng mới trong Google Sheet, vui lòng kiểm tra cấu hình quyền truy cập Web App.'
+      Object.assign(form, { name: '', email: '', phone: '', contactMethod: 'phone', product: '' })
+    } catch (e) {
+      success.value = false
+      message.value = 'Gửi thất bại. Vui lòng thử lại sau.'
+      console.error(e)
+    }
+  } finally {
+    submitting.value = false
+  }
+}
+</script>
+
 <style scoped>
 .product-form {
   /* background: linear-gradient(to bottom, rgba(0, 85, 102, 0.6), rgba(0, 150, 136, 0.6)); */
@@ -224,5 +334,3 @@ select option {
   }
 }
 </style>
-<script setup lang="ts">
-</script>
