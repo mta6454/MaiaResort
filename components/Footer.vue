@@ -69,7 +69,7 @@ import facebookIcon from "assets/images/facebook.svg";
 <style scoped>
 .footer-wrapper {
   background-color: rgba(0, 85, 102);
-  z-index: 9999;
+  z-index: 0;
   position: relative;
 }
 

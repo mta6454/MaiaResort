@@ -1,6 +1,7 @@
 <template>
     <transition name="fade">
-        <aside v-show="open" class="menu-overlay" tabindex="0" @keydown.esc="close()" @click.self="close()" :class="{'active': open}">
+        <aside v-show="open" class="menu-overlay" tabindex="0" @keydown.esc="close()" @click.self="close()"
+            :class="{ 'active': open }">
             <!-- Nút đóng -->
             <button class="btn-close" type="button" @click="close" aria-label="Đóng menu">
                 <span></span><span></span>
@@ -12,24 +13,27 @@
                 </div>
                 <div class="menu-wrap h-100 row p-4 align-items-center" @click.stop>
                     <!-- Cột trái -->
-                    <div class="col-md-4">
-                        <div class="product-popup-left">
-                            <transition name="fade-text" mode="out-in">
-                                <div :key="currentPanelIndex">
-                                    <div class="product-popup-left-title font-rosellinda text-3xl sub-cl">{{ data[currentPanelIndex]?.title }}
-                                    </div>
-                                    <div class="product-popup-left-subtitle text-2xl">{{ data[currentPanelIndex]?.subtitle }}</div>
-                                    <div class="product-popup-left-description mt-16 text-xl" v-html="data[currentPanelIndex]?.description"></div>
-                                    <div class="more-button mt-16">
-                                        Xem mặt bằng tầng
-                                    </div>
+                    <div class="col-md-3">
+                        <transition class="product-popup-left" name="fade-text" mode="out-in">
+
+                            <div :key="currentPanelIndex">
+                                <div class="product-popup-left-title font-rosellinda text-3xl sub-cl">{{
+                                    data[currentPanelIndex]?.title }}
                                 </div>
-                            </transition>
-                        </div>
+                                <div class="product-popup-left-subtitle text-2xl">{{ data[currentPanelIndex]?.subtitle
+                                }}</div>
+                                <div class="product-popup-left-description mt-16 text-xl"
+                                    v-html="data[currentPanelIndex]?.description"></div>
+                                <div class="more-button mt-16">
+                                    Xem mặt bằng tầng
+                                </div>
+                            </div>
+
+                        </transition>
                     </div>
-                    <div class="col-md-8 row align-items-center">
-                        <div class="col-md-1">
-                            <div class="privilege-carousel-prev" :class="{ 'disabled': isReachStart }"
+                    <div class="col-md-9 row align-items-center">
+                        <div class="col-md-1 ">
+                            <div class="privilege-carousel-prev m-auto" :class="{ 'disabled': isReachStart }"
                                 @click="handlePrev">
                                 <img :src="arrowLeft" alt="Arrow Left" />
                             </div>
@@ -43,7 +47,7 @@
                             </Flicking>
                         </div>
                         <div class="col-md-1">
-                            <div class="privilege-carousel-next" :class="{ 'disabled': isReachEnd }"
+                            <div class="privilege-carousel-next m-auto" :class="{ 'disabled': isReachEnd }"
                                 @click="handleNext">
                                 <img :src="arrowRight" alt="Arrow Right" />
                             </div>
@@ -134,7 +138,7 @@ const handlePrev = () => {
 
 const handleNext = () => {
     console.log(currentPanelIndex.value);
-    
+
     if (!isReachEnd.value) {
         moveTo(currentPanelIndex.value + 1)
     }
@@ -158,6 +162,7 @@ const handleNext = () => {
 .fade-text-leave-active {
     transition: opacity .22s ease, transform .22s ease;
 }
+
 .fade-text-enter-from,
 .fade-text-leave-to {
     opacity: 0;
@@ -211,11 +216,13 @@ const handleNext = () => {
     width: 100%;
     height: 100%;
 }
+
 .popup-background-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .popup-container {
     position: relative;
     z-index: 1;
@@ -226,10 +233,12 @@ const handleNext = () => {
 .product-popup-img-background.mobile {
     display: none;
 }
+
 @media (max-width: 768px) {
     .product-popup-img-background.mobile {
         display: block;
     }
+
     .product-popup-img-background.desktop {
         display: none;
     }
@@ -301,9 +310,10 @@ const handleNext = () => {
     font-size: 1.2rem;
     width: fit-content;
 }
+
 @media (min-width: 769px) {
     .product-popup-left {
-        margin-left: 2rem;
+        margin-left: 64px;
     }
 }
 </style>
