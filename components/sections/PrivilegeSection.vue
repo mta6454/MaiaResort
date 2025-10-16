@@ -52,13 +52,13 @@
               <h5 class="font-rosellinda text-xl">Chủ đầu tư và đơn vị phát triển</h5>
             </div>
             <div class="flex-row flex justify-content-center">
-              <div>
+              <div class="partner-item">
                 <img class="img-partner" src="/assets/images/Logo_The Grand_White.png"></img>
               </div>
-              <div>
+              <div class="partner-item">
                 <img class="img-partner" src="/assets/images/Lodgis-logo.png"></img>
               </div>
-              <div>
+              <div class="partner-item">
                 <img class="img-partner" src="/assets/images/VinaLiving-Logo-White.png"></img>
               </div>
             </div>
@@ -349,6 +349,9 @@ function go( hash : string ) {
   }
 }
 
+.partner-item {
+  margin: 0 16px;
+}
 .img-partner {
   height: 80px;
   object-fit: contain;
