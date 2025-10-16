@@ -356,7 +356,7 @@ const setReverse = () => {
 @media (max-width: 768px) {
   .intro_content {
     font-size: 16px !important;
-    margin-bottom: 260px;
+    margin-bottom: 580px;
   }
 
   .intro_description_first {

@@ -1,12 +1,13 @@
 <template>
   <div>
+
     <Head>
       <Meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
     </Head>
-    <div class="app" :style="appStyle">
-      <img :src="bg" alt="" aria-hidden="true" class="bg-sizer" />
+    <div class="app" :style="appStyle" ref="appEl">
+      <img :src="bg" alt="" aria-hidden="true" class="bg-sizer" ref="bgSizerEl" />
 
-      <div class="overlay">
+      <div class="overlay" ref="overlayEl">
         <Header />
         <main class="pt-32">
           <IntroSection />
@@ -15,10 +16,10 @@
           <PrivilegeSection />
           <ProductSection />
         </main>
-        <Footer  class="footer-mobile"/>
+        <Footer class="footer-mobile" />
         <BottomMenu />
       </div>
-      <Footer class="footer-desktop"/>
+      <Footer class="footer-desktop" />
     </div>
   </div>
 </template>
@@ -31,10 +32,36 @@ import BenefitSection from '~/components/sections/BenefitSection.vue'
 import PrivilegeSection from '~/components/sections/PrivilegeSection.vue'
 import ProductSection from '~/components/sections/ProductSection.vue'
 import BottomMenu from '~/components/commons/BottomMenu.vue'
+import { onMounted, onBeforeUnmount, ref } from 'vue'
 
 const appStyle = {
   backgroundImage: `url(${bg})`
 }
+
+const appEl = ref<HTMLElement | null>(null)
+const overlayEl = ref<HTMLElement | null>(null)
+const bgSizerEl = ref<HTMLImageElement | null>(null)
+
+function onResize() {
+  if (!appEl.value || !overlayEl.value || !bgSizerEl.value) return
+  const overlayHeight = overlayEl.value.scrollHeight
+  appEl.value.style.minHeight = `${overlayHeight}px`
+}
+
+onMounted(() => {
+  if (bgSizerEl.value) {
+    if (!bgSizerEl.value.complete) {
+      bgSizerEl.value.addEventListener('load', onResize, { once: true })
+    }
+  }
+  onResize()
+  window.addEventListener('resize', onResize)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', onResize)
+})
+
 </script>
 <style>
 .app {
@@ -60,6 +87,7 @@ const appStyle = {
   visibility: hidden;
   pointer-events: none;
   z-index: 1;
+
 }
 
 .overlay {
@@ -85,9 +113,11 @@ body {
 .overlay:has(.menu-overlay.active) .bottom-menu {
   display: none;
 }
+
 html:has(.menu-overlay.active) {
   overflow: hidden;
 }
+
 /* Mobile responsive improvements */
 @media (max-width: 768px) {
   .footer-mobile {
@@ -104,9 +134,6 @@ html:has(.menu-overlay.active) {
     background-position: center top;
   }
 
-  .pt-32 {
-    padding-top: 4rem;
-  }
 
   .container {
     padding-left: 1rem;
@@ -118,10 +145,6 @@ html:has(.menu-overlay.active) {
   .app {
     background-size: auto 100%;
     min-height: 100vh;
-  }
-
-  .pt-32 {
-    padding-top: 3rem;
   }
 }
 </style>
