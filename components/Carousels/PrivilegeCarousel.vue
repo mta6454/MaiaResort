@@ -75,10 +75,9 @@ onMounted(() => {
 </script>
 <style scoped>
 .flicking-panel {
-    /* 1.5 slides per viewport: 1 current + 0.5 next */
-    width: calc(100%);
+    /* 1 slide per viewport */
+    width: 100%;
     aspect-ratio: 16/9;
-    object-fit: cover;
 }
 .privilege-carousel-prev, .privilege-carousel-next {
     width: 3rem;

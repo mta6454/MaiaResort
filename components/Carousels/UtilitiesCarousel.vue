@@ -85,6 +85,7 @@ onMounted(() => {
 <style scoped>
 .flicking-panel {
   width: calc(100% / 1.5);
+  aspect-ratio: 16/9;
 }
 
 .utilities-carousel-prev,
@@ -119,23 +120,20 @@ onMounted(() => {
 
 .flicking-panel-img {
   width: calc(100% - 2rem);
-  aspect-ratio: 16/9;
+  height: 100%;
   object-fit: cover;
   margin: 0 1rem;
+  display: block;
 }
 
 .flicking-panel:not(.active) .flicking-panel-img {
   filter: brightness(.55);
-  transition: filter .2s ease;
 }
 
 .flicking-panel.active .flicking-panel-img {
   filter: none;
 }
 
-.flicking-panel {
-  contain: paint;
-}
 
 :root {
   --ease-smooth: cubic-bezier(.22, .61, .36, 1);
@@ -149,9 +147,10 @@ onMounted(() => {
 
 .flicking-panel-img {
   width: calc(100% - 2rem);
-  aspect-ratio: 16/9;
+  height: 100%;
   object-fit: cover;
   margin: 0 1rem;
+  display: block;
   transition: filter .5s ease;
 }
 
@@ -164,7 +163,8 @@ onMounted(() => {
 }
 
 .flicking-panel:last-child {
-  opacity: 0;
+   opacity: 0;
+  visibility: hidden;
 }
 
 @media (max-width: 768px) {
@@ -184,7 +184,8 @@ onMounted(() => {
   .flicking-panel-img {
     width: calc(100% - 1rem);
     margin: 0 0.5rem;
-    aspect-ratio: 16/9;
+    height: 100%;
+    display: block;
   }
 
   .col-md-10 {
