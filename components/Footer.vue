@@ -2,7 +2,7 @@
   <div class="footer-wrapper">
     <div class="container footer">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 col-12">
           <div class="footer-item">
             <div class="footer-item-title text-size-normal text-semibold mb-1">
               Maia Sales Gallery
@@ -14,7 +14,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 col-12">
           <div class="footer-item">
             <div class="footer-item-title text-size-normal text-semibold mb-1">
               Địa chỉ dự án
@@ -26,7 +26,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-2" style="margin-left: 30px">
+        <div class="col-md-2 col-12 ml-md-30">
           <div class="footer-item">
             <div class="footer-item-title text-size-normal text-semibold mb-1">
               Hotline
@@ -50,7 +50,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-1" style="margin-left: 70px">
+        <div class="col-md-1 ml-md-70">
           <div class="footer-item socials">
             <a target="_blank" href="https://www.facebook.com/MaiaResortHoTram.vn" aria-label="Facebook">
               <img :src="facebookIcon" alt="Facebook" class="facebook"/>
@@ -97,5 +97,16 @@ import facebookIcon from "assets/images/facebook.svg";
   height: 60%;
   object-fit: contain;
   margin: auto;
+}
+@media screen and (max-width: 768px) {
+  .footer-item {
+    margin-bottom: 1rem;
+  }
+  .footer-item-title {
+    font-size: 1.5rem;
+  }
+  .footer-item-content {
+    font-size: 1.25rem;
+  }
 }
 </style>

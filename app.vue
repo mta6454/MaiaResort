@@ -17,8 +17,8 @@
         </main>
         <BottomMenu />
       </div>
-      <Footer />
     </div>
+    <Footer />
   </div>
 </template>
 
