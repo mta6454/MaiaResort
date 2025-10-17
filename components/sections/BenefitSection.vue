@@ -179,9 +179,9 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
 }
 
 @media (max-width: 768px) {
-  .slide-title-text, .after-slider, .text-black, .section-benefit-second {
+  /* .slide-title-text, .after-slider, .text-black, .section-benefit-second {
     display: none;
-  }
+  } */
 
   .benefit-wrapper {
     width: 100%;
