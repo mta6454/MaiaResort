@@ -86,7 +86,17 @@
 
       <!-- wrapper phá max-width của container cha -->
       <div class="mini-vegas w-screen relative left-1/2 -translate-x-1/2 mt-8 text-white">
-        <img src="/assets/images/privilegeSlide/privileges-main.png" alt="Mini Vegas" loading="lazy" class="mini-vegas-img"/>
+        <div class="row">
+          <div class="col-md-4 col-12">
+            <img src="/assets/images/privilege/1.png" alt="Mini Vegas" loading="lazy" class="mini-vegas-img"/>
+          </div>
+          <div class="col-md-4 col-12">
+            <img src="/assets/images/privilege/2.png" alt="Mini Vegas" loading="lazy" class="mini-vegas-img"/>
+          </div>
+          <div class="col-md-4 col-12">
+            <img src="/assets/images/privilege/3.png" alt="Mini Vegas" loading="lazy" class="mini-vegas-img"/>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -117,16 +127,8 @@ function go( hash : string ) {
   @media (max-width: 1440px) {
     margin-top: 60px;
   }
-  @media (max-width: 768px) {
-    margin-top: 180px;
-  }
 }
 
-.section-devide-privilege{
-  @media (max-width: 768px) {
-    margin-top: 150px;
-  }
-}
 
 .second-slide-subtitle{
   font-size: 1.75rem;
@@ -354,7 +356,7 @@ function go( hash : string ) {
     max-height: 600px;
   }
   @media (max-width: 768px) {
-    max-height: 400px;
+    margin-bottom: 4rem;
   }
 }
 

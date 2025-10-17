@@ -110,10 +110,6 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
     margin-top: 4rem;
     margin-bottom: 70px;
   }
-  @media (max-width: 768px) {
-    margin-top: 150px;
-    margin-bottom: 150px;
-  }
 }
 
 .benefit-item {
@@ -185,7 +181,7 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
 
   .benefit-wrapper {
     width: 100%;
-    gap: 60px;
+    gap: 2rem;
     padding: 0 10px 0 10px;
     flex-direction: column;
     align-items: center;
