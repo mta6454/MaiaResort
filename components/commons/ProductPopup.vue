@@ -24,11 +24,9 @@
                                     }}</div>
                                     <div class="product-popup-left-description mt-16"
                                         v-html="data[currentPanelIndex]?.description"></div>
-                                    <a href="https://drive.google.com/file/d/1DaCaxIK3MeoSMNKXIAWNtWmpCikS6FjP/view?usp=sharing" target="_blank">
                                         <div class="more-button mt-16">
                                             Xem mặt bằng tầng
                                         </div>
-                                    </a>
                                 </div>
                             </transition>
                         </div>
@@ -277,6 +275,9 @@ const handleNext = () => {
     width: 3rem;
     cursor: pointer;
     transition: all .18s ease;
+    @media (max-width: 768px) {
+        width: 2.5rem;
+    }
 }
 
 .privilege-carousel-prev:hover,

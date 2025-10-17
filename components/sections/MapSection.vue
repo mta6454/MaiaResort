@@ -67,6 +67,12 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
     padding-left: 40px;
     padding-right: 40px;
   }
+  @media (min-width: 1400px) {
+    padding-left: calc((100% - 1320px) / 2);
+  }
+  @media(min-width: 1200px) and (max-width: 1399px) {
+    padding-left: calc((100% - 1140px) / 2);
+  }
 }
 
 .map {
@@ -75,7 +81,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 
   @media (max-width: 1521px) {
     width: auto;
-    margin-left: 80px;
+    margin-left: 60px;
   }
 
   @media (max-width: 1440px) {
@@ -112,7 +118,6 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 
 .section-map-title {
   margin-top: 0px;
-  max-width: 1600px;
   padding: 0;
   margin-bottom: 2rem;
 }
@@ -126,7 +131,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   }
 
   @media (max-width: 768px) {
-    margin-top: 220px;
+    margin-top: 40px;
     margin-bottom: 10px;
   }
 }
@@ -140,7 +145,8 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
     font-size: 2.5rem;
   }
 
-  @media (max-width: 768px) {}
+  @media (max-width: 768px) {
+  }
 }
 
 @media screen and (min-width: 769px) {

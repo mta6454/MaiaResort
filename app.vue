@@ -16,6 +16,7 @@
         </main>
         <Footer class="footer-mobile" />
         <BottomMenu />
+        <BottomRightMenu class="mobile-only" />
       </div>
       <Footer class="footer-desktop" />
     </div>
@@ -30,6 +31,7 @@ import BenefitSection from '~/components/sections/BenefitSection.vue'
 import PrivilegeSection from '~/components/sections/PrivilegeSection.vue'
 import ProductSection from '~/components/sections/ProductSection.vue'
 import BottomMenu from '~/components/commons/BottomMenu.vue'
+import BottomRightMenu from '~/components/commons/BottomRightMenu.vue'
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 
 const appStyle = {

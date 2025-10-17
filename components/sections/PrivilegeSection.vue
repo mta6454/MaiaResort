@@ -100,7 +100,7 @@
       </div>
 
     </div>
-    <div class="cta-schedule text-center" style="margin-top: 3rem;">
+    <div class="cta-schedule text-center">
       <div class="cta-title">ĐẶT LỊCH ĐỂ TRẢI NGHIỆM</div>
 
       <!-- Lỗi không căn giữa nên đặt 13px margin -->
@@ -356,7 +356,7 @@ function go( hash : string ) {
     max-height: 600px;
   }
   @media (max-width: 768px) {
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
     max-height: 480px;
   }
 }
@@ -416,6 +416,11 @@ function go( hash : string ) {
 .cta-schedule {
   text-align: center;
   padding: 16px 0 10px;
+  margin-top: 10rem;
+  @media (max-width: 768px) {
+    margin-top: 550px;
+    color: #000;
+  }
 }
 
 .cta-title {
@@ -511,11 +516,17 @@ function go( hash : string ) {
   .section-privilege-vegas {
     font-size: 1.125rem !important;
     padding: 0 1rem;
+    @media screen and (max-width: 768px) {
+      padding: 40px 0;
+    }
   }
 
   .section-privilege-vegas-content {
     font-size: 0.875rem !important;
     padding: 0 1rem;
+    @media screen and (max-width: 768px) {
+      padding: 40px 0;
+    }
   }
 
 }

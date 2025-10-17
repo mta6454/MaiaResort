@@ -200,7 +200,7 @@ const handleShowProductPopup = (data: ProductPopupProps[]) => {
 </script>
 <style>
 .section-product {
-    margin-top: 730px;
+    margin-top: 800px;
 
     @media (max-width: 1521px) {
         margin-top: 450px;
@@ -305,7 +305,7 @@ const handleShowProductPopup = (data: ProductPopupProps[]) => {
 }
 
 .section-product-after-quote-second {
-    margin-top: 4.75rem;
+    margin-top: 2rem;
 
     @media (max-width: 1440px) {
         margin-top: 2rem;
@@ -333,7 +333,7 @@ const handleShowProductPopup = (data: ProductPopupProps[]) => {
     .text-des {
         font-size: 14px !important;
         margin-right: 15px;
-        height: 30px;
+        height: 40px;
     }
 
     .project-wrapper {

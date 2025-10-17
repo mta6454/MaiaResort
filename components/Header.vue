@@ -2,15 +2,15 @@
   <header class="app_header" ref="headerContainerRef">
     <div class="app_header_inner container">
       <div class="app_header_inner_left">
-        <div class="btn_header">
+        <div class="btn_header pc-only">
           <a href="/" class="">
             <img :src="phoneIcon" alt="Phone" class="phone"/>
           </a>
         </div>
-        <div class="btn_header">
+        <div class="btn_header pc-only">
           <a target="_blank" href="https://vr360.maiaresorthotram.com/">
             <img :src="View360" alt="View360" class="view360"/>
-          </a>
+          </a>  
         </div>
       </div>
       <div class="header_logo_wrapper" ref="logoWrapperRef">
@@ -52,10 +52,10 @@ const handleScroll = () => {
 
   // If the user is NOT at the very top of the page, hide the logo.
   if (window.scrollY > 0) {
-    logoWrapper.classList.add('logo-hidden');
+    logoWrapper.classList.add('logo-scrolled');
   } else {
     // Otherwise, if they are at the top (scrollY is 0), show it.
-    logoWrapper.classList.remove('logo-hidden');
+    logoWrapper.classList.remove('logo-scrolled');
   }
 };
 
@@ -80,6 +80,7 @@ onUnmounted(() => {
   height: auto !important;
   padding-top: 0.7rem !important;
   padding-bottom: 0.7rem !important;
+  background: linear-gradient(to bottom, rgba(16, 153, 135, 0.4), rgba(1, 66, 97, 0.45), rgba(1, 66, 97, 0.4));
   /* The transition is no longer needed on the main header */
 }
 
@@ -128,10 +129,9 @@ onUnmounted(() => {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.logo-hidden {
-  opacity: 0;
-  transform: scale(0.9); /* Slightly shrink the logo when hiding */
-  pointer-events: none; /* Prevent clicking the logo when it's hidden */
+.logo-scrolled {
+  width: 4.5rem;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .header_logo {
@@ -187,6 +187,10 @@ onUnmounted(() => {
   .icon_menu {
     width: 2rem;
     height: 2rem;
+  }
+
+  .pc-only {
+    display: none;
   }
 }
 

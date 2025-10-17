@@ -121,6 +121,10 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   width: 280px;
   height: 280px;
   background: linear-gradient(to bottom, rgba(6, 89, 108, 0.9), rgba(12, 130, 125, 0.9));
+  @media (min-width: 1280px) {
+    width: 360px;
+    height: 360px;
+  }
 }
 
 .benefit-item img {
@@ -132,11 +136,18 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
     height: 50px;
   }
 }
-
+.benefit-item .text-center.text-sm {
+  @media (min-width: 1280px) {
+    font-size: 20px;
+  }
+}
 .slide-title-text {
   font-size: 1.15rem;
   @media (max-width: 1440px) {
     font-size: 1rem;
+  }
+  @media (max-width: 768px) {
+    padding: 40px 0;
   }
 }
 
@@ -147,6 +158,9 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   }
   @media (max-width: 1440px) {
     margin-top: 20px;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 140px;
   }
 }
 
@@ -160,6 +174,9 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   }
   @media (max-width: 1440px) {
     padding: 15px 0;
+  }
+  @media (max-width: 768px) {
+    padding: 40px 0;
   }
 }
 
@@ -175,6 +192,9 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   @media (max-width: 1440px) {
     margin-top: 15px;
     margin-bottom: 15px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 180px;
   }
 }
 

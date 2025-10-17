@@ -136,7 +136,7 @@ const setReverse = () => {
 
 .intro_description_first {
   font-size: 18px;
-  padding-top: 450px;
+  padding-top: 350px;
   @media (max-width: 1521px) {
     /* padding-top: 200px; */
   }
@@ -159,10 +159,12 @@ const setReverse = () => {
     margin-top: 10px;
   }
 }
-
+.intro-happy {
+  margin-top: 1rem !important;
+}
 .cta-schedule {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   @media (max-width: 1521px) {
     margin-top: 15px;
     padding: 0;
@@ -361,7 +363,8 @@ const setReverse = () => {
 @media (max-width: 768px) {
   .intro_content {
     font-size: 16px !important;
-    margin-bottom: 960px;
+    margin-bottom: 860px;
+    margin-top: 100px;
   }
 
 
@@ -379,7 +382,7 @@ const setReverse = () => {
   }
 
   .section-utilities {
-    padding: 20px 10px 0 10px;
+    padding: 20px 10px 80px 10px;
     border: none;
     margin: 0 auto;
     flex-direction: column !important;
