@@ -79,6 +79,9 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
     width: auto;
     margin-left: 20px;
   }
+  @media (max-width: 768px) {
+    padding: 3rem 0;
+  }
 }
 
 .map-img {
@@ -120,6 +123,10 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   @media (max-width: 1440px) {
     margin-top: 130px;
     font-size: 2.5rem;
+  }
+  @media (max-width: 768px) {
+    margin-top: 240px;
+
   }
 }
 
@@ -198,7 +205,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   }
 
   .schedule-item:not(:first-child):not(:last-child) {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
 
   .schedule-item-content {

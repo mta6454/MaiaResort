@@ -8,7 +8,7 @@
           mát lành. Không còi xe, không khối bụi - chỉ còn sự tĩnh tại và<br> năng lượng mói mẻ cho một ngày trọn vẹn.
         </div>
         <div class="slide-title-sub-title text-2xl text-semibold">
-          Ở Maia Resort Ho Tram,<br> bình yên trở thành thói quen hàng ngày.
+          Ở Maia Resort Ho Tram,<br> <span class="slide-title-sub-title-des">bình yên trở thành thói quen hàng ngày.</span>
         </div>
       </div>
       <div class="slide-wrapper py-8">
@@ -110,6 +110,10 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
     margin-top: 4rem;
     margin-bottom: 70px;
   }
+  @media (max-width: 768px) {
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
 }
 
 .benefit-item {
@@ -181,7 +185,7 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
 
   .benefit-wrapper {
     width: 100%;
-    gap: 10px;
+    gap: 60px;
     padding: 0 10px 0 10px;
     flex-direction: column;
     align-items: center;
@@ -204,6 +208,9 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
 
   .font-light {
     font-size: 12px;
+  }
+  .slide-title-sub-title-des {
+    font-size: 16px;
   }
 }
 </style>

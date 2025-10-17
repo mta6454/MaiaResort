@@ -14,7 +14,7 @@
       <div class="second-slide-wrapper">
         <CarouselsPrivilegeCarousel class="py-4"/>
       </div>
-      <SectionDevide/>
+      <SectionDevide class="section-devide-privilege"/>
       <div class="second-slide-subtitle second-slide-subtitle-second font-sans text-semibold">
         Maia Resort Ho Tram hội tụ uy tín quốc tế, <br/> sự am hiểu bản địa và chuẩn mực vận hành tinh hoa.
       </div>
@@ -116,6 +116,15 @@ function go( hash : string ) {
   }
   @media (max-width: 1440px) {
     margin-top: 60px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 180px;
+  }
+}
+
+.section-devide-privilege{
+  @media (max-width: 768px) {
+    margin-top: 150px;
   }
 }
 
@@ -447,7 +456,7 @@ function go( hash : string ) {
 
   .second-slide-subtitle {
     font-size: 1rem !important;
-    padding: 0 2rem;
+    padding: 2rem 2rem;
   }
 
   .section-privilege-content {

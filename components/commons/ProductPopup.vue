@@ -11,9 +11,9 @@
                     <img :src="PopupBackground" alt="product" class="product-popup-img-background desktop" />
                     <img :src="PopupBackgroundMobile" alt="product" class="product-popup-img-background mobile" />
                 </div>
-                <div class="menu-wrap h-100 row p-4 align-items-center" @click.stop>
+                <div class="menu-wrap h-100 row p-md-4 p-2 align-items-center" @click.stop>
                     <!-- Cột trái -->
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-12">
                         <div class="product-popup-left">
                             <transition name="fade-text" mode="out-in">
                                 <div :key="currentPanelIndex">
@@ -21,7 +21,7 @@
                                         data[currentPanelIndex]?.title }}
                                     </div>
                                     <div class="product-popup-left-subtitle">{{ data[currentPanelIndex]?.subtitle
-                                    }}</div>
+                                        }}</div>
                                     <div class="product-popup-left-description mt-16"
                                         v-html="data[currentPanelIndex]?.description"></div>
                                     <div class="more-button mt-16">
@@ -31,14 +31,14 @@
                             </transition>
                         </div>
                     </div>
-                    <div class="col-md-9 row align-items-center">
-                        <div class="col-md-1 ">
+                    <div class="col-md-9 col-12 row align-items-center slide-wrapper">
+                        <div class="col-md-1 btn-prev-wrapper">
                             <div class="privilege-carousel-prev m-auto" :class="{ 'disabled': isReachStart }"
                                 @click="handlePrev">
                                 <img :src="arrowLeft" alt="Arrow Left" />
                             </div>
                         </div>
-                        <div class="slider-container col-md-10">
+                        <div class="slider-container col-md-10 col-12">
                             <Flicking :hideBeforeInit="true" :firstPanelSize="'200px'" :options="flickingOptions"
                                 ref="flickingProductCompRef" @ready="onReady">
                                 <div v-for="(item, idx) in data" class="flicking-panel" :key="idx">
@@ -46,7 +46,7 @@
                                 </div>
                             </Flicking>
                         </div>
-                        <div class="col-md-1">
+                        <div class="col-md-1 btn-next-wrapper">
                             <div class="privilege-carousel-next m-auto" :class="{ 'disabled': isReachEnd }"
                                 @click="handleNext">
                                 <img :src="arrowRight" alt="Arrow Right" />
@@ -298,11 +298,18 @@ const handleNext = () => {
     line-height: 1.1;
     font-size: 3.5rem;
 }
+
 .product-popup-left-subtitle {
     font-size: 2.5rem;
 }
+
 .product-popup-left-description {
     font-size: 1.75rem;
+}
+
+.btn-prev-wrapper, 
+.btn-next-wrapper {
+    padding: 0;
 }
 .more-button {
     background-color: #ECBD6A;
@@ -322,21 +329,72 @@ const handleNext = () => {
         margin-left: 64px;
     }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 767px) {
+    .slide-wrapper {
+        position: relative;
+        padding: 0;
+    }
+
+    .btn-prev-wrapper {
+        position: absolute;
+        left: 2rem;
+        top: calc(50% -24px);
+        /* 1/2 kích thước btn */
+        z-index: 2;
+        width: fit-content;
+    }
+
+    .btn-next-wrapper {
+        position: absolute;
+        right: 2rem;
+        top: calc(50% -24px);
+        z-index: 2;
+        width: fit-content;
+    }
+
+    .privilege-carousel-prev:hover,
+    .privilege-carousel-next:hover {
+        transform: translateY(0);
+    }
+
+    .slider-container {
+        z-index: 1;
+    }
+
     .product-popup-left-subtitle {
         font-size: 1.5rem;
     }
+
     .product-popup-left-description {
         font-size: 1.25rem;
     }
+
     .more-button {
         font-size: 1rem;
     }
-    .privilege-carousel-next {
-        margin-top: 1rem !important;
+    .btn-next-wrapper {
+        right: 1rem;
     }
-    .privilege-carousel-prev {
-        margin-bottom: 1rem !important;
+    .btn-prev-wrapper {
+        left: 1rem;
     }
+    .slide-wrapper {
+        height: 60vh;
+    }
+    .slider-container {
+        height: 100%;
+    }
+    .flicking-panel {
+        height: 100%;
+        aspect-ratio: unset;
+    }
+    .flicking-panel-img {
+        height: 100%;
+        aspect-ratio: unset;
+    }
+}
+@media (max-width: 430px) {
+   
 }
 </style>

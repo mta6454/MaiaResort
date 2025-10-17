@@ -2,13 +2,13 @@
   <div id="register" class="product-form">
     <div class="product-form-title text-center text-3xl">Happy Tower & Villa tại Maia Resort Ho Tram</div>
     <div class="product-form-subtitle text-center mt-4">
-      <span class="font-rosellinda main-text-cl text-2xl" style="margin-right: -10px;">Giữa</span>
+      <span class="font-rosellinda main-text-cl text-2xl" style="margin-right: 4px;">Giữa</span>
       <span class="sub-cl text-semibold text-2xl">Rừng Vàng, Biển Bạc</span>
     </div>
     <div class="product-form-subtitle text-center mb-4">
-      <span class="font-rosellinda main-text-cl text-2xl" style="margin-right: -10px;">chọn</span>
-      <span class="sub-cl text-semibold text-2xl">An Vui,&nbsp;</span>
-      <span class="font-rosellinda main-text-cl text-2xl" style="margin-right: -10px;">chọn</span>
+      <span class="font-rosellinda main-text-cl text-2xl" style="margin-right: 4px;">chọn</span>
+      <span class="sub-cl text-semibold text-2xl">An Vui,&nbsp;&nbsp;</span>
+      <span class="font-rosellinda main-text-cl text-2xl" style="margin-right: 4px;">chọn</span>
       <span class="sub-cl text-semibold text-2xl">Giá Trị Bền Vững</span>
     </div>
 
@@ -22,13 +22,13 @@
         <div class="form-floating mb-3">
           <input
               type="text"
-              class="form-control px-0"
+              class="form-control px-0 customer-name"
               id="tenKhach"
               placeholder="Tên quý khách"
               v-model.trim="form.name"
               required
           />
-          <label for="tenKhach" class="px-0">Xin được biết tên quý khách:</label>
+          <label for="tenKhach" class="px-md-0">Xin được biết tên quý khách:</label>
         </div>
 
         <!-- Số điện thoại + Email -->
@@ -58,33 +58,35 @@
         </div>
 
         <!-- Liên hệ qua -->
-        <div class="mb-3 row form-check-wrapper">
-          <label class="form-label col-md-4">Liên hệ cho tôi bằng:</label>
+        <div class="mb-3 row form-check-wrapper w-100 justify-content-between">
+          <label class="form-label col-md-4 col-12">Liên hệ cho tôi bằng:</label>
 
-          <div class="form-check col-md-4 col-6 form-check-phone">
-            <input
-                class="form-check-input"
-                type="radio"
-                name="contactMethod"
-                id="contactPhone"
-                value="phone"
-                v-model="form.contactMethod"
-            />
-            <label class="form-check-label" for="contactPhone">Điện thoại</label>
+          <div class="row col-12 col-md-8 p-0 justify-content-md-end justify-content-center">
+            <div class="form-check form-check-phone">
+              <input
+                  class="form-check-input"
+                  type="radio"
+                  name="contactMethod"
+                  id="contactPhone"
+                  value="phone"
+                  v-model="form.contactMethod"
+              />
+              <label class="form-check-label" for="contactPhone">Điện thoại</label>
+            </div>
+  
+            <div class="form-check form-check-email">
+              <input
+                  class="form-check-input"
+                  type="radio"
+                  name="contactMethod"
+                  id="contactEmail"
+                  value="email"
+                  v-model="form.contactMethod"
+              />
+              <label class="form-check-label" for="contactEmail">Email</label>
+            </div>
           </div>
-
-          <div class="form-check form-check-email col-md-4 col-6">
-            <input
-                class="form-check-input"
-                type="radio"
-                name="contactMethod"
-                id="contactEmail"
-                value="email"
-                v-model="form.contactMethod"
-            />
-            <label class="form-check-label" for="contactEmail">Email</label>
           </div>
-        </div>
 
         <!-- Sản phẩm cần tư vấn -->
         <div class="form-floating mb-5">
@@ -93,7 +95,7 @@
             <option value="villa">Biệt thự</option>
             <option value="condo">Căn hộ</option>
           </select>
-          <label for="sanPham">Sản phẩm cần tư vấn</label>
+          <label for="sanPham" style="display: none;">Sản phẩm cần tư vấn</label>
         </div>
 
         <!-- Nút gửi -->
@@ -257,7 +259,10 @@ select option {
 
 /* Container mỗi lựa chọn */
 .form-check {
-  width: 200px;
+  max-width: 200px;
+  width: calc(50% - 16px);
+  min-width: max-content;
+  display: flex;
   align-items: center;
   justify-content: space-between; /* label trái – radio phải */
   gap: 12px;
@@ -265,8 +270,25 @@ select option {
   border-radius: 16px; /* nếu muốn pill */
   background: rgba(255, 255, 255, .08);
   border: 1px solid rgba(255, 255, 255, .22);
+  box-sizing: border-box;
 }
-
+@media (max-width: 768px) {
+  label.px-0 {
+    padding-left: 12px !important;
+  }
+  .form-check {
+    max-width: unset;
+  }
+  .customer-name {
+    padding: 0 12px !important;
+  }
+  .col-md-6.form-floating {
+    padding: 0;
+  }
+  #sanPham {
+    margin-left: 0 !important;
+  }
+}
 /* Label nằm bên trái, chiếm phần còn lại */
 .form-check-label {
   order: 1;
@@ -274,8 +296,11 @@ select option {
   color: #EAF7F9; /* tuỳ màu của bạn */
   flex: 1;
   float: left;
+  min-width: max-content;
 }
-
+.form-check-phone {
+    margin-right: 16px;
+  }
 /* Radio nằm bên phải */
 .form-check-input {
   order: 2;
@@ -302,9 +327,6 @@ select option {
   box-shadow: 0 0 10px rgba(16, 230, 215, .55), 0 2px 8px rgba(0, 0, 0, .35);
 }
 
-.form-check-email {
-  margin-left: 60px;
-}
 
 @supports not (appearance: none) {
   .form-check-input {
@@ -317,20 +339,12 @@ select option {
 }
 
 @media (max-width: 768px) {
-  .form-check {
-    width: 150px;
-  }
-
   .form-check-wrapper {
-    gap: 10px;
+    justify-content: center;
   }
 
-  .form-check-email {
-    margin-left: 10px;
-  }
-
-  .form-check-phone {
-    margin-left: 10px;
+  .product-form {
+    padding: 1rem;
   }
 }
 </style>

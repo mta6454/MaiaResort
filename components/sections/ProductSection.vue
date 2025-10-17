@@ -6,25 +6,25 @@
                     <div class="font-rosellinda text-2xl main-text">
                         Chủ đầu tư
                     </div>
-                    <div class="text-2xl mb-4">
-                        CÔNG TY TNHH DỰ ÁN <br>HỒ TRÀM
+                    <div class="text-2xl mb-4 company-name">
+                        CÔNG TY TNHH DỰ ÁN <br class="br-pc-only">HỒ TRÀM
                     </div>
                 </div>
-                <div class="col-12 col-md-7 d-flex justify-content-between">
+                <div class="col-12 col-md-7 d-flex gap-1 gap-md-0 justify-content-between">
                     <div class="">
-                        <div class="font-rosellinda text-2xl main-text hand-draw-text">
+                        <div class="font-rosellinda text-2xl main-text hand-draw-text section-product-name">
                             Vị trí
                         </div>
-                        <div class="column-margin mb-4 text-lg">
+                        <div class="column-margin mb-4 text-lg text-des">
                             Xã Hồ Tràm, Thành phố Hồ Chí Minh
                         </div>
-                        <div class="font-rosellinda text-2xl main-text">
+                        <div class="font-rosellinda text-2xl main-text section-product-name">
                             Khởi công
                         </div>
-                        <div class="column-margin mb-4 text-lg">
+                        <div class="column-margin mb-4 text-lg text-des">
                             Dự kiến quý 4/2025
                         </div>
-                        <div class="font-rosellinda text-2xl main-text">
+                        <div class="font-rosellinda text-2xl main-text section-product-name">
                             Thương hiệu vận hành
                         </div>
                         <div class="text-size-normal">
@@ -32,19 +32,19 @@
                         </div>
                     </div>
                     <div class="">
-                        <div class="font-rosellinda text-2xl main-text">
+                        <div class="font-rosellinda text-2xl main-text section-product-name">
                             Diện tích
                         </div>
-                        <div class="column-margin mb-4 text-lg">
+                        <div class="column-margin mb-4 text-lg text-des">
                             7ha
                         </div>
-                        <div class="font-rosellinda text-2xl main-text">
+                        <div class="font-rosellinda text-2xl main-text section-product-name">
                             Bàn Giao
                         </div>
-                        <div class="column-margin mb-4 text-lg">
+                        <div class="column-margin mb-4 text-lg text-des">
                             Dự kiến quý 3/2027
                         </div>
-                        <div class="font-rosellinda text-2xl main-text">
+                        <div class="font-rosellinda text-2xl main-text section-product-name">
                             Đơn vị thiết kế
                         </div>
                         <div class="text-size-normal">
@@ -58,7 +58,7 @@
                 <div class="col-12 col-md-5 font-rosellinda text-2xl main-text mb-4">
                     Quy mô
                 </div>
-                <div class="col-12 col-md-7 d-flex justify-content-between">
+                <div class="col-12 col-md-7 d-flex justify-content-between gap-1 gap-md-0">
                     <div class="">
                         <div class="font-rosellinda text-2xl main-text text-center">Peace Tower</div>
                         <div class="d-flex justify-content-center align-items-center">
@@ -132,8 +132,8 @@
                 </div>
             </div>
             <div class="py-8 row mt-16">
-                <div class="col-md-5 d-col-prod-form"></div>
-                <div class="col-md-7 col-prod-form">
+                <div class="col-lg-5 d-col-prod-form"></div>
+                <div class="col-lg-7 col-12 col-prod-form">
                     <ProductForm />
                 </div>
             </div>
@@ -238,7 +238,7 @@ const handleShowProductPopup = (data: ProductPopupProps[]) => {
         font-size: 3rem !important;
     }
     @media (max-width: 768px) {
-        font-size: 2.5rem !important;
+        font-size: 2.25rem !important;
     }
 }
 
@@ -315,16 +315,37 @@ const handleShowProductPopup = (data: ProductPopupProps[]) => {
 
 @media (max-width: 768px) {
     .section-product {
-        margin-top: 300px;
+        margin-top: 40px;
+    }
+
+    .col-prod-form {
+        padding: 0;
+    }
+
+    .company-name {
+        font-size: 1rem;
     }
 
     .d-col-prod-form {
         display: none;
     }
 
+    .text-des {
+        font-size: 14px !important;
+        margin-right: 15px;
+    }
+
     .project-wrapper {
         margin: 1rem 0;
         height: auto !important;
+    }
+
+    .br-pc-only {
+        display: none;
+    }
+
+    .section-product-name {
+        font-size: 1.25rem !important;
     }
 
     .project-wrapper .d-flex {
@@ -360,9 +381,6 @@ const handleShowProductPopup = (data: ProductPopupProps[]) => {
         padding: 0 1rem;
     }
 
-    .font-rosellinda {
-        font-size: 1.5rem !important;
-    }
 
     .section-product-after-quote-first,
     .section-product-after-quote-second {
