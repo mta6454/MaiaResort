@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-        <aside v-show="open" class="menu-overlay" tabindex="0" @keydown.esc="close()" @click.self="close()"
+        <div v-show="open" class="menu-overlay product-popup" tabindex="0" @keydown.esc="close()" @click.self="close()"
             :class="{ 'active': open }">
             <!-- Nút đóng -->
             <button class="btn-close" type="button" @click="close" aria-label="Đóng menu">
@@ -11,9 +11,9 @@
                     <img :src="PopupBackground" alt="product" class="product-popup-img-background desktop" />
                     <img :src="PopupBackgroundMobile" alt="product" class="product-popup-img-background mobile" />
                 </div>
-                <div class="menu-wrap h-100 row p-md-4 p-2" @click.stop>
+                <div class="menu-wrap h-100 row p-lg-4 p-2" @click.stop>
                     <!-- Cột trái -->
-                    <div class="col-md-3 col-12">
+                    <div class="col-lg-3 col-12">
                         <div class="product-popup-left">
                             <transition name="fade-text" mode="out-in">
                                 <div :key="currentPanelIndex">
@@ -21,7 +21,7 @@
                                         data[currentPanelIndex]?.title }}
                                     </div>
                                     <div class="product-popup-left-subtitle">{{ data[currentPanelIndex]?.subtitle
-                                        }}</div>
+                                    }}</div>
                                     <div class="product-popup-left-description mt-16"
                                         v-html="data[currentPanelIndex]?.description"></div>
                                     <div class="more-button mt-16">
@@ -31,22 +31,22 @@
                             </transition>
                         </div>
                     </div>
-                    <div class="col-md-9 row align-items-center slide-wrapper">
-                        <div class="col-md-1 btn-prev-wrapper">
+                    <div class="col-lg-9 row align-items-center slide-wrapper">
+                        <div class="col-lg-1 btn-prev-wrapper">
                             <div class="privilege-carousel-prev m-auto" :class="{ 'disabled': isReachStart }"
                                 @click="handlePrev">
                                 <img :src="arrowLeft" alt="Arrow Left" />
                             </div>
                         </div>
-                        <div class="slider-container col-md-10 col-12">
-                            <Flicking :hideBeforeInit="true" :firstPanelSize="'200px'" :options="flickingOptions"
+                        <div class="slider-container col-lg-10 col-12">
+                            <Flicking :hideBeforeInit="true" :firstPanelSize="'100px'" :options="flickingOptions"
                                 ref="flickingProductCompRef" @ready="onReady">
                                 <div v-for="(item, idx) in data" class="flicking-panel" :key="idx">
                                     <img :src="item.image" alt="product" class="flicking-panel-img" />
                                 </div>
                             </Flicking>
                         </div>
-                        <div class="col-md-1 btn-next-wrapper">
+                        <div class="col-lg-1 btn-next-wrapper">
                             <div class="privilege-carousel-next m-auto" :class="{ 'disabled': isReachEnd }"
                                 @click="handleNext">
                                 <img :src="arrowRight" alt="Arrow Right" />
@@ -56,7 +56,7 @@
                     </div>
                 </div>
             </div>
-        </aside>
+        </div>
     </transition>
 </template>
 
@@ -177,13 +177,18 @@ const handleNext = () => {
     /* background: linear-gradient(170deg, #19a89a 0%, #0a3f54 70%, #08384a 100%); */
     color: #fff;
     outline: none;
+    width: 100%;
+    height: 100%;
+    padding: 4rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Nếu thay đổi thì thay đổi cả vị trí btn x */
 }
 
 /* đảm bảo nút X luôn bấm được */
 .btn-close {
     position: absolute;
-    top: 24px;
-    right: 28px;
+    top: calc(24px + 4rem);
+    right: calc(28px + 4rem);
     z-index: 2;
     width: 36px;
     height: 36px;
@@ -234,7 +239,7 @@ const handleNext = () => {
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .product-popup-img-background.mobile {
         display: block;
     }
@@ -255,7 +260,7 @@ const handleNext = () => {
 
 .flicking-panel {
     width: calc(100%);
-    aspect-ratio: 16/9;
+    aspect-ratio: 3/2;
     object-fit: cover;
 }
 
@@ -297,21 +302,32 @@ const handleNext = () => {
 
 .product-popup-left-title {
     line-height: 1.1;
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .product-popup-left-subtitle {
-    font-size: 2.5rem;
-}
-
-.product-popup-left-description {
     font-size: 1.75rem;
 }
 
-.btn-prev-wrapper, 
+.product-popup-left-description {
+    font-size: 1.5rem;
+}
+
+.btn-prev-wrapper,
 .btn-next-wrapper {
     padding: 0;
 }
+
+.slide-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slider-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
 .more-button {
     background-color: #ECBD6A;
     color: #000;
@@ -321,20 +337,35 @@ const handleNext = () => {
     transition: all 0.3s ease;
     text-align: center;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1rem;
     width: fit-content;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 992px) {
     .product-popup-left {
         margin-left: 64px;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
+    .menu-overlay  {
+        padding: 1.5rem;
+    }
+    .btn-close  {
+        top: calc(1.5rem + 12px);
+        right: calc(1.5rem + 14px);
+    }
+    .menu-wrap {
+        margin: 0;
+    }
+
     .slide-wrapper {
         position: relative;
         padding: 0;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        max-width: 100%;
+        overflow: hidden;
     }
 
     .btn-prev-wrapper {
@@ -349,7 +380,7 @@ const handleNext = () => {
     .btn-next-wrapper {
         position: absolute;
         right: 2rem;
-        top: calc(50% -24px);
+        top: calc(50% - 24px);
         z-index: 2;
         width: fit-content;
     }
@@ -361,6 +392,8 @@ const handleNext = () => {
 
     .slider-container {
         z-index: 1;
+        max-width: 100%;
+        overflow: hidden;
     }
 
     .product-popup-left-subtitle {
@@ -374,23 +407,44 @@ const handleNext = () => {
     .more-button {
         font-size: 1rem;
     }
+
     .btn-next-wrapper {
         right: 1rem;
     }
+
     .btn-prev-wrapper {
         left: 1rem;
     }
+
     .menu-wrap {
         align-items: flex-start;
         padding-top: 4rem !important;
         flex-direction: column;
+        flex-wrap: wrap;
 
     }
+
     .slide-wrapper {
         margin-top: 2rem;
+        height: 55%;
+    }
+
+    .mt-16 {
+        margin-top: 2rem !important;
+    }
+
+    .flicking-panel {
+        height: 100%;
+    }
+
+    .flicking-panel-img {
+        height: 100%;
     }
 }
-@media (max-width: 430px) {
-   
+
+@media (max-width: 678px)  {
+    .slide-wrapper {
+        height: unset;
+    }
 }
 </style>
