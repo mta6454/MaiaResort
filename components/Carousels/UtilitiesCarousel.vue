@@ -1,6 +1,6 @@
 <template>
-  <div class="utilities-carousel row">
-    <div class="col-md-1 row align-items-end justify-content-end">
+  <div class="utilities-carousel row position-relative">
+    <div class="col-md-1 row align-items-md-end justify-content-md-end carousel-btn-wrapper">
       <div class="utilities-carousel-prev" :class="{ 'disabled': isReachStart }" @click="handlePrev">
         <img :src="arrowLeft" alt="Arrow Left" />
       </div>
@@ -163,22 +163,34 @@ onMounted(() => {
 }
 
 .flicking-panel:last-child {
-   opacity: 0;
+  opacity: 0;
   visibility: hidden;
 }
 
 @media (max-width: 768px) {
-  .utilities-carousel {
-    display: none;
+  .carousel-btn-wrapper {
+    width: 0;
   }
 
   .utilities-carousel-prev,
   .utilities-carousel-next {
-    width: 2.5rem;
+    position: absolute;
+    z-index: 2;
+    top: calc(50% - 0.5rem);
+
+  }
+
+  .utilities-carousel-prev {
+    left: 1rem;
+  }
+
+  .utilities-carousel-next {
+    right: 1rem;
   }
 
   .flicking-panel {
     width: 100%;
+    z-index: 1;
   }
 
   .flicking-panel-img {

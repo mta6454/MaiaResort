@@ -1,6 +1,6 @@
 <template>
-    <div class="privilege-carousel row align-items-center">
-        <div class="col-md-1">
+    <div class="privilege-carousel row align-items-center position-relative">
+        <div class="col-md-1 btn-prev-wrapper">
             <div class="privilege-carousel-prev" :class="{ 'disabled': isReachStart }" @click="handlePrev">
                 <img :src="arrowLeft" alt="Arrow Left" />
             </div>
@@ -12,7 +12,7 @@
                     </div>
                 </Flicking>
        </div>
-       <div class="col-md-1">
+       <div class="col-md-1 btn-next-wrapper">
             <div class="privilege-carousel-next" :class="{ 'disabled': isReachEnd }" @click="handleNext">
                 <img :src="arrowRight" alt="Arrow Right" />
             </div>
@@ -84,7 +84,9 @@ onMounted(() => {
     cursor: pointer;
     transition: all .18s ease;
 }
-
+.btn-prev-wrapper, .btn-next-wrapper {
+    width: fit-content;
+}
 .privilege-carousel-prev:hover, .privilege-carousel-next:hover {
     transform: translateY(1px);
 }
@@ -112,15 +114,20 @@ onMounted(() => {
 }
 
 @media (max-width: 768px) {
-    /* .privilege-carousel {
-        display: none;
-    } */
+    .btn-prev-wrapper, .btn-next-wrapper {
+        position: absolute;
+        top: calc(50% - 0.5rem);
 
-    /* .privilege-carousel-prev,
-    .privilege-carousel-next {
-        width: 2rem;
-    } */
-
+        z-index: 2;
+    }
+    .btn-prev-wrapper {
+        left: 1rem;
+        height: 1rem;
+    }
+    .btn-next-wrapper {
+        right: 1rem;
+        height: 1rem;
+    }
     .privilege-carousel-prev,
     .privilege-carousel-next {
         display: none;

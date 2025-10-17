@@ -212,5 +212,8 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   .slide-title-sub-title-des {
     font-size: 16px;
   }
+  .slide-wrapper {
+    width: 100%;
+  }
 }
 </style>

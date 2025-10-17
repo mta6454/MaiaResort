@@ -10,7 +10,7 @@
                         CÔNG TY TNHH DỰ ÁN <br class="br-pc-only">HỒ TRÀM
                     </div>
                 </div>
-                <div class="col-12 col-md-7 d-flex gap-1 gap-md-0 justify-content-between">
+                <div class="col-12 col-md-7 d-flex gap-2 gap-md-0 justify-content-between">
                     <div class="">
                         <div class="font-rosellinda text-2xl main-text hand-draw-text section-product-name">
                             Vị trí

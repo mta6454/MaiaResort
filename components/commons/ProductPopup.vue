@@ -11,7 +11,7 @@
                     <img :src="PopupBackground" alt="product" class="product-popup-img-background desktop" />
                     <img :src="PopupBackgroundMobile" alt="product" class="product-popup-img-background mobile" />
                 </div>
-                <div class="menu-wrap h-100 row p-md-4 p-2 align-items-center" @click.stop>
+                <div class="menu-wrap h-100 row p-md-4 p-2" @click.stop>
                     <!-- Cột trái -->
                     <div class="col-md-3 col-12">
                         <div class="product-popup-left">
@@ -31,7 +31,7 @@
                             </transition>
                         </div>
                     </div>
-                    <div class="col-md-9 col-12 row align-items-center slide-wrapper">
+                    <div class="col-md-9 row align-items-center slide-wrapper">
                         <div class="col-md-1 btn-prev-wrapper">
                             <div class="privilege-carousel-prev m-auto" :class="{ 'disabled': isReachStart }"
                                 @click="handlePrev">
@@ -250,6 +250,7 @@ const handleNext = () => {
     z-index: 2;
     width: 100%;
     height: 100%;
+    align-items: center;
 }
 
 .flicking-panel {
@@ -379,20 +380,14 @@ const handleNext = () => {
     .btn-prev-wrapper {
         left: 1rem;
     }
+    .menu-wrap {
+        align-items: flex-start;
+        padding-top: 4rem !important;
+        flex-direction: column;
+
+    }
     .slide-wrapper {
-        height: 60vh;
-    }
-    .slider-container {
-        height: 100%;
-    }
-    .flicking-panel {
-        height: 100%;
-        aspect-ratio: unset;
-    }
-    .flicking-panel-img {
-        height: 100%;
-        aspect-ratio: unset;
-        object-fit: contain;
+        margin-top: 2rem;
     }
 }
 @media (max-width: 430px) {
