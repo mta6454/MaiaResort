@@ -392,6 +392,7 @@ const handleNext = () => {
     .flicking-panel-img {
         height: 100%;
         aspect-ratio: unset;
+        object-fit: contain;
     }
 }
 @media (max-width: 430px) {
