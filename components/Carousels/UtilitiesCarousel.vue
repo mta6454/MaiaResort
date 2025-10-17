@@ -1,6 +1,6 @@
 <template>
   <div class="utilities-carousel row position-relative">
-    <div class="col-md-1 row align-items-md-end justify-content-md-end carousel-btn-wrapper">
+    <div class="col-md-2 row align-items-md-end justify-content-md-end carousel-btn-wrapper">
       <div class="utilities-carousel-prev" :class="{ 'disabled': isReachStart }" @click="handlePrev">
         <img :src="arrowLeft" alt="Arrow Left" />
       </div>
@@ -23,16 +23,20 @@
 import Flicking, { useFlickingReactiveAPI } from "@egjs/vue3-flicking";
 
 import type { Ref } from 'vue'
+import sectionImg1 from '~/assets/images/utilitiesSlide/1.jpg'
+import sectionImg2 from '~/assets/images/utilitiesSlide/2.jpg'
+import sectionImg3 from '~/assets/images/utilitiesSlide/3.jpg'
 import sectionImg from '~/assets/images/utilitiesSlide/section-4.jpg'
+
 import arrowLeft from '~/assets/images/arrow-left.svg'
 import arrowRight from '~/assets/images/arrow-right.svg'
 
 const list = ref([{
-  img: sectionImg
+  img: sectionImg1
 }, {
-  img: sectionImg
+  img: sectionImg2
 }, {
-  img: sectionImg
+  img: sectionImg3
 }, {
   img: sectionImg
   // Fake ảnh cuối, opacity của ảnh cuối là 0 để đôn ảnh trước đó lên center
