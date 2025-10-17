@@ -93,6 +93,9 @@ onMounted(() => {
   width: 4rem;
   cursor: pointer;
   transition: all .18s ease;
+  @media (max-width: 768px) {
+    width: 3rem;
+  }
 }
 
 .utilities-carousel-prev:hover,

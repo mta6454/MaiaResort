@@ -151,31 +151,37 @@ import productImage3 from '~/assets/images/happyTower/3.jpg'
 import productImage4 from '~/assets/images/happyTower/4.jpg'
 import villaImage1 from '~/assets/images/villa/1.jpg'
 import villaImage2 from '~/assets/images/villa/2.jpg'
+import happyTowerFile from '~/public/products/maia_tower.pdf'
+import villaFile from '~/public/products/maia_villa.pdf'
 const showProductPopup = ref(false)
 const happyTowerData = ref([
     {
         title: 'Căn hộ',
         subtitle: 'Studio',
         description: 'Diện tích căn: <strong>35m2</strong>',
-        image: productImage1
+        image: productImage1,
+        file: happyTowerFile
     },
     {
         title: 'Căn hộ',
         subtitle: '1 phòng ngủ',
         description: 'Diện tích căn: <strong>49m2</strong>',
-        image: productImage2
+        image: productImage2,
+        file: happyTowerFile
     },
     {
         title: 'Căn hộ',
         subtitle: '2 phòng ngủ chuẩn',
         description: 'Diện tích căn: <strong>65m2</strong>',
-        image: productImage3
+        image: productImage3,
+        file: happyTowerFile
     },
     {
         title: 'Căn hộ',
         subtitle: '2 phòng ngủ Luxury',
         description: 'Diện tích căn: <strong>80m2</strong>',
-        image: productImage4
+        image: productImage4,
+        file: happyTowerFile
     },
 ])
 const villaData = ref([
@@ -184,12 +190,14 @@ const villaData = ref([
         subtitle: '2 phòng ngủ',
         description: 'Diện tích căn: <strong>256m2</strong>',
         image: villaImage1,
+        file: villaFile
     },
     {
         title: 'Villa',
         subtitle: '3 phòng ngủ',
         description: 'Diện tích căn: <strong>380m2</strong>',
         image: villaImage2,
+        file: villaFile
     },
 ])
 const currentProductData = ref(happyTowerData.value)

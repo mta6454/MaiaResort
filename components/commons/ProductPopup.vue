@@ -24,7 +24,7 @@
                                     }}</div>
                                     <div class="product-popup-left-description mt-16"
                                         v-html="data[currentPanelIndex]?.description"></div>
-                                        <div class="more-button mt-16">
+                                        <div class="more-button mt-16" @click="handleDownloadFile">
                                             Xem mặt bằng tầng
                                         </div>
                                 </div>
@@ -73,6 +73,7 @@ export interface ProductPopupProps {
     subtitle: string
     description: string
     image: string
+    file: string
 }
 const props = defineProps({
     open: { type: Boolean, default: false },   // v-model:open
@@ -109,7 +110,6 @@ const onReady = (_e: any) => { }
 
 onMounted(() => {
     document.body.style.overflow = 'hidden'
-    console.log('ProductPopup mounted')
     if (flickingProductCompRef.value) {
         console.log('Flicking Product instance mounted')
     }
@@ -137,11 +137,13 @@ const handlePrev = () => {
 }
 
 const handleNext = () => {
-    console.log(currentPanelIndex.value);
-
     if (!isReachEnd.value) {
         moveTo(currentPanelIndex.value + 1)
     }
+}
+
+const handleDownloadFile = () => {
+    window.open(props.data[currentPanelIndex.value]?.file, '_blank')
 }
 </script>
 

@@ -134,8 +134,16 @@ onUnmounted(() => {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
+/* Animate the logo width when the wrapper gains/removes the scrolled class */
+.header_logo_wrapper.logo-scrolled .header_logo,
+.header_logo_wrapper.logo_scrolled .header_logo {
+  width: 4.5rem;
+  transition: width 0.3s ease-in-out;
+}
+
 .header_logo {
   width: 7rem;
+  transition: width 0.3s ease-in-out;
   filter: brightness(0) invert(1);
   @media (max-width: 1440px) {
     width: 5.5rem;
