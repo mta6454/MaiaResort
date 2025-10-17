@@ -3,9 +3,9 @@
     <div class="container section-benefit-first text-white text-center pb-8">
       <div class="slide-title">
         <div class="slide-title-text">
-          Hãy tưởng tượng một buổi sáng thức dậy, mở cửa ban công, hít căng lồng ngực làn gió mặn của <br> biển và hương
+          Hãy tưởng tượng một buổi sáng thức dậy, mở cửa ban công, hít căng lồng ngực làn gió mặn của <br class="pc-only-br"> biển và hương
           rừng
-          mát lành. Không còi xe, không khối bụi - chỉ còn sự tĩnh tại và<br> năng lượng mói mẻ cho một ngày trọn vẹn.
+          mát lành. <br class="mb-only-br"> Không còi xe, không khối bụi - chỉ còn sự tĩnh tại và<br  class="pc-only-br"> năng lượng mói mẻ cho một ngày trọn vẹn.
         </div>
         <div class="slide-title-sub-title text-2xl text-semibold">
           Ở Maia Resort Ho Tram,<br> <span class="slide-title-sub-title-des">bình yên trở thành thói quen hàng ngày.</span>
@@ -15,12 +15,12 @@
         <UtilitiesCarousel/>
       </div>
       <div class="after-slider font-rosellinda text-navy">
-        Và không chỉ dừng lại ở sự tĩnh tại.
+        Không chỉ dừng lại <br class="mb-only-br"> ở sự tĩnh tại,
       </div>
       <div class="text-black" style="color: #365967; margin-bottom: 10px;">
-        Maia Resort Ho Tram còn nằm trong lòng tổ hợp tỷ đô The Grand Ho Tram - trung tâm nghỉ dưỡng & giải trí hàng đầu
+        Maia Resort Ho Tram thuộc tổ hợp tỷ đô <br class="mb-only-br"> The Grand Ho Tram  - trung tâm nghỉ dưỡng <br class="mb-only-br"> & giải trí hàng đầu
         Việt Nam.<br>
-        Tại đây, quý khách được tận hưởng những đặc quyền hiếm có
+        Tại đây, quý khách được tận hưởng những <br class="mb-only-br"> đặc quyền hiếm có
       </div>
       <div class="text-black text-bold">
         sân golf đằng cấp thế giới, sân bay chuyên dụng cho khách cao cấp, cùng tổ hợp mua sắm và giải trí hiện đại.
@@ -97,6 +97,9 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   @media (max-width: 1440px) {
     font-size: 28px;
   }
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 .hightlight-wrapper {
@@ -147,6 +150,7 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   }
 }
 
+
 .slide-wrapper {
   width: 100vw;
   padding-top: 4rem;
@@ -178,7 +182,9 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   /* .slide-title-text, .after-slider, .text-black, .section-benefit-second {
     display: none;
   } */
-
+  .pc-only-br {
+    display: none;
+  }
   .benefit-wrapper {
     width: 100%;
     gap: 2rem;
@@ -210,6 +216,13 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   }
   .slide-wrapper {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+
+  .mb-only-br {
+    display: none;
   }
 }
 </style>

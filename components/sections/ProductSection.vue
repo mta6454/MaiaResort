@@ -3,7 +3,7 @@
         <div class="container text-white text-normal">
             <div class="row">
                 <div class="col-12 col-md-5">
-                    <div class="font-rosellinda text-2xl main-text">
+                    <div class="text-2xl main-text text-shadow">
                         Chủ đầu tư
                     </div>
                     <div class="text-2xl mb-4 company-name">
@@ -12,19 +12,19 @@
                 </div>
                 <div class="col-12 col-md-7 d-flex gap-2 gap-md-0 justify-content-between">
                     <div class="">
-                        <div class="font-rosellinda text-2xl main-text hand-draw-text section-product-name">
+                        <div class="text-2xl main-text hand-draw-text section-product-name">
                             Vị trí
                         </div>
                         <div class="column-margin mb-4 text-lg text-des">
-                            Xã Hồ Tràm, Thành phố Hồ Chí Minh
+                            Xã Hồ Tràm,<br class="mb-only-br"> Thành phố Hồ Chí Minh
                         </div>
-                        <div class="font-rosellinda text-2xl main-text section-product-name">
+                        <div class="text-2xl main-text section-product-name">
                             Khởi công
                         </div>
                         <div class="column-margin mb-4 text-lg text-des">
                             Dự kiến quý 4/2025
                         </div>
-                        <div class="font-rosellinda text-2xl main-text section-product-name">
+                        <div class="text-2xl main-text section-product-name">
                             Thương hiệu vận hành
                         </div>
                         <div class="text-size-normal">
@@ -32,19 +32,19 @@
                         </div>
                     </div>
                     <div class="">
-                        <div class="font-rosellinda text-2xl main-text section-product-name">
+                        <div class="text-2xl main-text section-product-name">
                             Diện tích
                         </div>
                         <div class="column-margin mb-4 text-lg text-des">
                             7ha
                         </div>
-                        <div class="font-rosellinda text-2xl main-text section-product-name">
+                        <div class="text-2xl main-text section-product-name">
                             Bàn Giao
                         </div>
                         <div class="column-margin mb-4 text-lg text-des">
                             Dự kiến quý 3/2027
                         </div>
-                        <div class="font-rosellinda text-2xl main-text section-product-name">
+                        <div class="text-2xl main-text section-product-name">
                             Đơn vị thiết kế
                         </div>
                         <div class="text-size-normal">
@@ -56,28 +56,28 @@
             <div class="devide-line my-16"></div>
             <div class="row">
                 <div class="col-12 col-md-5 font-rosellinda text-2xl main-text mb-4">
-                    Quy mô
+                    Quy mô dự án
                 </div>
                 <div class="col-12 col-md-7 d-flex justify-content-between gap-1 gap-md-0">
                     <div class="">
-                        <div class="font-rosellinda text-2xl main-text text-center">Peace Tower</div>
+                        <div class="font-rosellinda text-xl main-text text-center">Peace Tower</div>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="text-4xl product-number">634</div>
-                            <div>CĂN<br>HỘ</div>
+                            <div class="product-digits">CĂN<br>HỘ</div>
                         </div>
                     </div>
                     <div class="">
-                        <div class="font-rosellinda text-2xl main-text text-center">Happy Tower</div>
+                        <div class="font-rosellinda text-xl main-text text-center">Happy Tower</div>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="text-4xl product-number">610</div>
-                            <div>CĂN<br>HỘ</div>
+                            <div class="product-digits">CĂN<br>HỘ</div>
                         </div>
                     </div>
                     <div class="">
-                        <div class="font-rosellinda text-2xl main-text text-center">Biệt Thự</div>
+                        <div class="font-rosellinda text-xl main-text text-center">Biệt Thự</div>
                         <div class="d-flex justify-content-center align-items-center">
                             <div class="text-4xl product-number">36</div>
-                            <div><br>CĂN</div>
+                            <div class="product-digits"><br>CĂN</div>
                         </div>
                     </div>
                 </div>
@@ -117,8 +117,8 @@
                 </div>
             </div>
             <div class="text-center section-product-after-quote-wrapper">
-                <div class="font-rosellinda main-text" style="font-size: 2.3rem;">
-                    Maia Ho Tram trở lại cùng tuyệt tác
+                <div class="font-rosellinda main-text" style="font-size: 2rem;">
+                    Maia Ho Tram<br class="mb-only-br"> trở lại cùng tuyệt tác
                 </div>
                 <div class="mt-2 text-2xl section-product-after-quote-first">
                     Happy Tower và bộ sưu tập 36 căn Villa.
@@ -238,7 +238,7 @@ const handleShowProductPopup = (data: ProductPopupProps[]) => {
         font-size: 3rem !important;
     }
     @media (max-width: 768px) {
-        font-size: 2.25rem !important;
+        font-size: 2.5rem !important;
     }
 }
 
@@ -333,6 +333,7 @@ const handleShowProductPopup = (data: ProductPopupProps[]) => {
     .text-des {
         font-size: 14px !important;
         margin-right: 15px;
+        height: 30px;
     }
 
     .project-wrapper {
@@ -345,8 +346,13 @@ const handleShowProductPopup = (data: ProductPopupProps[]) => {
     }
 
     .section-product-name {
-        font-size: 1.25rem !important;
+        font-size: 18px;
+        margin-bottom: 4px;
     }
+
+    .product-digits {
+        font-size: 14px;
+    }    
 
     .project-wrapper .d-flex {
         flex-direction: column !important;

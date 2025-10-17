@@ -26,10 +26,10 @@
         </div>
       </div>
       <div class="intro_description intro_description_first text-center mt-10 text-semibold">
-        Đây không chỉ là nơi để bạn tìm lại an vui, mà còn là giá trị bền vững được kiến tạo cho
+        Không chỉ là nơi để tìm lại an vui, mà còn mang lại giá trị bền vững 
       </div>
       <div class="text-second text-2xl text-center text-semibold text-intro mt-8 intro-happy">
-        Happy Tower & Villa tại Maia Resort Ho Tram, <br>
+        Maia Resort Ho Tram, <br>
         chốn an trú độc tôn cho những chủ nhân tinh hoa.
       </div>
       <div class="cta-schedule text-center">
@@ -143,6 +143,9 @@ const setReverse = () => {
   @media (max-width: 1440px) {
     padding-top: 340px;
     font-size: 16px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 0;
   }
 }
 
@@ -328,7 +331,9 @@ const setReverse = () => {
 .section-utilities.is-reverse .utilities-right {
   width: 70%;
 }
-
+.is-reverse .utilities-right .utilities-des-content_overlay_des br {
+  display: none;
+}
 .section-utilities.is-reverse .utilities-des-content_overlay {
   background: transparent;
   align-items: flex-start;
@@ -356,12 +361,9 @@ const setReverse = () => {
 @media (max-width: 768px) {
   .intro_content {
     font-size: 16px !important;
-    margin-bottom: 680px;
+    margin-bottom: 960px;
   }
 
-  .intro_description_first {
-    display: none;
-  }
 
   .intro-happy {
     font-size: 16px !important;
@@ -430,6 +432,7 @@ const setReverse = () => {
 
   .container {
     margin-top: 4px;
+    padding: 0 16px !important;
   }
 
   .section-utilities.is-reverse .utilities-left,

@@ -5,45 +5,45 @@
         Và hơn thế
       </div>
       <div class="text-center text-white main-text text-xl text-des">
-        Maia Resort Ho Tram còn tọa lạc ngay trung tâm thủ phủ nghỉ dưỡng Hồ Tràm,<br>kết nối trực tiếp đến TP. Hồ Chí
+        Maia Resort Ho Tram còn tọa lạc ngay trung tâm <br class="br-mobile-only"> thủ phủ nghỉ dưỡng Hồ Tràm,<br>kết
+        nối trực tiếp đến TP. Hồ Chí
         Minh và sân bay quốc tế Long Thành.
       </div>
-      <div class="map-wrapper flex flex-row align-items-center mt-16">
-        <div class="schedule-wrapper col-md-2">
-          <div class="schedule-item">
-            <div class="schedule-item_dot"></div>
-            <div class="schedule-item-content">
-              <img src="/assets/images/logo-gold.png"
-                   alt="pin_logo">
-            </div>
+    </div>
+    <div class="map-wrapper flex flex-row align-items-center mt-16">
+      <div class="schedule-wrapper col-md-2">
+        <div class="schedule-item">
+          <div class="schedule-item_dot"></div>
+          <div class="schedule-item-content">
+            <img src="/assets/images/logo-gold.png" alt="pin_logo">
           </div>
-          <div class="schedule-item">
-            <div class="schedule-item_dot"></div>
-            <div class="schedule-item-content">
-              <div><span class="text-semibold text-3xl sub-cl">30 </span> <span
-                  class="font-rosellinda text-white text-xl">Phút</span></div>
-              <div class="text-white text-size-normal">
-                Là thời gian di chuyển từ đây tới sân bay quốc tế Long Thành
-              </div>
-            </div>
-          </div>
-          <div class="schedule-item">
-            <div class="schedule-item_dot"></div>
-            <div class="schedule-item-content">
-              <div><span class="text-semibold text-3xl sub-cl">90 </span> <span
-                  class="font-rosellinda text-white text-xl">Phút</span></div>
-              <div class="text-white text-size-normal">
-                Là thời gian di chuyển giữa Maia Resort Ho Tram và Siêu Đô thị Hồ Chí Minh
-              </div>
+        </div>
+        <div class="schedule-item">
+          <div class="schedule-item_dot"></div>
+          <div class="schedule-item-content">
+            <div><span class="text-semibold text-3xl sub-cl">30 </span> <span
+                class="font-rosellinda text-white text-xl">Phút</span></div>
+            <div class="text-white text-size-normal">
+              Là thời gian di chuyển từ đây tới sân bay quốc tế Long Thành
             </div>
           </div>
         </div>
-        <div class="map col-md-8">
-          <img src="/assets/images/map.png" alt="Map" loading="lazy" class="map-img"/>
+        <div class="schedule-item">
+          <div class="schedule-item_dot"></div>
+          <div class="schedule-item-content">
+            <div><span class="text-semibold text-3xl sub-cl">90 </span> <span
+                class="font-rosellinda text-white text-xl">Phút</span></div>
+            <div class="text-white text-size-normal">
+              Là thời gian di chuyển giữa Maia Resort Ho Tram và Siêu Đô thị Hồ Chí Minh
+            </div>
+          </div>
         </div>
       </div>
+      <div class="map col-md-8">
+        <img src="/assets/images/map.png" alt="Map" loading="lazy" class="map-img" />
+      </div>
     </div>
-    <SectionDevide/>
+    <SectionDevide />
   </section>
 </template>
 
@@ -54,15 +54,16 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 .map-wrapper {
   position: relative;
   margin-top: 4rem;
+
   @media (max-width: 1521px) {
     margin-top: 50px;
     height: 600px;
     padding-left: 40px;
     padding-right: 40px;
   }
+
   @media (max-width: 1440px) {
     margin-top: 50px;
-    height: 550px;
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -71,14 +72,17 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 .map {
   width: 1350px;
   height: 100%;
+
   @media (max-width: 1521px) {
     width: auto;
     margin-left: 80px;
   }
+
   @media (max-width: 1440px) {
     width: auto;
     margin-left: 20px;
   }
+
   @media (max-width: 768px) {
     padding: 3rem 0;
   }
@@ -89,14 +93,17 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   height: auto;
   object-fit: contain;
   display: block;
+
   @media (max-width: 1521px) {
     width: auto;
     max-height: 100%;
   }
+
   @media (max-width: 1440px) {
     width: auto;
     max-height: 100%;
   }
+
   @media (max-width: 768px) {
     width: 100%;
     height: auto;
@@ -108,33 +115,47 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   max-width: 1600px;
   padding: 0;
   margin-bottom: 2rem;
+}
+
+.section-map {
+  display: flex;
+  flex-direction: column;
   @media (max-width: 1440px) {
     margin-top: 80px;
     margin-bottom: 30px;
   }
+
+  @media (max-width: 768px) {
+    margin-top: 220px;
+    margin-bottom: 10px;
+  }
 }
 
-/* Note: Chỗ ngày bị lỗi section overlap, cần phải handle sau */
 .section-map-title-main {
   @media (max-width: 1521px) {
-    margin-top: 25px;
     font-size: 2.5rem;
   }
-  @media (max-width: 1440px) {
-    margin-top: 130px;
-    font-size: 2.5rem;
-  }
-  @media (max-width: 768px) {
-    margin-top: 240px;
 
+  @media (max-width: 1440px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 768px) {}
+}
+
+@media screen and (min-width: 769px) {
+  .br-mobile-only {
+    display: none;
   }
 }
 
 .main-text {
   margin-top: 2rem;
+
   @media (max-width: 1521px) {
     margin-top: 15px;
   }
+
   @media (max-width: 1440px) {
     margin-top: 10px;
   }
@@ -229,6 +250,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
     padding-right: 1rem;
   }
 }
+
 @media (max-width: 1280px) {
   .map-wrapper {
     flex-direction: column !important;
@@ -236,6 +258,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
     height: auto !important;
     flex-wrap: wrap;
   }
+
   .schedule-wrapper {
     width: 100% !important;
     display: flex;
@@ -243,12 +266,15 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
     align-items: center;
     justify-content: center;
   }
+
   .schedule-item-content {
     width: 10rem;
   }
+
   .map {
     width: 100%;
   }
+
   .map img {
     width: 100%;
     object-fit: contain;

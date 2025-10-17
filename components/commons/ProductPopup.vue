@@ -24,9 +24,11 @@
                                     }}</div>
                                     <div class="product-popup-left-description mt-16"
                                         v-html="data[currentPanelIndex]?.description"></div>
-                                    <div class="more-button mt-16">
-                                        Xem mặt bằng tầng
-                                    </div>
+                                    <a href="https://drive.google.com/file/d/1DaCaxIK3MeoSMNKXIAWNtWmpCikS6FjP/view?usp=sharing" target="_blank">
+                                        <div class="more-button mt-16">
+                                            Xem mặt bằng tầng
+                                        </div>
+                                    </a>
                                 </div>
                             </transition>
                         </div>
@@ -301,8 +303,8 @@ const handleNext = () => {
 }
 
 .product-popup-left-title {
-    line-height: 1.1;
-    font-size: 3rem;
+    line-height: 1.5;
+    font-size: 2.75rem;
 }
 
 .product-popup-left-subtitle {

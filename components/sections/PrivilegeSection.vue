@@ -4,19 +4,19 @@
       <div class="second-slide-title font-rosellinda text-2xl">
         Wellness từ thiên nhiên
       </div>
-      <div class="second-slide-subtitle second-slide-subtitle-first font-sans font-light">
-        Không khí rừng giàu anion & gió biển ion hóa <br> tái tạo sức khỏe, cải thiện tinh thần.
+      <div class="second-slide-subtitle second-slide-subtitle-first font-sans font-light ">
+        Không khí rừng giàu anion & gió biển ion hóa <br class="pc-only-br"> tái tạo sức khỏe, cải thiện tinh thần.
       </div>
       <div class="section-privilege-content text-light font-sans font-normal text-xl">
         Ở đây, việc dung dưỡng thân - tâm - trí không còn là xa xỉ. Đó là hơi thở của rừng vàng giàu anion, là làn gió
-        biển <br>mang ion tinh khiết, là những trải nghiệm đã được khoa học chứng minh giúp tái tạo thể chất lẫn tinh thần.
+        biển <br class="pc-only-br">mang ion tinh khiết,<br class="mb-only-br"> là những trải nghiệm đã được khoa học chứng minh giúp tái tạo thể chất lẫn tinh thần.
       </div>
       <div class="second-slide-wrapper">
         <CarouselsPrivilegeCarousel class="py-4"/>
       </div>
       <SectionDevide class="section-devide-privilege"/>
       <div class="second-slide-subtitle second-slide-subtitle-second font-sans text-semibold">
-        Maia Resort Ho Tram hội tụ uy tín quốc tế, <br/> sự am hiểu bản địa và chuẩn mực vận hành tinh hoa.
+        Maia Resort Ho Tram hội tụ uy tín quốc tế, <br/> sự am hiểu bản địa và chuẩn mực <br class="mb-only-br"> vận hành tinh hoa.
       </div>
       <div class="privilege-wrapper">
       <div class="privilege-wrapper-title font-rosellinda text-white font-light">Thuộc hệ sinh thái tài sản đầu tư</div>
@@ -49,7 +49,7 @@
         <div class="flex flex-row flex-wrap">
           <div class="banner-left">
             <div class="mb-4">
-              <h5 class="font-rosellinda text-xl">Chủ đầu tư và đơn vị phát triển</h5>
+              <h5 class="font-rosellinda text-xl privilege-wrapper-title-mb">Chủ đầu tư và đơn vị phát triển</h5>
             </div>
             <div class="flex-row flex justify-content-center">
               <div class="partner-item">
@@ -65,7 +65,7 @@
           </div>
           <div class="flex flex-column align-items-center banner-right">
             <div class="mb-2">
-              <h5 class="font-rosellinda font-normal text-xl">Vận hành dưới thương hiệu</h5>
+              <h5 class="font-rosellinda font-normal text-xl privilege-wrapper-title-mb">Vận hành dưới thương hiệu</h5>
             </div>
             <div class="flex-row flex">
               <div>
@@ -80,7 +80,7 @@
         <span class="font-rosellinda text-3xl font-light">Được ví như</span> <b>"Las Vegas thu nhỏ"</b>
       </p>
       <p class="section-privilege-vegas-content font-sans text-xl">
-        ngay tại trung tâm thủ phủ du lịch lớn nhất Việt Nam,<br>
+        ngay tại trung tâm thủ phủ du lịch<br class="mb-only-br"> lớn nhất Việt Nam,<br clear="pc-only-br">
         Maia Resort Ho Tram chính là sự đầu tư thích đáng và mang về giá trị bền vững cho tương lai
       </p>
 
@@ -356,7 +356,8 @@ function go( hash : string ) {
     max-height: 600px;
   }
   @media (max-width: 768px) {
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
+    max-height: 480px;
   }
 }
 
@@ -462,7 +463,7 @@ function go( hash : string ) {
   }
 
   .section-privilege-content {
-    font-size: 0.875rem !important;
+    font-size: 1rem;
     padding: 0 1rem;
   }
 
@@ -470,8 +471,8 @@ function go( hash : string ) {
     padding: 2rem 1rem;
   }
 
-  .privilege-wrapper-title {
-    font-size: 1.5rem !important;
+  .privilege-wrapper-title, .privilege-wrapper-title-mb {
+    font-size: 18px !important;
   }
 
   .privilege-wrapper-title-2 {
@@ -517,5 +518,18 @@ function go( hash : string ) {
     padding: 0 1rem;
   }
 
+}
+@media screen and (min-width: 769px) {
+  .mb-only-br {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pc-only-br {
+    display: none;
+  }
+}
+.font-light {
+  font-weight: 400;
 }
 </style>
