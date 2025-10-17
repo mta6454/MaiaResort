@@ -103,10 +103,10 @@ import facebookIcon from "assets/images/facebook.svg";
     margin-bottom: 1rem;
   }
   .footer-item-title {
-    font-size: 1.5rem;
+    font-size: 20px;
   }
   .footer-item-content {
-    font-size: 1.25rem;
+    font-size: 14px;
   }
 }
 </style>
