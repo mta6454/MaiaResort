@@ -22,17 +22,20 @@
 <script setup lang="ts">
 import Flicking, { useFlickingReactiveAPI } from "@egjs/vue3-flicking";
 import type { Ref } from 'vue'
-import sectionImg from '~/assets/images/privilegeSlide/section-6.jpg'
+import sectionImg1 from '~/assets/images/privilegeSlide/1.png'
+import sectionImg2 from '~/assets/images/privilegeSlide/2.png'
+import sectionImg3 from '~/assets/images/privilegeSlide/3.png'
+import sectionImg4 from '~/assets/images/privilegeSlide/4.png'
 import arrowLeft from '~/assets/images/arrow-left.svg'
 import arrowRight from '~/assets/images/arrow-right.svg'
 const list = ref([{
-    img: sectionImg
+    img: sectionImg1
 }, {
-    img: sectionImg
+    img: sectionImg2
 }, {
-    img: sectionImg
+    img: sectionImg3
 }, {
-    img: sectionImg
+    img: sectionImg4
 }]);
 const flickingPrivilegeCompRef = ref<InstanceType<typeof Flicking> | null>(null)
 // Flicking options
