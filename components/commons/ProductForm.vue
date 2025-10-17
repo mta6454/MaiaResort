@@ -255,6 +255,11 @@ select option {
   background: linear-gradient(to bottom, #c9a979 0%, #ecd4af 50%, #b79b70 100%);
   font-size: 1.5rem;
   font-weight: 600;
+  @media (max-width: 768px) {
+    font-size: 16px;
+    padding: 8px 32px;
+    width: 100%;
+  }
 }
 
 /* Container mỗi lựa chọn */
