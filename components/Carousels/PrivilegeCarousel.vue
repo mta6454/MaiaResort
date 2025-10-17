@@ -112,13 +112,18 @@ onMounted(() => {
 }
 
 @media (max-width: 768px) {
-    .privilege-carousel {
+    /* .privilege-carousel {
         display: none;
-    }
+    } */
+
+    /* .privilege-carousel-prev,
+    .privilege-carousel-next {
+        width: 2rem;
+    } */
 
     .privilege-carousel-prev,
     .privilege-carousel-next {
-        width: 2rem;
+        display: none;
     }
 
     .flicking-panel {
