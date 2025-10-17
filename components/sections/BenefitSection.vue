@@ -3,22 +3,26 @@
     <div class="container section-benefit-first text-white text-center pb-8">
       <div class="slide-title">
         <div class="slide-title-text">
-          Hãy tưởng tượng một buổi sáng thức dậy, mở cửa ban công, hít căng lồng ngực làn gió mặn của <br class="pc-only-br"> biển và hương
+          Hãy tưởng tượng một buổi sáng thức dậy, mở cửa ban công, hít căng lồng ngực làn gió mặn của <br
+            class="pc-only-br"> biển và hương
           rừng
-          mát lành. <br class="mb-only-br"> Không còi xe, không khối bụi - chỉ còn sự tĩnh tại và<br  class="pc-only-br"> năng lượng mói mẻ cho một ngày trọn vẹn.
+          mát lành. <br class="mb-only-br"> Không còi xe, không khối bụi - chỉ còn sự tĩnh tại và<br class="pc-only-br">
+          năng lượng mói mẻ cho một ngày trọn vẹn.
         </div>
         <div class="slide-title-sub-title text-2xl text-semibold">
-          Ở Maia Resort Ho Tram,<br> <span class="slide-title-sub-title-des">bình yên trở thành thói quen hàng ngày.</span>
+          Ở Maia Resort Ho Tram,<br> <span class="slide-title-sub-title-des">bình yên trở thành thói quen hàng
+            ngày.</span>
         </div>
       </div>
       <div class="slide-wrapper py-8">
-        <UtilitiesCarousel/>
+        <UtilitiesCarousel />
       </div>
       <div class="after-slider font-rosellinda text-navy">
         Không chỉ dừng lại <br class="mb-only-br"> ở sự tĩnh tại,
       </div>
       <div class="text-black" style="color: #365967; margin-bottom: 10px;">
-        Maia Resort Ho Tram thuộc tổ hợp tỷ đô <br class="mb-only-br"> The Grand Ho Tram  - trung tâm nghỉ dưỡng <br class="mb-only-br"> & giải trí hàng đầu
+        Maia Resort Ho Tram thuộc tổ hợp tỷ đô <br class="mb-only-br"> The Grand Ho Tram - trung tâm nghỉ dưỡng <br
+          class="mb-only-br"> & giải trí hàng đầu
         Việt Nam.<br>
         Tại đây, quý khách được tận hưởng những <br class="mb-only-br"> đặc quyền hiếm có
       </div>
@@ -26,7 +30,7 @@
         sân golf đằng cấp thế giới, sân bay chuyên dụng cho khách cao cấp, cùng tổ hợp mua sắm và giải trí hiện đại.
       </div>
     </div>
-    <SectionDevide/>
+    <SectionDevide />
     <div class="container section-benefit-second text-center pt-8">
       <div class="section-benefit-second-title text-navy text-2xl text-semibold">
         Một điểm đến, triệu trải nghiệm
@@ -39,28 +43,28 @@
     <div class="hightlight-wrapper">
       <div class="benefit-wrapper container d-flex justify-content-between">
         <div class="benefit-item benefit-item-1 d-flex flex-column justify-center align-items-center">
-          <img src="/assets/images/benefit/benefit-icon-1.png" alt="benefit-1" loading="lazy"/>
+          <img src="/assets/images/benefit/benefit-icon-1.png" alt="benefit-1" loading="lazy" />
           <p class="text-4xl md:text-5xl text-light mt-2 mb-0 lh-1">164<span
               class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
-          <p class="text-center text-sm font-light text-light my-0">Tổng diện tích <br/> khu tổ hợp tỷ đô</p>
+          <p class="text-center text-sm font-light text-light my-0">Tổng diện tích <br /> khu tổ hợp tỷ đô</p>
         </div>
 
         <div class="benefit-item benefit-item-2 d-flex flex-column justify-center align-items-center">
-          <img src="/assets/images/benefit/benefit-icon-2.png" alt="benefit-2" loading="lazy"/>
+          <img src="/assets/images/benefit/benefit-icon-2.png" alt="benefit-2" loading="lazy" />
           <p class="text-4xl md:text-5xl text-light mt-2 mb-0 lh-1">86<span
               class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
-          <p class="text-center text-sm font-light text-light my-0">Quy mô sân golf <br/> tiêu chuẩn quốc tế</p>
+          <p class="text-center text-sm font-light text-light my-0">Quy mô sân golf <br /> tiêu chuẩn quốc tế</p>
         </div>
 
         <div class="benefit-item benefit-item-3 d-flex flex-column justify-center align-items-center">
-          <img src="/assets/images/benefit/benefit-icon-3.png" alt="benefit-3" loading="lazy"/>
+          <img src="/assets/images/benefit/benefit-icon-3.png" alt="benefit-3" loading="lazy" />
           <p class="text-4xl md:text-5xl text-light mt-2 mb-0 lh-1">240<span
               class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
-          <p class="text-center text-sm font-light text-light my-0">Khoảng rộng của <br/> sân bay chuyên dụng</p>
+          <p class="text-center text-sm font-light text-light my-0">Khoảng rộng của <br /> sân bay chuyên dụng</p>
         </div>
       </div>
     </div>
-    <SectionDevide/>
+    <SectionDevide />
   </section>
 </template>
 
@@ -79,6 +83,7 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   @media (max-width: 1521px) {
     padding-bottom: 30px;
   }
+
   @media (max-width: 1440px) {
     padding-bottom: 20px;
   }
@@ -88,6 +93,7 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   @media (max-width: 1521px) {
     padding-top: 20px;
   }
+
   @media (max-width: 1440px) {
     padding-top: 20px;
   }
@@ -97,6 +103,7 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   @media (max-width: 1440px) {
     font-size: 28px;
   }
+
   @media screen and (max-width: 768px) {
     font-size: 24px;
   }
@@ -105,10 +112,12 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
 .hightlight-wrapper {
   margin-top: 5rem;
   margin-bottom: 150px;
+
   @media (max-width: 1521px) {
     margin-top: 70px;
     margin-bottom: 70px;
   }
+
   @media (max-width: 1440px) {
     margin-top: 4rem;
     margin-bottom: 70px;
@@ -121,6 +130,7 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   width: 280px;
   height: 280px;
   background: linear-gradient(to bottom, rgba(6, 89, 108, 0.9), rgba(12, 130, 125, 0.9));
+
   @media (min-width: 1280px) {
     width: 360px;
     height: 360px;
@@ -132,20 +142,25 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   width: auto;
   object-fit: contain;
   max-width: 100%;
+
   @media (max-width: 768px) {
     height: 50px;
   }
 }
+
 .benefit-item .text-center.text-sm {
   @media (min-width: 1280px) {
     font-size: 20px;
   }
 }
+
 .slide-title-text {
   font-size: 1.15rem;
+
   @media (max-width: 1440px) {
     font-size: 1rem;
   }
+
   @media (max-width: 768px) {
     padding: 40px 0;
   }
@@ -153,12 +168,15 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
 
 .slide-title-sub-title {
   margin-top: 4rem;
+
   @media (max-width: 1521px) {
     margin-top: 25px;
   }
+
   @media (max-width: 1440px) {
     margin-top: 20px;
   }
+
   @media (max-width: 768px) {
     margin-bottom: 140px;
   }
@@ -169,14 +187,21 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   width: 100vw;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  margin-left: -100px;
+
   @media (max-width: 1521px) {
     padding: 20px 0;
   }
+
   @media (max-width: 1440px) {
     padding: 15px 0;
+    margin-left: -25px;
   }
+
+
   @media (max-width: 768px) {
     padding: 40px 0;
+    margin-left: 0;
   }
 }
 
@@ -185,26 +210,31 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   font-size: 34px;
   margin-top: 35px;
   margin-bottom: 35px;
+
   @media (max-width: 1521px) {
     margin-top: 0px;
     margin-bottom: 20px;
   }
+
   @media (max-width: 1440px) {
     margin-top: 15px;
     margin-bottom: 15px;
   }
+
   @media (max-width: 768px) {
     margin-top: 180px;
   }
 }
 
 @media (max-width: 768px) {
+
   /* .slide-title-text, .after-slider, .text-black, .section-benefit-second {
     display: none;
   } */
   .pc-only-br {
     display: none;
   }
+
   .benefit-wrapper {
     width: 100%;
     gap: 2rem;
@@ -231,9 +261,11 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   .font-light {
     font-size: 12px;
   }
+
   .slide-title-sub-title-des {
     font-size: 16px;
   }
+
   .slide-wrapper {
     width: 100%;
   }

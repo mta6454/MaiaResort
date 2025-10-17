@@ -1,6 +1,6 @@
 <template>
   <div class="utilities-carousel row position-relative">
-    <div class="col-md-2 row align-items-md-end justify-content-md-end carousel-btn-wrapper">
+    <div class="row align-items-md-end justify-content-md-end carousel-btn-wrapper">
       <div class="utilities-carousel-prev" :class="{ 'disabled': isReachStart }" @click="handlePrev">
         <img :src="arrowLeft" alt="Arrow Left" />
       </div>
@@ -8,7 +8,7 @@
         <img :src="arrowRight" alt="Arrow Right" />
       </div>
     </div>
-    <div class="col-md-10">
+    <div class="col-md-10 utilities-carousel-content">
       <Flicking :hideBeforeInit="true" :firstPanelSize="'200px'" :options="flickingOptions" ref="flickingCompRef"
         @ready="onReady">
         <div v-for="(item, idx) in list" class="flicking-panel" :key="idx"
@@ -31,16 +31,20 @@ import sectionImg from '~/assets/images/utilitiesSlide/section-4.jpg'
 import arrowLeft from '~/assets/images/arrow-left.svg'
 import arrowRight from '~/assets/images/arrow-right.svg'
 
-const list = ref([{
-  img: sectionImg1
-}, {
-  img: sectionImg2
-}, {
-  img: sectionImg3
-}, {
-  img: sectionImg
-  // Fake ảnh cuối, opacity của ảnh cuối là 0 để đôn ảnh trước đó lên center
-},]);
+const list = ref([
+  {
+    img: sectionImg
+  },
+  {
+    img: sectionImg1
+  }, {
+    img: sectionImg2
+  }, {
+    img: sectionImg3
+  }, {
+    img: sectionImg
+    // Fake ảnh cuối, opacity của ảnh cuối là 0 để đôn ảnh trước đó lên center
+  },]);
 const flickingCompRef = ref<InstanceType<typeof Flicking> | null>(null)
 // Flicking options
 const flickingOptions = reactive({
@@ -97,6 +101,7 @@ onMounted(() => {
   width: 4rem;
   cursor: pointer;
   transition: all .18s ease;
+
   @media (max-width: 768px) {
     width: 3rem;
   }
@@ -131,6 +136,10 @@ onMounted(() => {
   object-fit: cover;
   margin: 0 1rem;
   display: block;
+}
+
+.utilities-carousel {
+  flex-wrap: nowrap;
 }
 
 .flicking-panel:not(.active) .flicking-panel-img {
@@ -174,9 +183,19 @@ onMounted(() => {
   visibility: hidden;
 }
 
+.carousel-btn-wrapper {
+  width: 152px;
+  min-width: max-content;
+}
+
+.utilities-carousel-content {
+  width: 90%;
+}
+
 @media (max-width: 768px) {
   .carousel-btn-wrapper {
     width: 0;
+    padding: 0;
   }
 
   .utilities-carousel-prev,
@@ -215,6 +234,10 @@ onMounted(() => {
   .col-md-1 {
     width: auto;
     padding: 0 0.5rem;
+  }
+
+  .utilities-carousel-content {
+    width: 100%;
   }
 }
 </style>

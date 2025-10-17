@@ -1,8 +1,8 @@
 <template>
     <div class="bottom-right-menu">
         <div class="bottom-right-menu-item">
-            <a href="https://www.facebook.com/maiaresorthotram" target="_blank">
-                <img src="/assets/images/facebook.svg" alt="Facebook" />
+            <a href="tel:0911804988">
+                <img src="/assets/images/phone.svg" alt="call" />
             </a>
         </div>
         <div class="bottom-right-menu-item">
