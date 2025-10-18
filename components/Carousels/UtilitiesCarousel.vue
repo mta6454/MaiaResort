@@ -4,13 +4,13 @@
       <div class="utilities-carousel-prev" :class="{ 'disabled': currentPanelIndex === 0 }" @click="handlePrev">
         <img :src="arrowLeft" alt="Arrow Left" />
       </div>
-      <div class="utilities-carousel-next" :class="{ 'disabled': isLastPanel }" @click="handleNext">
+      <div class="utilities-carousel-next" @click="handleNext">
         <img :src="arrowRight" alt="Arrow Right" />
       </div>
     </div>
-    <div class="col-md-10 utilities-carousel-content" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
+    <div class="col-md-10 utilities-carousel-content">
       <Flicking :hideBeforeInit="true" :firstPanelSize="'200px'" :options="flickingOptions" ref="flickingCompRef"
-        @ready="onReady">
+        @ready="onReady" :plugins="[autoplay]">
         <div v-for="(item, idx) in list" class="flicking-panel" :key="idx"
           :class="{ active: idx === currentPanelIndex }">
           <img :src="item?.img" alt="Utilities" loading="lazy" class="flicking-panel-img" />
@@ -41,14 +41,11 @@ const list = ref([
     img: sectionImg2
   }, {
     img: sectionImg3
-  }, {
-    img: sectionImg
-    // Fake ảnh cuối, opacity của ảnh cuối là 0 để đôn ảnh trước đó lên center
-  },]);
+  }]);
 const flickingCompRef = ref<InstanceType<typeof Flicking> | null>(null)
 // Flicking options
 const flickingOptions = reactive({
-  circular: false,
+  circular: true,
   bound: true,
   duration: 600,
   defaultIndex: 0,
@@ -75,33 +72,9 @@ const autoplay = new AutoPlay({
   stopOnHover: true,
 })
 
-// Custom autoplay handler to skip last panel
-let autoplayInterval: number | null = null
-
-const startAutoplay = () => {
-  if (autoplayInterval) clearInterval(autoplayInterval)
-
-  autoplayInterval = setInterval(() => {
-    const nextIndex = currentPanelIndex.value + 1
-    // If next would be last panel (fake), go to first instead
-    if (nextIndex >= totalPanelCount.value - 1) {
-      moveTo(0)
-    } else {
-      moveTo(nextIndex)
-    }
-  }, 4000)
-}
-
-const stopAutoplay = () => {
-  if (autoplayInterval) {
-    clearInterval(autoplayInterval)
-    autoplayInterval = null
-  }
-}
-
 // Methods
 const onReady = (_e: any) => {
-  startAutoplay()
+
 }
 const handlePrev = () => {
   if (!isReachStart.value) {
@@ -115,28 +88,19 @@ const isLastPanel = computed(() => {
 // Case ảnh cuối opacity 0
 
 const handleNext = () => {
-  if (!isLastPanel.value) {
+  if (currentPanelIndex.value === totalPanelCount.value - 1) {
+    moveTo(0)
+  } else {
     moveTo(currentPanelIndex.value + 1)
   }
 }
 
-// Add hover events to pause/resume autoplay
-const onMouseEnter = () => {
-  stopAutoplay()
-}
-
-const onMouseLeave = () => {
-  startAutoplay()
-}
 onMounted(() => {
   if (flickingCompRef.value) {
     console.log('Flicking instance mounted')
   }
 })
 
-onUnmounted(() => {
-  stopAutoplay()
-})
 </script>
 <style scoped>
 .flicking-panel {
@@ -150,11 +114,11 @@ onUnmounted(() => {
   }
 }
 
-.flicking-panel:last-child {
+/* .flicking-panel:last-child {
   @media (max-width: 768px) {
     display: none;
   }
-}
+} */
 
 .utilities-carousel-prev,
 .utilities-carousel-next {
@@ -238,10 +202,10 @@ onUnmounted(() => {
   filter: none;
 }
 
-.flicking-panel:last-child {
+/* .flicking-panel:last-child {
   opacity: 0;
   visibility: hidden;
-}
+} */
 
 .carousel-btn-wrapper {
   width: 152px;

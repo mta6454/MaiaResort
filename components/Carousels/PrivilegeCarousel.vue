@@ -46,7 +46,7 @@ const flickingPrivilegeCompRef = ref<InstanceType<typeof Flicking> | null>(null)
 // Flicking options
 const flickingOptions = reactive({
     circular: true,
-    bound: true,
+    // bound: true,
     duration: 500,
     defaultIndex: 0,
     align: "prev",
