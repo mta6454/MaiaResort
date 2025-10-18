@@ -1,7 +1,7 @@
 <template>
   <div class="utilities-carousel row position-relative">
     <div class="row align-items-md-end justify-content-md-end carousel-btn-wrapper">
-      <div class="utilities-carousel-prev" :class="{ 'disabled': isReachStart }" @click="handlePrev">
+      <div class="utilities-carousel-prev" :class="{ 'disabled': currentPanelIndex === 0 }" @click="handlePrev">
         <img :src="arrowLeft" alt="Arrow Left" />
       </div>
       <div class="utilities-carousel-next" :class="{ 'disabled': isLastPanel }" @click="handleNext">
@@ -10,7 +10,7 @@
     </div>
     <div class="col-md-10 utilities-carousel-content">
       <Flicking :hideBeforeInit="true" :firstPanelSize="'200px'" :options="flickingOptions" ref="flickingCompRef"
-        @ready="onReady">
+        @ready="onReady" :plugins="[autoplay]">
         <div v-for="(item, idx) in list" class="flicking-panel" :key="idx"
           :class="{ active: idx === currentPanelIndex }">
           <img :src="item?.img" alt="Utilities" loading="lazy" class="flicking-panel-img" />
@@ -21,7 +21,7 @@
 </template>
 <script setup lang="ts">
 import Flicking, { useFlickingReactiveAPI } from "@egjs/vue3-flicking";
-
+import { AutoPlay } from "@egjs/flicking-plugins";
 import type { Ref } from 'vue'
 import sectionImg1 from '~/assets/images/utilitiesSlide/1.jpg'
 import sectionImg2 from '~/assets/images/utilitiesSlide/2.jpg'
@@ -53,6 +53,9 @@ const flickingOptions = reactive({
   duration: 600,
   defaultIndex: 0,
   align: "prev",
+  inputType: ["touch", "mouse"],
+  preventClickOnDrag: true,
+  preventDefaultOnDrag: false
 })
 
 // Use Reactive API hook
@@ -64,6 +67,13 @@ const {
   progress,
   moveTo
 } = useFlickingReactiveAPI(flickingCompRef as unknown as Ref<any>)
+
+// AutoPlay plugin
+const autoplay = new AutoPlay({
+  duration: 4000,
+  direction: "NEXT",
+  stopOnHover: true,
+})
 
 // Methods
 const onReady = (_e: any) => {
@@ -94,8 +104,17 @@ onMounted(() => {
 .flicking-panel {
   width: calc(100% / 1.5);
   aspect-ratio: 16/9;
+  touch-action: pan-x;
+  user-select: none;
+  @media (max-width: 768px) {
+    aspect-ratio: 5/4;
+  }
 }
-
+.flicking-panel:last-child {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
 .utilities-carousel-prev,
 .utilities-carousel-next {
   width: 4rem;
@@ -229,6 +248,7 @@ onMounted(() => {
   .col-md-10 {
     width: 100%;
     padding: 0;
+    touch-action: pan-x;
   }
 
   .col-md-1 {

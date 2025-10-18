@@ -7,7 +7,7 @@
             class="pc-only-br"> biển và hương
           rừng
           mát lành. <br class="mb-only-br"> Không còi xe, không khối bụi - chỉ còn sự tĩnh tại và<br class="pc-only-br">
-          năng lượng mói mẻ cho một ngày trọn vẹn.
+          năng lượng mới mẻ cho một ngày trọn vẹn.
         </div>
         <div class="slide-title-sub-title text-2xl text-semibold">
           Ở Maia Resort Ho Tram,<br> <span class="slide-title-sub-title-des">bình yên trở thành thói quen hàng
@@ -60,7 +60,7 @@
           <img src="/assets/images/benefit/benefit-icon-3.png" alt="benefit-3" loading="lazy" />
           <p class="text-4xl md:text-5xl text-light mt-2 mb-0 lh-1">240<span
               class="text-2xl md:text-3xl font-normal text-light">ha</span></p>
-          <p class="text-center text-sm font-light text-light my-0">Khoảng rộng của <br /> sân bay chuyên dụng</p>
+          <p class="text-center text-sm font-light text-light my-0"> Sân bay chuyên dụng</p>
         </div>
       </div>
     </div>

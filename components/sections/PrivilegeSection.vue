@@ -80,7 +80,7 @@
         <span class="font-rosellinda text-3xl font-light">Được ví như</span> <b>"Las Vegas thu nhỏ"</b>
       </p>
       <p class="section-privilege-vegas-content font-sans text-xl">
-        ngay tại trung tâm thủ phủ du lịch<br class="mb-only-br"> lớn nhất Việt Nam,<br clear="pc-only-br">
+        Ngay tại trung tâm thủ phủ du lịch<br class="mb-only-br"> lớn nhất Việt Nam,<br clear="pc-only-br">
         Maia Resort Ho Tram chính là sự đầu tư thích đáng và mang về giá trị bền vững cho tương lai
       </p>
 
