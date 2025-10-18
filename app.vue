@@ -11,8 +11,8 @@
           <IntroSection @openModalForm="openModalForm" />
           <MapSection />
           <BenefitSection />
-          <PrivilegeSection />
-          <ProductSection @openModalForm="openModalForm" />
+          <PrivilegeSection @openModalForm="openModalForm"/>
+          <ProductSection  />
         </main>
         <Footer class="footer-mobile" />
         <BottomMenu />
