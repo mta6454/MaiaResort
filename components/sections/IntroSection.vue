@@ -177,6 +177,10 @@ const openModalForm = () => {
     margin-top: 10px;
     padding: 0;
   }
+  @media screen and (max-width: 768px) {
+    margin-top: 15px;
+    height: unset;
+  }
 }
 
 .cta-title {
@@ -185,6 +189,10 @@ const openModalForm = () => {
   font-weight: 700;
   font-size: 14px;
   color: #0A0A0A;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    margin-top: 15px;
+  }
 }
 
 .cta-icon {
@@ -386,7 +394,7 @@ const openModalForm = () => {
   }
 
   .section-utilities {
-    padding: 20px 10px 40px 10px;
+    padding: 20px 10px 10px 10px;
     border: none;
     margin: 0 auto;
     flex-direction: column !important;

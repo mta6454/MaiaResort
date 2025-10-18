@@ -110,7 +110,7 @@ onMounted(() => {
   user-select: none;
 
   @media (max-width: 768px) {
-    aspect-ratio: 5/4;
+    aspect-ratio: 4 / 5;
   }
 }
 

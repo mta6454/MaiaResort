@@ -104,7 +104,7 @@
       <div class="cta-title">ĐẶT LỊCH ĐỂ TRẢI NGHIỆM</div>
 
       <!-- Lỗi không căn giữa nên đặt 13px margin -->
-       <img src="/assets/images/arrow-left.svg" alt="arrow-down" style="width: 38px; height: 38px; rotate: -90deg; cursor: pointer;" @click="openModalForm"/>
+       <img src="/assets/images/arrow.svg" alt="arrow-down" style="width: 38px; height: 38px; rotate: 90deg; cursor: pointer;" @click="openModalForm"/>
     </div>
   </section>
 </template>
@@ -345,6 +345,9 @@ const openModalForm = () => {
     margin-top: 10px;
     height: auto;
   }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 4rem;
+  }
 }
 
 .mini-vegas-img {
@@ -359,8 +362,8 @@ const openModalForm = () => {
     max-height: 600px;
   }
   @media (max-width: 768px) {
-    margin-bottom: 4rem;
-    max-height: 480px;
+    margin-bottom: 3rem;
+    max-height: 460px;
   }
 }
 
@@ -421,8 +424,9 @@ const openModalForm = () => {
   padding: 16px 0 10px;
   margin-top: 10rem;
   @media (max-width: 768px) {
-    margin-top: 260px;
     color: #000;
+    height: 240px;
+    margin-top: 10rem;
   }
 }
 
@@ -433,6 +437,12 @@ const openModalForm = () => {
   letter-spacing: .16em;
   font-size: 14px;
   color: #fff;
+  @media (max-width: 768px) {
+    color: #003366;
+    font-size: 18px;
+    /* text-shadow: 0 0 10px #003366; */
+    margin-top: -4rem;
+  }
 }
 
 .cta-icon {

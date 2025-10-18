@@ -75,7 +75,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 }
 
 .map {
-  width: 1350px;
+  width: 1150px;
   height: 100%;
 
   @media (max-width: 1521px) {
@@ -85,7 +85,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
 
   @media (max-width: 1440px) {
     width: auto;
-    margin-left: 20px;
+    margin-left: 0;
   }
 
   @media (max-width: 768px) {
@@ -120,7 +120,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   padding: 0;
   margin-bottom: 2rem;
   @media (max-width: 768px) {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 }
 
@@ -133,7 +133,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   }
 
   @media (max-width: 768px) {
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 10px;
   }
 }
