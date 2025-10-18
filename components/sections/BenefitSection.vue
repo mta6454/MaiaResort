@@ -6,7 +6,7 @@
           Hãy tưởng tượng một buổi sáng thức dậy, mở cửa ban công, hít căng lồng ngực làn gió mặn của <br
             class="pc-only-br"> biển và hương
           rừng
-          mát lành. <br class="mb-only-br"> Không còi xe, không khối bụi - chỉ còn sự tĩnh tại và<br class="pc-only-br">
+          mát lành. <br class="mb-only-br"> Không còi xe, không khói bụi - chỉ còn sự tĩnh tại và<br class="pc-only-br">
           năng lượng mới mẻ cho một ngày trọn vẹn.
         </div>
         <div class="slide-title-sub-title text-2xl text-semibold">
