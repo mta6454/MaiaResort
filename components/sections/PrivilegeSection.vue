@@ -104,18 +104,17 @@
       <div class="cta-title">ĐẶT LỊCH ĐỂ TRẢI NGHIỆM</div>
 
       <!-- Lỗi không căn giữa nên đặt 13px margin -->
-       <img src="/assets/images/arrow-left.svg" alt="arrow-down" style="width: 38px; height: 38px; rotate: -90deg; cursor: pointer;" @click="go('#register')"/>
+       <img src="/assets/images/arrow-left.svg" alt="arrow-down" style="width: 38px; height: 38px; rotate: -90deg; cursor: pointer;" @click="openModalForm"/>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
 import SectionDevide from '~/components/commons/SectionDevide.vue'
-function go( hash : string ) {
-  if (hash && hash.startsWith('#')) {
-    const el = document.querySelector(hash)
-    if (el) el.scrollIntoView({behavior: 'smooth'})
-  }
+const emit = defineEmits(['openModalForm'])
+
+const openModalForm = () => {
+  emit('openModalForm')
 }
 </script>
 <style>

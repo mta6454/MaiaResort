@@ -8,11 +8,11 @@
       <div class="overlay">
         <Header />
         <main class="pt-32"  ref="overlayEl">
-          <IntroSection />
+          <IntroSection @openModalForm="openModalForm" />
           <MapSection />
           <BenefitSection />
           <PrivilegeSection />
-          <ProductSection />
+          <ProductSection @openModalForm="openModalForm" />
         </main>
         <Footer class="footer-mobile" />
         <BottomMenu />
@@ -20,6 +20,7 @@
       </div>
       <Footer class="footer-desktop" />
     </div>
+    <ModalForm v-model:open="showModalForm" />
   </div>
 </template>
 
@@ -32,7 +33,13 @@ import PrivilegeSection from '~/components/sections/PrivilegeSection.vue'
 import ProductSection from '~/components/sections/ProductSection.vue'
 import BottomMenu from '~/components/commons/BottomMenu.vue'
 import BottomRightMenu from '~/components/commons/BottomRightMenu.vue'
+import ModalForm from '~/components/commons/ModalForm.vue'
 import { onMounted, onBeforeUnmount, ref } from 'vue'
+const showModalForm = ref(false)
+
+const openModalForm = () => {
+  showModalForm.value = true
+}
 
 const appStyle = {
   backgroundImage: `url(${bg})`
@@ -95,7 +102,7 @@ body {
   display: none;
 }
 
-html:has(.menu-overlay.active) {
+html:has(.menu-overlay.active, .modal-form.active) {
   overflow: hidden;
 }
 
