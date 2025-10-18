@@ -178,8 +178,8 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   }
 
   @media (max-width: 768px) {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
 }
 
@@ -223,8 +223,8 @@ import UtilitiesCarousel from '~/components/Carousels/UtilitiesCarousel.vue'
   }
 
   @media (max-width: 768px) {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
 }
 
