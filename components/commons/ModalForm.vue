@@ -106,11 +106,6 @@ const close = () => {
     }
 }
 
-.btn-close:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-}
-
 .btn-close:active {
     transform: scale(0.95);
 }
