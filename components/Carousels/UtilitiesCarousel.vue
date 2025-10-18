@@ -8,9 +8,9 @@
         <img :src="arrowRight" alt="Arrow Right" />
       </div>
     </div>
-    <div class="col-md-10 utilities-carousel-content">
+    <div class="col-md-10 utilities-carousel-content" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
       <Flicking :hideBeforeInit="true" :firstPanelSize="'200px'" :options="flickingOptions" ref="flickingCompRef"
-        @ready="onReady" :plugins="[autoplay]">
+        @ready="onReady">
         <div v-for="(item, idx) in list" class="flicking-panel" :key="idx"
           :class="{ active: idx === currentPanelIndex }">
           <img :src="item?.img" alt="Utilities" loading="lazy" class="flicking-panel-img" />
@@ -75,8 +75,33 @@ const autoplay = new AutoPlay({
   stopOnHover: true,
 })
 
+// Custom autoplay handler to skip last panel
+let autoplayInterval: number | null = null
+
+const startAutoplay = () => {
+  if (autoplayInterval) clearInterval(autoplayInterval)
+
+  autoplayInterval = setInterval(() => {
+    const nextIndex = currentPanelIndex.value + 1
+    // If next would be last panel (fake), go to first instead
+    if (nextIndex >= totalPanelCount.value - 1) {
+      moveTo(0)
+    } else {
+      moveTo(nextIndex)
+    }
+  }, 4000)
+}
+
+const stopAutoplay = () => {
+  if (autoplayInterval) {
+    clearInterval(autoplayInterval)
+    autoplayInterval = null
+  }
+}
+
 // Methods
 const onReady = (_e: any) => {
+  startAutoplay()
 }
 const handlePrev = () => {
   if (!isReachStart.value) {
@@ -94,10 +119,23 @@ const handleNext = () => {
     moveTo(currentPanelIndex.value + 1)
   }
 }
+
+// Add hover events to pause/resume autoplay
+const onMouseEnter = () => {
+  stopAutoplay()
+}
+
+const onMouseLeave = () => {
+  startAutoplay()
+}
 onMounted(() => {
   if (flickingCompRef.value) {
     console.log('Flicking instance mounted')
   }
+})
+
+onUnmounted(() => {
+  stopAutoplay()
 })
 </script>
 <style scoped>
@@ -106,15 +144,18 @@ onMounted(() => {
   aspect-ratio: 16/9;
   touch-action: pan-x;
   user-select: none;
+
   @media (max-width: 768px) {
     aspect-ratio: 5/4;
   }
 }
+
 .flicking-panel:last-child {
   @media (max-width: 768px) {
     display: none;
   }
 }
+
 .utilities-carousel-prev,
 .utilities-carousel-next {
   width: 4rem;

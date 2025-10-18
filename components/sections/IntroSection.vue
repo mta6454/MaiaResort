@@ -382,7 +382,7 @@ const setReverse = () => {
   }
 
   .section-utilities {
-    padding: 20px 10px 80px 10px;
+    padding: 20px 10px 40px 10px;
     border: none;
     margin: 0 auto;
     flex-direction: column !important;

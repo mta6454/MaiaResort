@@ -6,8 +6,7 @@
       </div>
       <div class="text-center text-white main-text text-xl text-des">
         Maia Resort Ho Tram còn tọa lạc ngay trung tâm <br class="br-mobile-only"> thủ phủ nghỉ dưỡng Hồ Tràm,<br>kết
-        nối trực tiếp đến TP. Hồ Chí
-        Minh và sân bay quốc tế Long Thành.
+        nối trực tiếp đến TP. Hồ Chí Minh và sân bay quốc tế Long Thành.
       </div>
     </div>
     <div class="map-wrapper flex flex-row align-items-center mt-16">
@@ -120,6 +119,9 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   margin-top: 0px;
   padding: 0;
   margin-bottom: 2rem;
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
 }
 
 .section-map {
@@ -146,6 +148,7 @@ import SectionDevide from '~/components/commons/SectionDevide.vue'
   }
 
   @media (max-width: 768px) {
+    margin-top: 16px;
   }
 }
 

@@ -172,7 +172,8 @@ onMounted(() => {
 
     .privilege-carousel-prev,
     .privilege-carousel-next {
-        display: none;
+        /* display: none; */
+        width: 2rem;
     }
 
     .flicking-panel {

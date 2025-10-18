@@ -338,7 +338,7 @@ const handleShowProductPopup = (data: ProductPopupProps[]) => {
         display: none;
     }
 
-    .text-des {
+    .text-des.column-margin.text-lg {
         font-size: 14px !important;
         margin-right: 15px;
         height: 40px;

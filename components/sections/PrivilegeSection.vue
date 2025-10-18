@@ -75,7 +75,7 @@
           </div>
         </div>
       </div>
-      <SectionDevide/>
+      <SectionDevide class="section-devide-privilege-vegas"/>
       <p class="section-privilege-vegas text-2xl font-sans text-semibold">
         <span class="font-rosellinda text-3xl font-light">Được ví như</span> <b>"Las Vegas thu nhỏ"</b>
       </p>
@@ -190,6 +190,10 @@ function go( hash : string ) {
   }
   @media (max-width: 1440px) {
     margin: 0;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 80px;
+    margin-top: 80px;
   }
 }
 
@@ -418,7 +422,7 @@ function go( hash : string ) {
   padding: 16px 0 10px;
   margin-top: 10rem;
   @media (max-width: 768px) {
-    margin-top: 550px;
+    margin-top: 260px;
     color: #000;
   }
 }
@@ -517,15 +521,15 @@ function go( hash : string ) {
     font-size: 1.125rem !important;
     padding: 0 1rem;
     @media screen and (max-width: 768px) {
-      padding: 40px 0;
+      padding: 40px 0 20px;
     }
   }
 
   .section-privilege-vegas-content {
-    font-size: 0.875rem !important;
+    font-size: 1rem;
     padding: 0 1rem;
     @media screen and (max-width: 768px) {
-      padding: 40px 0;
+      padding: 20px 0;
     }
   }
 
@@ -538,6 +542,9 @@ function go( hash : string ) {
 @media screen and (max-width: 768px) {
   .pc-only-br {
     display: none;
+  }
+  .section-devide-privilege-vegas {
+    margin-top: 45px;
   }
 }
 .font-light {
