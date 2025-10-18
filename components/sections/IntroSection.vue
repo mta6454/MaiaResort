@@ -367,7 +367,7 @@ const openModalForm = () => {
 @media (max-width: 768px) {
   .intro_content {
     font-size: 16px !important;
-    margin-bottom: 860px;
+    margin-bottom: 1000px;
     margin-top: 100px;
   }
 
@@ -450,6 +450,9 @@ const openModalForm = () => {
   .row.section-utilities {
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 768px) {  
+      margin: 150px 0 110px;
+    }
   }
 }
 </style>

@@ -25,7 +25,7 @@
 </template>
 
 <script setup lang="ts">
-import bg from '~/assets/images/bg.jpg'
+import bg from '~/assets/images/bg_old.jpg'
 import IntroSection from '~/components/sections/IntroSection.vue'
 import MapSection from '~/components/sections/MapSection.vue'
 import BenefitSection from '~/components/sections/BenefitSection.vue'
